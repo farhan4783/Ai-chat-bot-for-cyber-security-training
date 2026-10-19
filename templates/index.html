@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f4f6f1" />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles/style.css') }}"
+    />
+    <title>CyberBot | Security assistant</title>
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="CyberBot navigation">
+        <a
+          class="brand"
+          href="{{ url_for('chat') }}"
+          aria-label="CyberBot home"
+        >
+          <span class="brand-mark" aria-hidden="true">C</span>
+          <span>cyber<span class="brand-light">bot</span></span>
+        </a>
+        <button class="new-chat" id="newChat" type="button">
+          <span aria-hidden="true">+</span> New chat
+        </button>
+        <div class="sidebar-label">YOUR SPACE</div>
+        <div class="history-item">
+          <span class="history-dot" aria-hidden="true"></span> Security
+          questions
+        </div>
+        <div class="sidebar-bottom">
+          <div class="sidebar-note">
+            <span class="note-mark" aria-hidden="true">i</span>
+            <p>Clear, practical guidance for safer digital habits.</p>
+          </div>
+          <div class="profile">
+            <span class="profile-mark" aria-hidden="true">CB</span
+            ><span
+              ><strong>CyberBot</strong><small>Awareness assistant</small></span
+            >
+          </div>
+        </div>
+      </aside>
+
+      <main class="main-panel">
+        <header class="topbar">
+          <div class="mobile-brand">
+            <span class="brand-mark" aria-hidden="true">C</span> CyberBot
+          </div>
+          <div class="model-label">
+            <span class="status-dot" aria-hidden="true"></span> Cybersecurity
+            guide <span class="beta-tag">BETA</span>
+          </div>
+          <span class="about-link">Local model</span>
+        </header>
+
+        <section
+          class="conversation"
+          id="conversation"
+          aria-live="polite"
+          aria-label="Chat conversation"
+        >
+          <div class="welcome" id="welcome">
+            <div class="welcome-kicker">
+              <span class="spark" aria-hidden="true">✳</span> YOUR DIGITAL
+              SAFETY, MADE CLEARER
+            </div>
+            <h1>Good security<br /><span>starts with a question.</span></h1>
+            <p>
+              Get straightforward guidance on everyday cybersecurity, without
+              the jargon.
+            </p>
+            <div class="prompt-grid" aria-label="Suggested questions">
+              <button
+                class="prompt-card"
+                type="button"
+                data-prompt="How can I spot a phishing message?"
+              >
+                <span class="prompt-icon icon-coral" aria-hidden="true">↗</span
+                ><span
+                  ><strong>Spot a phishing message</strong
+                  ><small>Check links, senders, and warning signs</small></span
+                ><span class="prompt-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button
+                class="prompt-card"
+                type="button"
+                data-prompt="How do I make my accounts safer?"
+              >
+                <span class="prompt-icon icon-green" aria-hidden="true">◎</span
+                ><span
+                  ><strong>Secure my accounts</strong
+                  ><small>Passwords, passkeys, and MFA</small></span
+                ><span class="prompt-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button
+                class="prompt-card"
+                type="button"
+                data-prompt="What should I do if I clicked a suspicious link?"
+              >
+                <span class="prompt-icon icon-yellow" aria-hidden="true">!</span
+                ><span
+                  ><strong>Respond to a risky click</strong
+                  ><small>Practical next steps after a mistake</small></span
+                ><span class="prompt-arrow" aria-hidden="true">↗</span>
+              </button>
+              <button
+                class="prompt-card"
+                type="button"
+                data-prompt="How can I browse the web more safely?"
+              >
+                <span class="prompt-icon icon-blue" aria-hidden="true">⌕</span
+                ><span
+                  ><strong>Browse more safely</strong
+                  ><small>Safer habits for everyday browsing</small></span
+                ><span class="prompt-arrow" aria-hidden="true">↗</span>
+              </button>
+            </div>
+          </div>
+          <div class="messages" id="messages"></div>
+          <div class="typing-row" id="typing" hidden>
+            <span></span><span></span><span></span
+            ><small>CyberBot is thinking</small>
+          </div>
+        </section>
+
+        <footer class="composer-area">
+          <form class="composer" id="chatForm">
+            <label class="visually-hidden" for="userInput"
+              >Message CyberBot</label
+            >
+            <textarea
+              id="userInput"
+              rows="1"
+              placeholder="Ask a cybersecurity question..."
+              maxlength="500"
+              required
+            ></textarea>
+            <button
+              class="send-button"
+              id="send"
+              type="submit"
+              aria-label="Send message"
+              title="Send message"
+            >
+              <span aria-hidden="true">↑</span>
+            </button>
+          </form>
+          <p class="disclaimer">
+            CyberBot can make mistakes. For an active incident, contact your IT
+            or security team.
+          </p>
+        </footer>
+      </main>
+    </div>
+
+    <script>
+      const conversation = document.getElementById("conversation");
+      const messages = document.getElementById("messages");
+      const form = document.getElementById("chatForm");
+      const input = document.getElementById("userInput");
+      const typing = document.getElementById("typing");
+
+      function addMessage(text, sender) {
+        const row = document.createElement("div");
+        row.className = `message-row ${sender}`;
+        const avatar = document.createElement("span");
+        avatar.className =
+          sender === "assistant" ? "message-avatar" : "user-avatar";
+        avatar.textContent = sender === "assistant" ? "C" : "Y";
+        const bubble = document.createElement("p");
+        bubble.className = "message-bubble";
+        bubble.textContent = text;
+        row.append(avatar, bubble);
+        messages.append(row);
+        conversation.scrollTo({
+          top: conversation.scrollHeight,
+          behavior: "smooth",
+        });
+      }
+
+      async function sendMessage(message) {
+        const text = message.trim();
+        if (!text) return;
+        document.getElementById("welcome").hidden = true;
+        addMessage(text, "user");
+        input.value = "";
+        input.style.height = "auto";
+        typing.hidden = false;
+        conversation.scrollTo({
+          top: conversation.scrollHeight,
+          behavior: "smooth",
+        });
+        try {
+          const response = await fetch(
+            `/bot/response/?msg=${encodeURIComponent(text)}`,
+          );
+          if (!response.ok) throw new Error("The server could not answer.");
+          const data = await response.json();
+          addMessage(data.response, "assistant");
+        } catch (error) {
+          addMessage(
+            "I couldn't reach the server just now. Please try sending your question again.",
+            "assistant",
+          );
+        } finally {
+          typing.hidden = true;
+          input.focus();
+        }
+      }
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        sendMessage(input.value);
+      });
+      input.addEventListener("input", () => {
+        input.style.height = "auto";
+        input.style.height = `${Math.min(input.scrollHeight, 140)}px`;
+      });
+      input.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && !event.shiftKey) {
+          event.preventDefault();
+          form.requestSubmit();
+        }
+      });
+      document.querySelectorAll("[data-prompt]").forEach((button) => {
+        button.addEventListener("click", () =>
+          sendMessage(button.dataset.prompt),
+        );
+      });
+      document.getElementById("newChat").addEventListener("click", () => {
+        messages.replaceChildren();
+        document.getElementById("welcome").hidden = false;
+        input.value = "";
+        input.focus();
+      });
+    </script>
+  </body>
+</html>
