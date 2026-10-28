@@ -85,4 +85,4 @@ Contributions are welcome. Please make focused changes, keep training examples r
 
 ## Contact
 
-Project: [github.com/leonTech254/CyberBot](https://github.com/leonTech254/CyberBot)
+Farhan
