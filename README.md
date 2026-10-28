@@ -1,88 +1,129 @@
-# CyberBot
+# CyberBot: Local AI Cybersecurity Awareness Training Platform
 
-CyberBot is a small cybersecurity-awareness chatbot built with Flask and scikit-learn. It classifies a question into one of the topics in the local training dataset and returns practical, topic-specific guidance through a browser-based chat interface.
+CyberBot is a 100% local, privacy-preserving AI chatbot designed specifically for **Cybersecurity Awareness Training**. It runs entirely on your local machine using `scikit-learn` NLP classification, semantic cosine similarity retrieval, and heuristic threat inspection—requiring **zero external cloud APIs or internet connectivity**.
 
-## What it covers
+---
 
-- Phishing and social engineering
-- Malware and safer browsing
-- Passwords and multi-factor authentication
-- Public Wi-Fi and encryption
-- Software updates and incident reporting
+## 🌟 Key Features
 
-The interface includes suggested questions, a responsive conversation view, and a new-chat control. The model runs locally; it does not send prompts to an external AI service.
+### 1. 100% Local & Air-Gapped AI Engine
+- **Zero Cloud Leakage**: No user prompts, company emails, or credentials ever leave your local machine.
+- **Hybrid Local NLP**: Combines Sublinear TF-IDF n-grams (1-3 words), calibrated multi-class `LogisticRegression`, and semantic cosine similarity against 277+ exemplar patterns across 32 core security intents.
+- **Emergency Panic Detection**: Instantly detects indicators of active compromise (e.g., *"I clicked a link"*, *"I typed my password"*, *"ransomware"*) and delivers immediate step-by-step triage and containment advice.
 
-## Requirements
+### 2. Interactive Phishing Message Inspector
+- Paste any email header, subject line, or message text into the chat (or click **"Inspect Phishing Email"**).
+- CyberBot breaks down:
+  - **Risk Assessment Score** (0–100 scale: Low, Suspicious, Critical Threat)
+  - **Identified Red Flags** (artificial urgency, executive impersonation, credential harvesting triggers, risky attachment extensions, shortened URLs)
+  - **Recommended Action & Precautions**
 
-- Python 3.11 or newer
-- `pip`
+### 3. Scenario-Based Cyber Quizzes
+- Type `quiz` or click **"Practice Cyber Quiz"** in the sidebar.
+- CyberBot tests your practical security instincts through interactive workplace scenarios (Baiting, Vishing, BEC, Password entropy, Public Wi-Fi).
+- Evaluates your answers (`A`, `B`, `C`, `D`), explains why an answer is right or wrong, and scores your awareness level.
 
-## Setup and run
+### 4. 32 Comprehensive Cybersecurity Awareness Domains
+Trained locally on real-world threat vectors, including:
+- **Social Engineering & Phishing**: Phishing basics, Spear Phishing, Whaling, Smishing (SMS), Vishing (Voice), BEC / CEO Fraud.
+- **Identity & Authentication**: Strong Passphrases, Password Managers, 2FA/MFA, MFA Fatigue Attacks, Passkeys (FIDO2).
+- **Malware & Attacks**: Ransomware isolation, Trojans, Spyware, Infostealers, Zero-Day updates.
+- **Network & Device Safety**: Public Wi-Fi & Evil Twins, VPN usage, HTTPS myths, Full Disk Encryption (BitLocker/FileVault).
+- **Physical & Operational Security**: Clean Desk Policy, Screen Locking, BadUSB & Juice Jacking, Remote Work & Home Router security, Insider Threats & Shadow IT.
+- **Incident Response & Recovery**: First 5 minutes after a click, Account Takeover recovery, Credit Freezes & HaveIBeenPwned.
 
-Open a terminal in the project directory, then create and activate a virtual environment.
+---
 
-### Windows PowerShell
+## 🚀 Quick Start Guide
 
-```powershell
-py -3 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install Flask scikit-learn
-python app.py
+### Requirements
+- **Python 3.11+**
+- Packages: `Flask`, `scikit-learn`, `numpy`
+
+### Installation & Run
+
+1. Open PowerShell / Terminal in the project directory:
+   ```powershell
+   cd "c:\Users\Acer\Desktop\Dekstop\Imp\New folder (2)\CyberBot-main"
+   ```
+
+2. Run the application:
+   ```powershell
+   py app.py
+   # Or using python:
+   python app.py
+   ```
+
+3. Open your web browser and navigate to:
+   ```text
+   http://127.0.0.1:5000/chat
+   ```
+
+---
+
+## 🛠️ API Reference
+
+### 1. `POST /api/chat`
+Send a question or command to the local AI.
+
+**Request Body:**
+```json
+{
+  "message": "What should I do if I clicked a suspicious link?",
+  "session_id": "user_session_123"
+}
 ```
 
-If PowerShell prevents activation, allow it for the current terminal session and activate again:
-
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-.\.venv\Scripts\Activate.ps1
+**Response:**
+```json
+{
+  "success": true,
+  "response": "Immediate action can prevent a minor error from escalating into a full organizational breach...\n\n#### 🛡️ Recommended Best Practices:\n- 1. DISCONNECT IMMEDIATELY...",
+  "session_id": "user_session_123"
+}
 ```
 
-### macOS or Linux
+### 2. `POST /api/analyze/phishing`
+Inspect suspicious message text for phishing indicators.
 
-```bash
-python3 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install Flask scikit-learn
-python app.py
+**Request Body:**
+```json
+{
+  "text": "From support@paypa1.xyz: Urgent! Your account is suspended within 24 hours. Click here to verify."
+}
 ```
 
-When Flask reports that it is running, open [http://127.0.0.1:5000/chat](http://127.0.0.1:5000/chat). Stop the development server with `Ctrl+C`.
+### 3. `GET /api/status`
+Returns model training status and offline metrics.
 
-## Project layout
+---
+
+## 📂 Project Structure
 
 ```text
-app.py                     Flask routes and JSON response endpoint
-ML/mlScript.py             Intent classifier and topic guidance
-dataset/cybersecurity.json Training phrases grouped by intent
-templates/index.html       Chat interface and browser-side behavior
-static/styles/style.css    Responsive interface styling
+CyberBot/
+├── app.py                     # Modern Flask backend with REST & legacy endpoints
+├── ML/
+│   └── mlScript.py            # Local NLP Engine, Phishing Inspector & Quiz Engine
+├── dataset/
+│   ├── cybersecurity.json     # Master dataset: 32 intents, 277 patterns, quiz scenarios
+│   └── build_dataset.py       # Generator script to expand and customize the dataset
+├── templates/
+│   └── index.html             # Responsive chat UI with Markdown & interactive quiz pills
+├── static/
+│   └── styles/style.css       # Clean cybersecurity-themed styling
+└── test_backend.py            # Automated test suite verifying all local AI endpoints
 ```
 
-## How it works
+---
 
-1. The browser sends a question to `/bot/response/`.
-2. The scikit-learn pipeline compares the text with example phrases in `dataset/cybersecurity.json` and predicts an intent.
-3. Low-confidence predictions receive a clarification message rather than an unrelated topic answer.
-4. A reviewed response for the selected topic is returned as JSON.
+## 💡 Customizing & Expanding the Dataset
 
-The classifier is intentionally lightweight and is not a generative AI model. It can misunderstand unusual wording, and its guidance is general rather than a substitute for professional security support. For an active incident, contact your organization's IT/security team or the relevant service provider.
-
-## Customizing the bot
-
-Add representative example questions to the appropriate `patterns` list in `dataset/cybersecurity.json`. Keep examples distinct between topics to reduce ambiguous predictions. Topic guidance is maintained in `TOPIC_RESPONSES` in `ML/mlScript.py`; review advice carefully before changing it. Restart the Flask app after edits so the model reloads the training data.
-
-## Troubleshooting
-
-- **Python command not found on Windows:** install Python and use the `py` launcher (`py -3`), or update the Python installation and PATH settings.
-- **Activation is blocked:** use the PowerShell process-scoped execution policy command above, or invoke `.venv\Scripts\python.exe app.py` without activating the environment.
-- **Port 5000 is already in use:** stop the other local server or change the port in the `app.run` call in `app.py`.
-
-## Contributing
-
-Contributions are welcome. Please make focused changes, keep training examples representative, and verify the app locally before submitting a pull request.
-
-## Contact
-
-Farhan
+To add your own organization-specific policies or new questions:
+1. Open `dataset/build_dataset.py`.
+2. Add your new patterns, rules, or quiz questions to the `DATASET` dictionary.
+3. Run:
+   ```powershell
+   py dataset/build_dataset.py
+   ```
+4. Restart `app.py`. The model will retrain on launch in under 1 second!

@@ -8,7 +8,7 @@
       rel="stylesheet"
       href="{{ url_for('static', filename='styles/style.css') }}"
     />
-    <title>CyberBot | Security assistant</title>
+    <title>CyberBot | Local AI Cybersecurity Awareness Trainer</title>
   </head>
   <body>
     <div class="app-shell">
@@ -24,21 +24,36 @@
         <button class="new-chat" id="newChat" type="button">
           <span aria-hidden="true">+</span> New chat
         </button>
-        <div class="sidebar-label">YOUR SPACE</div>
-        <div class="history-item">
-          <span class="history-dot" aria-hidden="true"></span> Security
-          questions
+
+        <div class="sidebar-label">QUICK TOOLS</div>
+        <div class="quick-action-sidebar">
+          <button class="sidebar-action-btn" type="button" data-prompt="quiz">
+            <span aria-hidden="true">🎯</span> Practice Cyber Quiz
+          </button>
+          <button class="sidebar-action-btn" type="button" data-prompt="Analyze this email: From: support@bank-security.xyz Urgent! Your account is locked, click http://verify-bank.top to unlock.">
+            <span aria-hidden="true">🔍</span> Inspect Phishing Email
+          </button>
+          <button class="sidebar-action-btn" type="button" data-prompt="I clicked a suspicious link and typed my password what do I do?">
+            <span aria-hidden="true">🚨</span> Emergency Containment
+          </button>
+          <button class="sidebar-action-btn" type="button" data-prompt="How do passkeys and MFA protect against phishing?">
+            <span aria-hidden="true">🔑</span> Passkeys & MFA Guide
+          </button>
         </div>
+
+        <div class="sidebar-label">TOPIC MODULES</div>
+        <div class="history-item">
+          <span class="history-dot" aria-hidden="true"></span> 32 Local Cyber Domains
+        </div>
+
         <div class="sidebar-bottom">
           <div class="sidebar-note">
-            <span class="note-mark" aria-hidden="true">i</span>
-            <p>Clear, practical guidance for safer digital habits.</p>
+            <span class="note-mark" aria-hidden="true">🔒</span>
+            <p>100% Local AI. No prompts or data are sent to external cloud servers.</p>
           </div>
           <div class="profile">
-            <span class="profile-mark" aria-hidden="true">CB</span
-            ><span
-              ><strong>CyberBot</strong><small>Awareness assistant</small></span
-            >
+            <span class="profile-mark" aria-hidden="true">CB</span>
+            <span><strong>CyberBot AI</strong><small>Local Security Coach</small></span>
           </div>
         </div>
       </aside>
@@ -49,10 +64,10 @@
             <span class="brand-mark" aria-hidden="true">C</span> CyberBot
           </div>
           <div class="model-label">
-            <span class="status-dot" aria-hidden="true"></span> Cybersecurity
-            guide <span class="beta-tag">BETA</span>
+            <span class="status-dot" aria-hidden="true"></span> Local NLP Security Model
+            <span class="beta-tag">v2.0 OFFLINE</span>
           </div>
-          <span class="about-link">Local model</span>
+          <span class="about-link" id="modelStatus">100% Private & Local</span>
         </header>
 
         <section
@@ -63,13 +78,11 @@
         >
           <div class="welcome" id="welcome">
             <div class="welcome-kicker">
-              <span class="spark" aria-hidden="true">✳</span> YOUR DIGITAL
-              SAFETY, MADE CLEARER
+              <span class="spark" aria-hidden="true">✳</span> PRACTICAL CYBERSECURITY AWARENESS
             </div>
             <h1>Good security<br /><span>starts with a question.</span></h1>
             <p>
-              Get straightforward guidance on everyday cybersecurity, without
-              the jargon.
+              Trained locally on 32 cybersecurity domains, interactive scenario drills, and phishing threat detection.
             </p>
             <div class="prompt-grid" aria-label="Suggested questions">
               <button
@@ -77,64 +90,54 @@
                 type="button"
                 data-prompt="How can I spot a phishing message?"
               >
-                <span class="prompt-icon icon-coral" aria-hidden="true">↗</span
-                ><span
-                  ><strong>Spot a phishing message</strong
-                  ><small>Check links, senders, and warning signs</small></span
-                ><span class="prompt-arrow" aria-hidden="true">↗</span>
+                <span class="prompt-icon icon-coral" aria-hidden="true">🎣</span>
+                <span><strong>Spot Phishing & BEC</strong><small>Check sender domains, urgency, & links</small></span>
+                <span class="prompt-arrow" aria-hidden="true">↗</span>
               </button>
               <button
                 class="prompt-card"
                 type="button"
-                data-prompt="How do I make my accounts safer?"
+                data-prompt="quiz"
               >
-                <span class="prompt-icon icon-green" aria-hidden="true">◎</span
-                ><span
-                  ><strong>Secure my accounts</strong
-                  ><small>Passwords, passkeys, and MFA</small></span
-                ><span class="prompt-arrow" aria-hidden="true">↗</span>
+                <span class="prompt-icon icon-green" aria-hidden="true">🎯</span>
+                <span><strong>Take Security Quiz</strong><small>Test your instincts on interactive scenarios</small></span>
+                <span class="prompt-arrow" aria-hidden="true">↗</span>
               </button>
               <button
                 class="prompt-card"
                 type="button"
                 data-prompt="What should I do if I clicked a suspicious link?"
               >
-                <span class="prompt-icon icon-yellow" aria-hidden="true">!</span
-                ><span
-                  ><strong>Respond to a risky click</strong
-                  ><small>Practical next steps after a mistake</small></span
-                ><span class="prompt-arrow" aria-hidden="true">↗</span>
+                <span class="prompt-icon icon-yellow" aria-hidden="true">🚨</span>
+                <span><strong>Emergency Incident Steps</strong><small>What to do immediately after a mistake</small></span>
+                <span class="prompt-arrow" aria-hidden="true">↗</span>
               </button>
               <button
                 class="prompt-card"
                 type="button"
-                data-prompt="How can I browse the web more safely?"
+                data-prompt="Analyze this email: From: billing@paypa1-update.com Subject: Urgent Account Suspension. Click here to verify your identity."
               >
-                <span class="prompt-icon icon-blue" aria-hidden="true">⌕</span
-                ><span
-                  ><strong>Browse more safely</strong
-                  ><small>Safer habits for everyday browsing</small></span
-                ><span class="prompt-arrow" aria-hidden="true">↗</span>
+                <span class="prompt-icon icon-blue" aria-hidden="true">🔍</span>
+                <span><strong>Phishing Analyzer</strong><small>Inspect email snippet for red flags</small></span>
+                <span class="prompt-arrow" aria-hidden="true">↗</span>
               </button>
             </div>
           </div>
           <div class="messages" id="messages"></div>
           <div class="typing-row" id="typing" hidden>
-            <span></span><span></span><span></span
-            ><small>CyberBot is thinking</small>
+            <span></span><span></span><span></span>
+            <small>CyberBot is thinking...</small>
           </div>
         </section>
 
         <footer class="composer-area">
           <form class="composer" id="chatForm">
-            <label class="visually-hidden" for="userInput"
-              >Message CyberBot</label
-            >
+            <label class="visually-hidden" for="userInput">Message CyberBot</label>
             <textarea
               id="userInput"
               rows="1"
-              placeholder="Ask a cybersecurity question..."
-              maxlength="500"
+              placeholder="Ask a security question, paste a suspicious email, or type 'quiz'..."
+              maxlength="2000"
               required
             ></textarea>
             <button
@@ -148,30 +151,109 @@
             </button>
           </form>
           <p class="disclaimer">
-            CyberBot can make mistakes. For an active incident, contact your IT
-            or security team.
+            CyberBot operates 100% locally. For an active organizational breach, contact your internal IT/Security Helpdesk immediately.
           </p>
         </footer>
       </main>
     </div>
 
     <script>
+      let sessionId = "sess_" + Math.random().toString(36).substring(2, 9);
       const conversation = document.getElementById("conversation");
       const messages = document.getElementById("messages");
       const form = document.getElementById("chatForm");
       const input = document.getElementById("userInput");
       const typing = document.getElementById("typing");
 
+      // Check model status
+      fetch("/api/status")
+        .then(r => r.json())
+        .then(data => {
+          if (data && data.total_intents) {
+            document.getElementById("modelStatus").textContent = `${data.total_intents} Topics • Local Scikit-Learn`;
+          }
+        })
+        .catch(() => {});
+
+      // Lightweight Markdown Formatter
+      function formatMarkdown(text) {
+        if (!text) return "";
+        let html = text
+          // Escape basic HTML
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;");
+
+        // Headings
+        html = html.replace(/^### (.*$)/gim, "<h3>$1</h3>");
+        html = html.replace(/^#### (.*$)/gim, "<h4>$1</h4>");
+        html = html.replace(/^##### (.*$)/gim, "<h5>$1</h5>");
+
+        // Horizontal rules
+        html = html.replace(/^---$/gim, "<hr>");
+
+        // Blockquotes
+        html = html.replace(/^&gt; (.*$)/gim, "<blockquote>$1</blockquote>");
+
+        // Bold & Italic
+        html = html.replace(/\*\*(.*?)\*\*/gim, "<strong>$1</strong>");
+        html = html.replace(/\*(.*?)\*/gim, "<em>$1</em>");
+
+        // Inline code
+        html = html.replace(/`([^`]+)`/gim, "<code>$1</code>");
+
+        // Unordered lists (- item)
+        html = html.replace(/^\s*-\s+(.*$)/gim, "<li>$1</li>");
+        html = html.replace(/(<li>.*<\/li>)/gims, "<ul>$1</ul>");
+        // Fix multiple adjacent ul tags
+        html = html.replace(/<\/ul>\s*<ul>/gim, "");
+
+        // Convert remaining double newlines to paragraph breaks
+        const paragraphs = html.split(/\n{2,}/);
+        html = paragraphs.map(p => {
+          p = p.trim();
+          if (p.startsWith("<h3>") || p.startsWith("<h4>") || p.startsWith("<h5>") || 
+              p.startsWith("<ul>") || p.startsWith("<blockquote>") || p.startsWith("<hr>")) {
+            return p;
+          }
+          return `<p>${p.replace(/\n/g, "<br>")}</p>`;
+        }).join("");
+
+        return html;
+      }
+
       function addMessage(text, sender) {
         const row = document.createElement("div");
         row.className = `message-row ${sender}`;
+        
         const avatar = document.createElement("span");
-        avatar.className =
-          sender === "assistant" ? "message-avatar" : "user-avatar";
+        avatar.className = sender === "assistant" ? "message-avatar" : "user-avatar";
         avatar.textContent = sender === "assistant" ? "C" : "Y";
-        const bubble = document.createElement("p");
+
+        const bubble = document.createElement("div");
         bubble.className = "message-bubble";
-        bubble.textContent = text;
+
+        if (sender === "assistant") {
+          bubble.innerHTML = formatMarkdown(text);
+
+          // If the message is a quiz question with options, append quick-reply buttons
+          if (text.includes("Scenario Quiz") && text.includes("Reply with")) {
+            const optRow = document.createElement("div");
+            optRow.className = "quiz-options";
+            ["A", "B", "C", "D"].forEach(letter => {
+              const btn = document.createElement("button");
+              btn.type = "button";
+              btn.className = "quiz-opt-btn";
+              btn.textContent = `Option ${letter}`;
+              btn.addEventListener("click", () => sendMessage(letter));
+              optRow.appendChild(btn);
+            });
+            bubble.appendChild(optRow);
+          }
+        } else {
+          bubble.textContent = text;
+        }
+
         row.append(avatar, bubble);
         messages.append(row);
         conversation.scrollTo({
@@ -192,16 +274,27 @@
           top: conversation.scrollHeight,
           behavior: "smooth",
         });
+
         try {
-          const response = await fetch(
-            `/bot/response/?msg=${encodeURIComponent(text)}`,
-          );
-          if (!response.ok) throw new Error("The server could not answer.");
-          const data = await response.json();
-          addMessage(data.response, "assistant");
+          // Attempt POST to /api/chat
+          const response = await fetch("/api/chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ message: text, session_id: sessionId })
+          });
+
+          if (response.ok) {
+            const data = await response.json();
+            addMessage(data.response, "assistant");
+          } else {
+            // Fallback to legacy GET endpoint
+            const fallback = await fetch(`/bot/response/?msg=${encodeURIComponent(text)}&session_id=${encodeURIComponent(sessionId)}`);
+            const fbData = await fallback.json();
+            addMessage(fbData.response, "assistant");
+          }
         } catch (error) {
           addMessage(
-            "I couldn't reach the server just now. Please try sending your question again.",
+            "I couldn't reach the local model. Please make sure the Flask application is running.",
             "assistant",
           );
         } finally {
@@ -214,22 +307,33 @@
         event.preventDefault();
         sendMessage(input.value);
       });
+
       input.addEventListener("input", () => {
         input.style.height = "auto";
         input.style.height = `${Math.min(input.scrollHeight, 140)}px`;
       });
+
       input.addEventListener("keydown", (event) => {
         if (event.key === "Enter" && !event.shiftKey) {
           event.preventDefault();
           form.requestSubmit();
         }
       });
+
       document.querySelectorAll("[data-prompt]").forEach((button) => {
-        button.addEventListener("click", () =>
-          sendMessage(button.dataset.prompt),
-        );
+        button.addEventListener("click", () => {
+          const prompt = button.dataset.prompt;
+          if (prompt.startsWith("Analyze this email: From: billing@paypa1-update.com")) {
+            input.value = prompt;
+            input.focus();
+          } else {
+            sendMessage(prompt);
+          }
+        });
       });
+
       document.getElementById("newChat").addEventListener("click", () => {
+        sessionId = "sess_" + Math.random().toString(36).substring(2, 9);
         messages.replaceChildren();
         document.getElementById("welcome").hidden = false;
         input.value = "";

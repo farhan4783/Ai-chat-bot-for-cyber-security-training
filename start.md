@@ -1,59 +1,50 @@
-# CyberBot Startup Guide
+# CyberBot Startup & Verification Guide
 
-Use the commands below from the project root to set up the virtual environment, install dependencies, and run the app.
+Follow these steps to run and test CyberBot locally.
 
-## 1) Open PowerShell in the project folder
-
+## 1. Open PowerShell in the project directory
 ```powershell
 cd "c:\Users\Acer\Desktop\Dekstop\Imp\New folder (2)\CyberBot-main"
 ```
 
-## 2) Create a virtual environment
-
+## 2. Verify / Run the Automated Test Suite
+Run the test script to verify that the local AI model, phishing inspector, and quiz state machine are healthy:
 ```powershell
-py -3 -m venv .venv
+py test_backend.py
 ```
 
-## 3) Activate the virtual environment
-
+## 3. Run the Web Application
 ```powershell
-.\.venv\Scripts\Activate.ps1
+py app.py
 ```
+*(If `py` is not mapped, use `python app.py`)*
 
-## 4) Install dependencies
-
-```powershell
-python -m pip install --upgrade pip
-python -m pip install scikit-learn Flask
-```
-
-## 5) Run the app
-
-```powershell
-python app.py
-```
-
-## 6) Open the app in your browser
-
-Go to:
-
+## 4. Open in Your Browser
+Visit:
 ```text
 http://127.0.0.1:5000/chat
 ```
 
-## Optional: one-line setup command
+---
 
-```powershell
-cd "c:\Users\Acer\Desktop\Dekstop\Imp\New folder (2)\CyberBot-main"; py -3 -m venv .venv; .\.venv\Scripts\Activate.ps1; python -m pip install --upgrade pip; python -m pip install scikit-learn Flask; python app.py
-```
+## 5. Features to Try in the Browser
 
-## Notes
+1. **Interactive Security Scenario Quiz**:
+   - Click **"Practice Cyber Quiz"** in the sidebar or type `quiz`.
+   - The bot presents scenario questions and click-to-answer buttons (`Option A`, `Option B`, `Option C`, `Option D`).
+   - Try answering with **D** on the first question to see the instant feedback and next scenario.
 
-- If `py` is not recognized, use `python` instead when available.
-- If PowerShell blocks script execution, run:
+2. **Phishing Email Inspector**:
+   - Click the prompt card **"Phishing Analyzer"** or paste any suspicious email:
+   - Example prompt:
+     ```text
+     Analyze this email: From: billing@paypa1-update.com Subject: Urgent Account Suspension. Click here to verify your identity.
+     ```
+   - CyberBot returns an instant **Risk Assessment Score** with red-flag breakdown.
 
-```powershell
-Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-```
-
-Then activate the virtual environment again.
+3. **Emergency Incident Triage**:
+   - Ask:
+     ```text
+     I clicked a suspicious link and typed my password what do I do?
+     ```
+   - CyberBot detects emergency panic triggers and outputs the immediate 5-step containment checklist.

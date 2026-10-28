@@ -648,3 +648,110 @@ button {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* --- CyberBot Enterprise AI Markdown & Interactive Formatting --- */
+.message-bubble h3 {
+  margin: 6px 0 10px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--forest);
+}
+.message-bubble h4 {
+  margin: 12px 0 6px;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #1e3b2e;
+}
+.message-bubble h5 {
+  margin: 10px 0 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #4b6657;
+}
+.message-bubble p {
+  margin: 0 0 8px;
+}
+.message-bubble p:last-child {
+  margin-bottom: 0;
+}
+.message-bubble ul {
+  margin: 6px 0 10px;
+  padding-left: 20px;
+}
+.message-bubble li {
+  margin-bottom: 6px;
+  line-height: 1.6;
+}
+.message-bubble blockquote {
+  margin: 10px 0;
+  padding: 8px 14px;
+  border-left: 4px solid #84d648;
+  background: #f1f7ee;
+  border-radius: 0 8px 8px 0;
+  color: #244234;
+  font-size: 12.5px;
+  line-height: 1.6;
+}
+.message-bubble code {
+  padding: 2px 6px;
+  background: #ebf2e8;
+  border-radius: 4px;
+  font-family: Consolas, monospace;
+  font-size: 12px;
+  color: #1a3c2c;
+  font-weight: 600;
+}
+.message-bubble hr {
+  margin: 14px 0;
+  border: 0;
+  border-top: 1px solid #e1e7dc;
+}
+.quiz-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 12px;
+}
+.quiz-opt-btn {
+  padding: 6px 14px;
+  border: 1px solid #c9d8c6;
+  border-radius: 6px;
+  background: #f8faf6;
+  color: #223c2e;
+  font-size: 12px;
+  font-weight: 600;
+  transition: all 0.15s ease;
+}
+.quiz-opt-btn:hover {
+  background: var(--leaf);
+  border-color: #a4d852;
+  color: var(--forest);
+  transform: translateY(-1px);
+}
+.quick-action-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 14px 0 24px;
+}
+.sidebar-action-btn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 8px 10px;
+  border: 0;
+  border-radius: 6px;
+  color: #dbe6dc;
+  background: #254236;
+  font-size: 12.5px;
+  text-align: left;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+.sidebar-action-btn:hover {
+  background: #315848;
+  color: #fff;
+}
+.sidebar-action-btn span {
+  font-size: 14px;
+}
