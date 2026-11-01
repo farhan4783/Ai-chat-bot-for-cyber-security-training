@@ -1,0 +1,3423 @@
+{
+  "categories": [
+    {
+      "id": "phishing",
+      "name": {
+        "en": "Phishing",
+        "hi": "फ़िशिंग"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "An email says your bank account will be blocked unless you verify it through a link. What should you do?",
+            "hi": "एक ईमेल कहता है कि लिंक से पुष्टि न करने पर आपका बैंक खाता बंद हो जाएगा। आपको क्या करना चाहिए?"
+          },
+          "options": {
+            "en": [
+              "Click the link immediately",
+              "Reply with your account details",
+              "Open the bank's official app or type its address yourself",
+              "Forward the email to friends"
+            ],
+            "hi": [
+              "तुरंत लिंक खोलें",
+              "खाते की जानकारी देकर जवाब दें",
+              "बैंक का आधिकारिक ऐप खोलें या पता स्वयं टाइप करें",
+              "ईमेल दोस्तों को भेजें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Urgent messages and unexpected links are common phishing tactics. Verify through a trusted channel.",
+            "hi": "जल्दबाजी कराने वाले संदेश और अनजान लिंक फ़िशिंग के आम तरीके हैं। विश्वसनीय माध्यम से पुष्टि करें।"
+          },
+          "id": "phishing-1"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A delivery text asks for a small fee through a shortened link. What is safest?",
+            "hi": "डिलीवरी का एक संदेश छोटे लिंक से थोड़ी फीस मांगता है। सबसे सुरक्षित तरीका क्या है?"
+          },
+          "options": {
+            "en": [
+              "Pay through the link",
+              "Check the delivery company's official app or website",
+              "Send your card number by text",
+              "Ask the sender for an OTP"
+            ],
+            "hi": [
+              "लिंक से भुगतान करें",
+              "डिलीवरी कंपनी के आधिकारिक ऐप या वेबसाइट पर जांचें",
+              "कार्ड नंबर संदेश में भेजें",
+              "भेजने वाले से OTP मांगें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Use the official delivery service to check a parcel; don't trust unsolicited payment links.",
+            "hi": "पार्सल जांचने के लिए आधिकारिक डिलीवरी सेवा का उपयोग करें; अनचाहे भुगतान लिंक पर भरोसा न करें।"
+          },
+          "id": "phishing-2"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A message claims you won a prize but asks you to pay a processing fee first. What should you do?",
+            "hi": "एक संदेश कहता है कि आपने इनाम जीता है, लेकिन पहले प्रोसेसिंग फीस मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Pay the fee to claim it",
+              "Share your bank OTP",
+              "Ignore it and verify any contest through its official source",
+              "Send identity documents"
+            ],
+            "hi": [
+              "इनाम पाने के लिए फीस दें",
+              "बैंक OTP साझा करें",
+              "इसे अनदेखा करें और प्रतियोगिता की आधिकारिक स्रोत से पुष्टि करें",
+              "पहचान के दस्तावेज भेजें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Unexpected prizes that require upfront payment are a common scam warning sign.",
+            "hi": "अनपेक्षित इनाम के लिए पहले भुगतान मांगना धोखाधड़ी का आम संकेत है।"
+          },
+          "id": "phishing-3"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "The sender address looks almost like your employer's but has one extra character. What should you do?",
+            "hi": "भेजने वाले का पता आपके नियोक्ता जैसा है, लेकिन उसमें एक अतिरिक्त अक्षर है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Open the attachment because the name looks familiar",
+              "Check the exact address and confirm through a known work channel",
+              "Reply with your password",
+              "Forward it to all coworkers"
+            ],
+            "hi": [
+              "अटैचमेंट खोलें क्योंकि नाम जाना-पहचाना है",
+              "पूरा पता जांचें और परिचित कार्य-माध्यम से पुष्टि करें",
+              "पासवर्ड से जवाब दें",
+              "सभी सहकर्मियों को भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Lookalike sender addresses can impersonate trusted organizations. Verify the exact address and request.",
+            "hi": "मिलते-जुलते ईमेल पते भरोसेमंद संस्थाओं की नकल कर सकते हैं। सही पता और अनुरोध जांचें।"
+          },
+          "id": "phishing-4"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "An unexpected invoice attachment arrives from an unknown sender. What is the safest action?",
+            "hi": "अनजान व्यक्ति से अप्रत्याशित बिल का अटैचमेंट आता है। सबसे सुरक्षित कदम क्या है?"
+          },
+          "options": {
+            "en": [
+              "Open it to see what it is",
+              "Enable macros if asked",
+              "Don't open it; verify the sender independently and report it",
+              "Save it to a shared folder"
+            ],
+            "hi": [
+              "देखने के लिए खोलें",
+              "कहने पर मैक्रो चालू करें",
+              "न खोलें; भेजने वाले की अलग से पुष्टि करें और रिपोर्ट करें",
+              "साझा फ़ोल्डर में सेव करें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Unexpected attachments can contain malware. Confirm with the sender using a known contact method.",
+            "hi": "अप्रत्याशित अटैचमेंट में मैलवेयर हो सकता है। ज्ञात संपर्क माध्यम से भेजने वाले की पुष्टि करें।"
+          },
+          "id": "phishing-5"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A message says your account will be deleted in ten minutes unless you sign in. What is the best response?",
+            "hi": "संदेश कहता है कि दस मिनट में साइन-इन न करने पर खाता मिटा दिया जाएगा। सही प्रतिक्रिया क्या है?"
+          },
+          "options": {
+            "en": [
+              "Use its sign-in button",
+              "Visit the service using its official app or saved address",
+              "Send your password to support",
+              "Ignore browser security warnings"
+            ],
+            "hi": [
+              "उसके साइन-इन बटन का उपयोग करें",
+              "आधिकारिक ऐप या सुरक्षित पते से सेवा खोलें",
+              "सपोर्ट को पासवर्ड भेजें",
+              "ब्राउज़र चेतावनियों को अनदेखा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Fear and urgency are used to make people click fake login links. Navigate to the service independently.",
+            "hi": "डर और जल्दबाजी से नकली लॉगिन लिंक पर क्लिक करवाया जाता है। सेवा को स्वयं आधिकारिक तरीके से खोलें।"
+          },
+          "id": "phishing-6"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "You entered your password on a page reached through a suspicious email. What should you do first?",
+            "hi": "संदिग्ध ईमेल के लिंक से खुले पेज पर आपने पासवर्ड दर्ज कर दिया। सबसे पहले क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Wait to see if anything happens",
+              "Change it immediately on the real site and secure any reused accounts",
+              "Reply to the email",
+              "Delete your browser"
+            ],
+            "hi": [
+              "कुछ होने की प्रतीक्षा करें",
+              "असली वेबसाइट पर तुरंत पासवर्ड बदलें और दोबारा इस्तेमाल किए खातों को सुरक्षित करें",
+              "ईमेल का जवाब दें",
+              "ब्राउज़र मिटा दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Changing the exposed password promptly limits misuse; also enable MFA and report the incident.",
+            "hi": "उजागर पासवर्ड तुरंत बदलने से दुरुपयोग सीमित होता है; MFA चालू करें और घटना की रिपोर्ट करें।"
+          },
+          "id": "phishing-7"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A coworker sends an unusual request for gift cards from a new email address. What should you do?",
+            "hi": "सहकर्मी के नाम से नए ईमेल पते पर गिफ्ट कार्ड खरीदने का असामान्य अनुरोध आता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Buy them quickly",
+              "Reply asking for their password",
+              "Confirm with the coworker through a known channel",
+              "Send the gift card codes"
+            ],
+            "hi": [
+              "जल्दी खरीदें",
+              "उनका पासवर्ड मांगकर जवाब दें",
+              "ज्ञात माध्यम से सहकर्मी से पुष्टि करें",
+              "गिफ्ट कार्ड कोड भेजें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Compromised or spoofed accounts can impersonate colleagues. Verify unusual requests separately.",
+            "hi": "हैक या नकली खातों से सहकर्मियों का रूप लिया जा सकता है। असामान्य अनुरोध की अलग से पुष्टि करें।"
+          },
+          "id": "phishing-8"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A login page reached from an email asks for your password and recovery code together. What should you do?",
+            "hi": "ईमेल से खुले लॉगिन पेज पर पासवर्ड और रिकवरी कोड दोनों मांगे जाते हैं। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Enter both to avoid losing access",
+              "Close it and sign in through the official app or site",
+              "Send the recovery code to the sender",
+              "Use the page on another device"
+            ],
+            "hi": [
+              "एक्सेस बचाने के लिए दोनों दर्ज करें",
+              "पेज बंद करें और आधिकारिक ऐप या वेबसाइट से लॉगिन करें",
+              "भेजने वाले को रिकवरी कोड भेजें",
+              "दूसरे डिवाइस पर पेज खोलें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Recovery codes are sensitive credentials. Only use them on the genuine service you navigated to yourself.",
+            "hi": "रिकवरी कोड संवेदनशील प्रमाण होते हैं। इन्हें केवल स्वयं खोली गई असली सेवा पर उपयोग करें।"
+          },
+          "id": "phishing-9"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What should you do with a suspicious phishing message at work?",
+            "hi": "काम पर मिले संदिग्ध फ़िशिंग संदेश के साथ क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Forward it to everyone",
+              "Use the organization's report-phishing process",
+              "Click links to investigate",
+              "Delete it without telling anyone"
+            ],
+            "hi": [
+              "इसे सभी को भेजें",
+              "संस्था की फ़िशिंग रिपोर्ट प्रक्रिया अपनाएं",
+              "जांचने के लिए लिंक खोलें",
+              "किसी को बताए बिना मिटा दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Reporting helps security teams block similar messages and protect other people.",
+            "hi": "रिपोर्ट करने से सुरक्षा टीम मिलते-जुलते संदेश रोककर दूसरों को सुरक्षित कर सकती है।"
+          },
+          "id": "phishing-10"
+        }
+      ]
+    },
+    {
+      "id": "otp-banking",
+      "name": {
+        "en": "OTP & Banking Fraud",
+        "hi": "OTP और बैंकिंग धोखाधड़ी"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A caller claiming to be from your bank asks for an OTP to stop a transaction. What should you do?",
+            "hi": "बैंक का कर्मचारी बताने वाला व्यक्ति लेनदेन रोकने के लिए OTP मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Share it to stop the transaction",
+              "Share only the first digits",
+              "Never share it; contact the bank using its official number",
+              "Ask them to send another OTP"
+            ],
+            "hi": [
+              "लेनदेन रोकने के लिए OTP दें",
+              "केवल शुरुआती अंक दें",
+              "OTP साझा न करें; बैंक के आधिकारिक नंबर पर संपर्क करें",
+              "दूसरा OTP भेजने को कहें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Banks do not need your OTP over a call. Contact the bank yourself through a trusted channel.",
+            "hi": "बैंक को फोन पर आपका OTP नहीं चाहिए। विश्वसनीय माध्यम से स्वयं बैंक से संपर्क करें।"
+          },
+          "id": "otp-banking-1"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "You receive an OTP for a transaction you did not start. What is the safest response?",
+            "hi": "ऐसे लेनदेन का OTP आता है जिसे आपने शुरू नहीं किया। सबसे सुरक्षित कदम क्या है?"
+          },
+          "options": {
+            "en": [
+              "Tell the caller who asks about it",
+              "Do not share it; check your account through the official app and contact the bank",
+              "Reply to the SMS",
+              "Forward it to a friend"
+            ],
+            "hi": [
+              "पूछने वाले कॉलर को बताएं",
+              "साझा न करें; आधिकारिक ऐप में खाता जांचें और बैंक से संपर्क करें",
+              "SMS का जवाब दें",
+              "दोस्त को भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "An unexpected OTP may indicate an attempted transaction. Never disclose it and contact the bank.",
+            "hi": "अनपेक्षित OTP से लेनदेन का प्रयास पता चल सकता है। इसे साझा न करें और बैंक से संपर्क करें।"
+          },
+          "id": "otp-banking-2"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "Someone asks you to install an app to complete a KYC update over the phone. What should you do?",
+            "hi": "फोन पर KYC अपडेट पूरा करने के लिए कोई ऐप इंस्टॉल करने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Install it and share your screen",
+              "Install it only if they know your name",
+              "Decline and verify KYC requirements through the official bank app or branch",
+              "Give them remote access"
+            ],
+            "hi": [
+              "इंस्टॉल करके स्क्रीन साझा करें",
+              "नाम पता होने पर इंस्टॉल करें",
+              "मना करें और आधिकारिक बैंक ऐप या शाखा से KYC की पुष्टि करें",
+              "रिमोट एक्सेस दें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Unsolicited apps can enable remote control or steal data. Verify requests directly with the bank.",
+            "hi": "अनचाहे ऐप रिमोट नियंत्रण या डेटा चोरी कर सकते हैं। अनुरोध की सीधे बैंक से पुष्टि करें।"
+          },
+          "id": "otp-banking-3"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A text says your debit card will be blocked and asks you to call a number in the message. What should you do?",
+            "hi": "संदेश कहता है कि आपका डेबिट कार्ड बंद होगा और उसी में दिए नंबर पर कॉल करने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Call the number immediately",
+              "Use the number printed on your card or the bank's official website",
+              "Send your PIN by text",
+              "Click any link in the message"
+            ],
+            "hi": [
+              "तुरंत उसी नंबर पर कॉल करें",
+              "कार्ड पर छपे नंबर या बैंक की आधिकारिक वेबसाइट का नंबर उपयोग करें",
+              "PIN संदेश में भेजें",
+              "संदेश का कोई भी लिंक खोलें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Use contact details you obtain independently, not numbers supplied in suspicious messages.",
+            "hi": "संदिग्ध संदेश में दिए नंबर के बजाय संपर्क विवरण स्वयं आधिकारिक स्रोत से लें।"
+          },
+          "id": "otp-banking-4"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A caller asks you to read out your card CVV to reverse a failed payment. What should you do?",
+            "hi": "असफल भुगतान वापस करने के लिए कॉलर कार्ड का CVV बताने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Read it out",
+              "Share it if they know the transaction amount",
+              "Do not disclose it; check with your bank through an official channel",
+              "Send a photo of the card"
+            ],
+            "hi": [
+              "CVV बता दें",
+              "लेनदेन की राशि पता होने पर साझा करें",
+              "न बताएं; आधिकारिक माध्यम से बैंक से जांचें",
+              "कार्ड की फोटो भेजें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Never disclose card security details to unsolicited callers. A refund does not require revealing your CVV.",
+            "hi": "अनचाहे कॉल करने वालों को कार्ड सुरक्षा विवरण न बताएं। रिफंड के लिए CVV बताना आवश्यक नहीं है।"
+          },
+          "id": "otp-banking-5"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A person says they can raise your bank transfer limit if you share your net-banking password. What should you do?",
+            "hi": "कोई कहता है कि नेट बैंकिंग पासवर्ड देने पर वह ट्रांसफर सीमा बढ़ा देगा। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Share it temporarily",
+              "Share it after changing it",
+              "Refuse and use the bank's official app, website, or branch",
+              "Send only half the password"
+            ],
+            "hi": [
+              "अस्थायी रूप से साझा करें",
+              "बदलने के बाद साझा करें",
+              "मना करें और बैंक का आधिकारिक ऐप, वेबसाइट या शाखा उपयोग करें",
+              "आधा पासवर्ड भेजें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Legitimate bank staff will not ask for your password. Manage account changes through official banking channels.",
+            "hi": "बैंक कर्मचारी आपका पासवर्ड नहीं मांगेंगे। खाते में बदलाव आधिकारिक बैंकिंग माध्यम से करें।"
+          },
+          "id": "otp-banking-6"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What should you do if you accidentally shared an OTP with a caller?",
+            "hi": "यदि गलती से कॉलर को OTP बता दिया तो क्या करना चाहिए?"
+          },
+          "options": {
+            "en": [
+              "Wait until tomorrow",
+              "Immediately contact the bank, block affected services if needed, and report the transaction",
+              "Share the next OTP too",
+              "Delete the call log"
+            ],
+            "hi": [
+              "कल तक प्रतीक्षा करें",
+              "तुरंत बैंक से संपर्क करें, जरूरत हो तो सेवाएं ब्लॉक करें और लेनदेन रिपोर्ट करें",
+              "अगला OTP भी साझा करें",
+              "कॉल लॉग मिटा दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Fast reporting can help the bank respond to unauthorized activity and secure your account.",
+            "hi": "जल्दी रिपोर्ट करने से बैंक अनधिकृत गतिविधि पर कार्रवाई कर सकता है और खाता सुरक्षित कर सकता है।"
+          },
+          "id": "otp-banking-7"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A caller asks you to keep a banking conversation secret from your family and bank staff. What does this suggest?",
+            "hi": "कॉलर बैंकिंग बातचीत को परिवार और बैंक कर्मचारियों से गुप्त रखने को कहता है। यह किस बात का संकेत है?"
+          },
+          "options": {
+            "en": [
+              "It is a normal security process",
+              "It may be an attempt to isolate and pressure you; end the call and verify independently",
+              "They are protecting your account",
+              "You should transfer money to a safe account"
+            ],
+            "hi": [
+              "यह सामान्य सुरक्षा प्रक्रिया है",
+              "यह अलग-थलग कर दबाव बनाने का प्रयास हो सकता है; कॉल काटकर पुष्टि करें",
+              "वे आपका खाता सुरक्षित कर रहे हैं",
+              "सुरक्षित खाते में पैसे भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Secrecy and pressure are manipulation tactics. Pause and check the claim with the bank using an official channel.",
+            "hi": "गोपनीयता और दबाव हेरफेर के तरीके हैं। रुकें और आधिकारिक माध्यम से बैंक से जांचें।"
+          },
+          "id": "otp-banking-8"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "You notice an unauthorized debit in your bank account. What should you do first?",
+            "hi": "बैंक खाते में अनधिकृत कटौती दिखती है। सबसे पहले क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Delete the notification",
+              "Contact the bank immediately to block/report it and report cyber fraud through official channels",
+              "Wait for the merchant to call",
+              "Post your account number online"
+            ],
+            "hi": [
+              "सूचना मिटा दें",
+              "तुरंत बैंक से संपर्क करके इसे ब्लॉक/रिपोर्ट करें और आधिकारिक माध्यम से साइबर धोखाधड़ी रिपोर्ट करें",
+              "व्यापारी के कॉल की प्रतीक्षा करें",
+              "खाता नंबर ऑनलाइन पोस्ट करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Promptly contact your bank and report suspected financial cybercrime using official channels.",
+            "hi": "तुरंत बैंक से संपर्क करें और आधिकारिक माध्यम से संदिग्ध वित्तीय साइबर अपराध की रिपोर्ट करें।"
+          },
+          "id": "otp-banking-9"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "How should you handle a message asking you to update banking details through an unfamiliar link?",
+            "hi": "बैंकिंग विवरण अनजान लिंक से अपडेट करने को कहने वाला संदेश कैसे संभालें?"
+          },
+          "options": {
+            "en": [
+              "Open the link on mobile data",
+              "Enter details only if the page has a bank logo",
+              "Ignore the link and check using the bank's official app or website",
+              "Send details by reply"
+            ],
+            "hi": [
+              "मोबाइल डेटा पर लिंक खोलें",
+              "बैंक का लोगो होने पर जानकारी भरें",
+              "लिंक न खोलें; बैंक के आधिकारिक ऐप या वेबसाइट से जांचें",
+              "जवाब में विवरण भेजें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Logos can be copied. Access your bank independently using its official app or known address.",
+            "hi": "लोगो की नकल हो सकती है। बैंक का आधिकारिक ऐप या ज्ञात पता स्वयं खोलें।"
+          },
+          "id": "otp-banking-10"
+        }
+      ]
+    },
+    {
+      "id": "upi",
+      "name": {
+        "en": "UPI Scams",
+        "hi": "UPI धोखाधड़ी"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A buyer says you must enter your UPI PIN to receive their payment. What should you do?",
+            "hi": "खरीदार कहता है कि भुगतान पाने के लिए UPI PIN डालना होगा। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Enter the PIN",
+              "Scan their QR and enter the PIN",
+              "Refuse; receiving money does not require entering your UPI PIN",
+              "Share the PIN with the buyer"
+            ],
+            "hi": [
+              "PIN डालें",
+              "QR स्कैन करके PIN डालें",
+              "मना करें; पैसे पाने के लिए UPI PIN डालना नहीं पड़ता",
+              "खरीदार को PIN बताएं"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "A UPI PIN authorizes money leaving your account; it is not needed to receive money.",
+            "hi": "UPI PIN से आपके खाते से पैसे भेजे जाते हैं; पैसे पाने के लिए इसकी जरूरत नहीं होती।"
+          },
+          "id": "upi-1"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A collect request appears in your UPI app from an unknown person. What should you do?",
+            "hi": "UPI ऐप में अनजान व्यक्ति से पैसे मांगने का अनुरोध आता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Approve it to receive money",
+              "Check the amount and requester; decline if you did not expect it",
+              "Enter your PIN to see who sent it",
+              "Forward it to a contact"
+            ],
+            "hi": [
+              "पैसे पाने के लिए स्वीकार करें",
+              "राशि और अनुरोधकर्ता जांचें; अनपेक्षित हो तो अस्वीकार करें",
+              "भेजने वाले को देखने के लिए PIN डालें",
+              "संपर्क को भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "A collect request asks you to pay. Approve only if you recognize and intend the payment.",
+            "hi": "पैसे मांगने का अनुरोध आपसे भुगतान करने को कहता है। केवल पहचानने और भुगतान करने का इरादा होने पर स्वीकार करें।"
+          },
+          "id": "upi-2"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "Someone sends a screenshot claiming a UPI payment is complete, but no credit appears in your app. What should you trust?",
+            "hi": "कोई UPI भुगतान पूरा होने का स्क्रीनशॉट भेजता है, लेकिन ऐप में पैसे नहीं आए। किस पर भरोसा करें?"
+          },
+          "options": {
+            "en": [
+              "The screenshot",
+              "Their message",
+              "Your bank or UPI app transaction history",
+              "A confirmation call"
+            ],
+            "hi": [
+              "स्क्रीनशॉट पर",
+              "उनके संदेश पर",
+              "अपने बैंक या UPI ऐप के लेनदेन इतिहास पर",
+              "पुष्टि कॉल पर"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Screenshots can be altered. Confirm payments in your own bank or UPI transaction history.",
+            "hi": "स्क्रीनशॉट बदले जा सकते हैं। अपने बैंक या UPI ऐप के लेनदेन इतिहास में भुगतान जांचें।"
+          },
+          "id": "upi-3"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A stranger offers to help reverse a UPI payment and asks you to share your screen. What should you do?",
+            "hi": "अजनबी UPI भुगतान वापस कराने में मदद के नाम पर स्क्रीन साझा करने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Share it while hiding your balance",
+              "Decline and contact your bank or UPI app's official support",
+              "Install their screen-sharing app",
+              "Tell them your UPI PIN"
+            ],
+            "hi": [
+              "बैलेंस छिपाकर साझा करें",
+              "मना करें और बैंक या UPI ऐप के आधिकारिक सपोर्ट से संपर्क करें",
+              "उनका स्क्रीन शेयरिंग ऐप इंस्टॉल करें",
+              "UPI PIN बताएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Screen sharing can expose sensitive information and allow manipulation. Use official support.",
+            "hi": "स्क्रीन साझा करने से संवेदनशील जानकारी उजागर और हेरफेर हो सकती है। आधिकारिक सहायता लें।"
+          },
+          "id": "upi-4"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "You accidentally paid the wrong UPI ID. What is the appropriate next step?",
+            "hi": "गलती से गलत UPI ID पर भुगतान हो गया। अगला सही कदम क्या है?"
+          },
+          "options": {
+            "en": [
+              "Pay again to cancel it",
+              "Contact your bank or UPI app promptly and use its dispute process",
+              "Ask a stranger online to recover it",
+              "Share your PIN with the recipient"
+            ],
+            "hi": [
+              "रद्द करने के लिए फिर भुगतान करें",
+              "तुरंत बैंक या UPI ऐप से संपर्क करके विवाद प्रक्रिया अपनाएं",
+              "ऑनलाइन अजनबी से वापस दिलाने को कहें",
+              "प्राप्तकर्ता को PIN बताएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Contact your bank or app provider quickly; never pay a third party promising guaranteed recovery.",
+            "hi": "जल्दी बैंक या ऐप प्रदाता से संपर्क करें; पैसे वापस दिलाने का वादा करने वाले तीसरे पक्ष को भुगतान न करें।"
+          },
+          "id": "upi-5"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A merchant asks you to scan a QR code to receive a refund. The app displays a payment screen. What should you do?",
+            "hi": "व्यापारी रिफंड पाने के लिए QR स्कैन करने को कहता है, लेकिन ऐप भुगतान स्क्रीन दिखाता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Enter your PIN to receive the refund",
+              "Stop and verify with the merchant through a trusted channel",
+              "Approve it because the amount is small",
+              "Share the screen with the merchant"
+            ],
+            "hi": [
+              "रिफंड पाने के लिए PIN डालें",
+              "रुकें और विश्वसनीय माध्यम से व्यापारी की पुष्टि करें",
+              "राशि कम है इसलिए स्वीकार करें",
+              "व्यापारी से स्क्रीन साझा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Review the transaction wording and recipient. A payment request is not a refund credit.",
+            "hi": "लेनदेन का विवरण और प्राप्तकर्ता जांचें। भुगतान अनुरोध रिफंड जमा होना नहीं है।"
+          },
+          "id": "upi-6"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "Which detail should you verify before approving a UPI payment?",
+            "hi": "UPI भुगतान स्वीकार करने से पहले कौन सा विवरण जांचना चाहिए?"
+          },
+          "options": {
+            "en": [
+              "Only the app color",
+              "Recipient name and amount shown in the app",
+              "The sender's profile photo",
+              "The number of messages received"
+            ],
+            "hi": [
+              "केवल ऐप का रंग",
+              "ऐप में दिख रहा प्राप्तकर्ता का नाम और राशि",
+              "भेजने वाले की प्रोफाइल फोटो",
+              "मिले संदेशों की संख्या"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Always check the recipient and amount on the confirmation screen before entering your PIN.",
+            "hi": "PIN डालने से पहले पुष्टि स्क्रीन पर प्राप्तकर्ता और राशि हमेशा जांचें।"
+          },
+          "id": "upi-7"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A caller says to transfer your money to a 'safe account' to protect it from fraud. What should you do?",
+            "hi": "कॉलर धोखाधड़ी से बचाने के लिए पैसे 'सुरक्षित खाते' में भेजने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Transfer a small test amount",
+              "Do not transfer; hang up and call your bank using its official number",
+              "Ask them to send a QR code",
+              "Share your UPI PIN first"
+            ],
+            "hi": [
+              "पहले थोड़ी रकम भेजें",
+              "पैसे न भेजें; कॉल काटकर बैंक के आधिकारिक नंबर पर कॉल करें",
+              "QR कोड भेजने को कहें",
+              "पहले UPI PIN साझा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Fraudsters use fake safe-account stories to steal money. Banks do not ask customers to move funds this way.",
+            "hi": "धोखेबाज पैसे चुराने के लिए नकली सुरक्षित-खाते की कहानी बताते हैं। बैंक इस तरह पैसे भेजने को नहीं कहते।"
+          },
+          "id": "upi-8"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "You approved an unknown UPI collect request and money was debited. What should you do?",
+            "hi": "अनजान UPI अनुरोध स्वीकार किया और पैसे कट गए। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Wait a few days",
+              "Contact your bank and UPI provider immediately and report the fraud",
+              "Send more money to reverse it",
+              "Delete the UPI app"
+            ],
+            "hi": [
+              "कुछ दिन प्रतीक्षा करें",
+              "तुरंत बैंक और UPI प्रदाता से संपर्क करें और धोखाधड़ी रिपोर्ट करें",
+              "वापस पाने के लिए और पैसे भेजें",
+              "UPI ऐप मिटा दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Promptly report unauthorized debits to your bank and use official reporting channels.",
+            "hi": "अनधिकृत कटौती तुरंत बैंक को बताएं और आधिकारिक रिपोर्टिंग माध्यम अपनाएं।"
+          },
+          "id": "upi-9"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "Someone requests your UPI PIN to send you money. What is the correct response?",
+            "hi": "कोई आपको पैसे भेजने के लिए UPI PIN मांगता है। सही प्रतिक्रिया क्या है?"
+          },
+          "options": {
+            "en": [
+              "Share it once",
+              "Share only the last digit",
+              "Never share it; a sender does not need your PIN",
+              "Write it on the payment note"
+            ],
+            "hi": [
+              "एक बार बता दें",
+              "केवल अंतिम अंक बताएं",
+              "कभी साझा न करें; भेजने वाले को PIN नहीं चाहिए",
+              "भुगतान नोट में लिखें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Keep your UPI PIN secret. It authorizes payments from your account.",
+            "hi": "UPI PIN गोपनीय रखें। इससे आपके खाते से भुगतान अधिकृत होता है।"
+          },
+          "id": "upi-10"
+        }
+      ]
+    },
+    {
+      "id": "passwords",
+      "name": {
+        "en": "Passwords",
+        "hi": "पासवर्ड"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "Which password practice is safest?",
+            "hi": "पासवर्ड का कौन सा तरीका सबसे सुरक्षित है?"
+          },
+          "options": {
+            "en": [
+              "Reuse one password everywhere",
+              "Use a long, unique password for each account",
+              "Use your name and birth year",
+              "Share passwords with friends"
+            ],
+            "hi": [
+              "हर जगह एक पासवर्ड रखें",
+              "हर खाते के लिए लंबा और अलग पासवर्ड रखें",
+              "नाम और जन्म वर्ष उपयोग करें",
+              "दोस्तों को पासवर्ड बताएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unique passwords prevent one exposed account from unlocking others.",
+            "hi": "अलग-अलग पासवर्ड से एक खाते की जानकारी लीक होने पर अन्य खाते सुरक्षित रहते हैं।"
+          },
+          "id": "passwords-1"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "How can a password manager help?",
+            "hi": "पासवर्ड मैनेजर कैसे मदद कर सकता है?"
+          },
+          "options": {
+            "en": [
+              "It makes every password public",
+              "It stores and generates unique passwords securely",
+              "It removes the need to secure your device",
+              "It shares passwords automatically with callers"
+            ],
+            "hi": [
+              "यह सभी पासवर्ड सार्वजनिक करता है",
+              "यह अलग पासवर्ड सुरक्षित रख और बना सकता है",
+              "डिवाइस सुरक्षित करने की जरूरत खत्म करता है",
+              "कॉलर को अपने आप पासवर्ड भेजता है"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "A reputable password manager can create and store unique passwords; protect it with a strong master password and MFA.",
+            "hi": "विश्वसनीय पासवर्ड मैनेजर अलग पासवर्ड बना और रख सकता है; इसे मजबूत मास्टर पासवर्ड और MFA से सुरक्षित करें।"
+          },
+          "id": "passwords-2"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "You receive an alert that your password appeared in a data breach. What should you do?",
+            "hi": "सूचना मिलती है कि आपका पासवर्ड डेटा लीक में मिला है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Keep using it until prompted",
+              "Change it on the affected account and anywhere it was reused",
+              "Post it in a forum to check",
+              "Change only one character"
+            ],
+            "hi": [
+              "कहने तक उपयोग करते रहें",
+              "प्रभावित खाते और जहां दोबारा उपयोग किया वहां बदलें",
+              "जांचने के लिए फोरम पर डालें",
+              "केवल एक अक्षर बदलें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Replace exposed passwords with unique ones and enable multi-factor authentication.",
+            "hi": "उजागर पासवर्ड को अलग पासवर्ड से बदलें और मल्टी-फैक्टर प्रमाणीकरण चालू करें।"
+          },
+          "id": "passwords-3"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "Which is a safer way to create a memorable password?",
+            "hi": "याद रखने योग्य पासवर्ड बनाने का सुरक्षित तरीका कौन सा है?"
+          },
+          "options": {
+            "en": [
+              "A common quote and your name",
+              "A long, unique passphrase not used elsewhere",
+              "Your phone number",
+              "The word 'password' with 1 added"
+            ],
+            "hi": [
+              "आम कहावत और आपका नाम",
+              "लंबा, अलग पासफ़्रेज़ जिसका उपयोग कहीं और न हो",
+              "आपका फोन नंबर",
+              "password के बाद 1 जोड़ें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Long, unique passphrases are harder to guess, especially when not reused.",
+            "hi": "लंबे और अलग पासफ़्रेज़ का अनुमान लगाना कठिन होता है, खासकर जब वे दोबारा उपयोग न हों।"
+          },
+          "id": "passwords-4"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A website asks you to set a security question. Which answer is safest?",
+            "hi": "वेबसाइट सुरक्षा प्रश्न का उत्तर मांगती है। सबसे सुरक्षित उत्तर कौन सा है?"
+          },
+          "options": {
+            "en": [
+              "A fact visible on your social profile",
+              "A truthful public fact",
+              "A unique answer stored securely like a password",
+              "Your account password"
+            ],
+            "hi": [
+              "सोशल प्रोफाइल पर दिखने वाला तथ्य",
+              "सार्वजनिक सच्चा तथ्य",
+              "पासवर्ड की तरह सुरक्षित रखा अनोखा उत्तर",
+              "खाते का पासवर्ड"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Security answers can be guessed from public details; treat them as secret credentials.",
+            "hi": "सुरक्षा उत्तर सार्वजनिक जानकारी से अनुमानित हो सकते हैं; इन्हें गुप्त प्रमाण की तरह रखें।"
+          },
+          "id": "passwords-5"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "Where should you store a recovery code?",
+            "hi": "रिकवरी कोड कहां रखना चाहिए?"
+          },
+          "options": {
+            "en": [
+              "In a public post",
+              "In a secure password manager or another protected offline location",
+              "In a shared work chat",
+              "On a note attached to your device"
+            ],
+            "hi": [
+              "सार्वजनिक पोस्ट में",
+              "सुरक्षित पासवर्ड मैनेजर या संरक्षित ऑफलाइन जगह में",
+              "साझा कार्य चैट में",
+              "डिवाइस पर चिपकी पर्ची पर"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Recovery codes can bypass account protections, so keep them private and securely stored.",
+            "hi": "रिकवरी कोड खाते की सुरक्षा पार कर सकते हैं, इसलिए निजी और सुरक्षित रखें।"
+          },
+          "id": "passwords-6"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A support agent asks you to tell them your account password to fix a problem. What should you do?",
+            "hi": "सपोर्ट एजेंट समस्या ठीक करने के लिए खाते का पासवर्ड बताने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Tell them if they have a company badge",
+              "Refuse and use the service's official support process",
+              "Send it in a private message",
+              "Change it to a simple one first"
+            ],
+            "hi": [
+              "कंपनी बैज हो तो बता दें",
+              "मना करें और सेवा की आधिकारिक सपोर्ट प्रक्रिया अपनाएं",
+              "निजी संदेश में भेजें",
+              "पहले आसान पासवर्ड रखें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Legitimate support should not need your password. Never disclose it to another person.",
+            "hi": "असली सहायता टीम को आपका पासवर्ड नहीं चाहिए। इसे किसी अन्य व्यक्ति को न बताएं।"
+          },
+          "id": "passwords-7"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What does multi-factor authentication add to an account?",
+            "hi": "मल्टी-फैक्टर प्रमाणीकरण खाते में क्या जोड़ता है?"
+          },
+          "options": {
+            "en": [
+              "Another independent verification step",
+              "A public password",
+              "A way to skip updates",
+              "Automatic account sharing"
+            ],
+            "hi": [
+              "एक अतिरिक्त स्वतंत्र सत्यापन चरण",
+              "सार्वजनिक पासवर्ड",
+              "अपडेट छोड़ने का तरीका",
+              "खाता अपने आप साझा करना"
+            ]
+          },
+          "answer": 0,
+          "explanation": {
+            "en": "MFA requires another proof of identity, making a stolen password less useful to an attacker.",
+            "hi": "MFA पहचान का एक और प्रमाण मांगता है, जिससे चोरी हुआ पासवर्ड हमलावर के कम काम आता है।"
+          },
+          "id": "passwords-8"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "You are creating a password for an important account. Which should you avoid?",
+            "hi": "महत्वपूर्ण खाते के लिए पासवर्ड बनाते समय किससे बचें?"
+          },
+          "options": {
+            "en": [
+              "Using a unique passphrase",
+              "Using a password manager",
+              "Using the same password as your email account",
+              "Enabling MFA"
+            ],
+            "hi": [
+              "अलग पासफ़्रेज़ उपयोग करना",
+              "पासवर्ड मैनेजर उपयोग करना",
+              "ईमेल खाते वाला ही पासवर्ड रखना",
+              "MFA चालू करना"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Reusing a password lets an attacker try leaked credentials on other services.",
+            "hi": "पासवर्ड दोहराने से हमलावर लीक प्रमाणों को अन्य सेवाओं पर आजमा सकते हैं।"
+          },
+          "id": "passwords-9"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "You suspect someone else knows your password. What is the best response?",
+            "hi": "आपको संदेह है कि किसी और को आपका पासवर्ड पता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Wait for them to log in",
+              "Change it from the official service, sign out other sessions, and enable MFA",
+              "Send them a warning with your new password",
+              "Disable account alerts"
+            ],
+            "hi": [
+              "उनके लॉगिन की प्रतीक्षा करें",
+              "आधिकारिक सेवा पर बदलें, अन्य सत्र बंद करें और MFA चालू करें",
+              "नया पासवर्ड उन्हें चेतावनी में भेजें",
+              "खाता अलर्ट बंद करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Secure the account promptly, end unknown sessions, and use MFA to reduce further access.",
+            "hi": "खाते को तुरंत सुरक्षित करें, अनजान सत्र बंद करें और आगे के एक्सेस को रोकने के लिए MFA उपयोग करें।"
+          },
+          "id": "passwords-10"
+        }
+      ]
+    },
+    {
+      "id": "social-engineering",
+      "name": {
+        "en": "Social Engineering",
+        "hi": "सोशल इंजीनियरिंग"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A caller pressures you to act immediately and keep the call secret. What should you do?",
+            "hi": "कॉलर तुरंत कार्रवाई करने और कॉल गुप्त रखने का दबाव डालता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Follow the instructions",
+              "Pause, end the call, and verify through an official contact",
+              "Give a small amount first",
+              "Share an OTP to confirm identity"
+            ],
+            "hi": [
+              "निर्देश मानें",
+              "रुकें, कॉल समाप्त करें और आधिकारिक संपर्क से पुष्टि करें",
+              "पहले थोड़ी राशि दें",
+              "पहचान पुष्टि के लिए OTP साझा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Urgency and secrecy are common manipulation tactics. Take time and verify independently.",
+            "hi": "जल्दबाजी और गोपनीयता हेरफेर के आम तरीके हैं। समय लें और स्वयं पुष्टि करें।"
+          },
+          "id": "social-engineering-1"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "Someone follows you through a secure office door saying they forgot their badge. What should you do?",
+            "hi": "कोई बैज भूलने की बात कहकर सुरक्षित कार्यालय के दरवाजे से आपके पीछे अंदर आता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Hold the door because they look familiar",
+              "Politely direct them to reception or the approved access process",
+              "Share your badge",
+              "Let them use your computer"
+            ],
+            "hi": [
+              "पहचाने लगते हैं इसलिए दरवाजा रोकें",
+              "उन्हें रिसेप्शन या स्वीकृत प्रवेश प्रक्रिया की ओर भेजें",
+              "अपना बैज दें",
+              "कंप्यूटर उपयोग करने दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Tailgating bypasses physical access controls. Follow your organization's visitor procedures.",
+            "hi": "पीछे-पीछे प्रवेश करके भौतिक सुरक्षा तोड़ी जा सकती है। संस्था की आगंतुक प्रक्रिया अपनाएं।"
+          },
+          "id": "social-engineering-2"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A person claiming to be IT asks for your login code to fix your account. What should you do?",
+            "hi": "IT कर्मचारी बताने वाला व्यक्ति खाता ठीक करने के लिए लॉगिन कोड मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Give it to them",
+              "Refuse and contact IT through a known support channel",
+              "Send it after changing your password",
+              "Read only half of it"
+            ],
+            "hi": [
+              "कोड दे दें",
+              "मना करें और ज्ञात सहायता माध्यम से IT से संपर्क करें",
+              "पासवर्ड बदलकर कोड भेजें",
+              "आधा कोड बताएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "One-time login codes should not be shared. Verify support requests using a known channel.",
+            "hi": "एक बार उपयोग होने वाले लॉगिन कोड साझा न करें। ज्ञात माध्यम से सहायता अनुरोध की पुष्टि करें।"
+          },
+          "id": "social-engineering-3"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A stranger offers a free gift if you scan your badge and share your staff details. What is safest?",
+            "hi": "अजनबी बैज स्कैन करके कर्मचारी विवरण देने पर मुफ्त उपहार देता है। सुरक्षित कदम क्या है?"
+          },
+          "options": {
+            "en": [
+              "Share details because the gift is free",
+              "Decline and check the promotion with your organization",
+              "Send a photo of your badge",
+              "Use a personal account to share it"
+            ],
+            "hi": [
+              "उपहार मुफ्त है इसलिए विवरण दें",
+              "मना करें और संस्था से प्रचार की पुष्टि करें",
+              "बैज की फोटो भेजें",
+              "व्यक्तिगत खाते से साझा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unverified offers may be used to collect identity or workplace information.",
+            "hi": "अपुष्ट प्रस्तावों से पहचान या कार्यस्थल की जानकारी जुटाई जा सकती है।"
+          },
+          "id": "social-engineering-4"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A caller knows public details about you and asks for a confidential code. What should you remember?",
+            "hi": "कॉलर को आपके सार्वजनिक विवरण पता हैं और वह गोपनीय कोड मांगता है। क्या याद रखें?"
+          },
+          "options": {
+            "en": [
+              "Knowing details proves they are genuine",
+              "Public information can be used to sound convincing; never share the code",
+              "Give the code if they say your name",
+              "Ask them to guess your password"
+            ],
+            "hi": [
+              "विवरण पता होना असली होने का प्रमाण है",
+              "सार्वजनिक जानकारी से विश्वसनीय लगा जा सकता है; कोड साझा न करें",
+              "नाम बोलें तो कोड दें",
+              "पासवर्ड का अनुमान लगाने को कहें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Personal details may be publicly available and do not authenticate a caller.",
+            "hi": "व्यक्तिगत विवरण सार्वजनिक हो सकते हैं और कॉलर की पहचान प्रमाणित नहीं करते।"
+          },
+          "id": "social-engineering-5"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A delivery worker asks you to tell them a verification code sent to your phone. What should you do?",
+            "hi": "डिलीवरी कर्मी फोन पर आए सत्यापन कोड को बताने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Share it without reading the message",
+              "Read the code and decide later",
+              "Check the message purpose; never share account or payment codes",
+              "Send all recent codes"
+            ],
+            "hi": [
+              "संदेश पढ़े बिना साझा करें",
+              "कोड पढ़कर बाद में निर्णय लें",
+              "संदेश का उद्देश्य जांचें; खाता या भुगतान कोड साझा न करें",
+              "सभी हाल के कोड भेजें"
+            ]
+          },
+          "answer": 2,
+          "explanation": {
+            "en": "Codes may authorize account access or payments. Understand the purpose and keep sensitive codes private.",
+            "hi": "कोड खाते का एक्सेस या भुगतान अधिकृत कर सकते हैं। उद्देश्य समझें और संवेदनशील कोड निजी रखें।"
+          },
+          "id": "social-engineering-6"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "A manager emails an unusual request to urgently send confidential files to a new address. What should you do?",
+            "hi": "प्रबंधक के नाम से गोपनीय फाइलें नए पते पर तुरंत भेजने का असामान्य ईमेल आता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Send them immediately",
+              "Verify the request using a separate known communication channel",
+              "Reply asking for their password",
+              "Upload them to a public link"
+            ],
+            "hi": [
+              "तुरंत भेजें",
+              "अलग ज्ञात संचार माध्यम से अनुरोध की पुष्टि करें",
+              "पासवर्ड मांगकर जवाब दें",
+              "सार्वजनिक लिंक पर अपलोड करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Attackers impersonate authority to create urgency. Independently confirm sensitive requests before acting.",
+            "hi": "हमलावर जल्दबाजी के लिए अधिकारी होने का रूप लेते हैं। संवेदनशील अनुरोध पर कार्रवाई से पहले अलग से पुष्टि करें।"
+          },
+          "id": "social-engineering-7"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A caller says you will be arrested unless you transfer money immediately. What should you do?",
+            "hi": "कॉलर कहता है कि तुरंत पैसे न भेजने पर आपको गिरफ्तार कर लिया जाएगा। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Transfer money to settle it",
+              "Stay calm, end the call, and verify with the relevant agency using official details",
+              "Share your banking password",
+              "Follow instructions and do not tell anyone"
+            ],
+            "hi": [
+              "मामला निपटाने के लिए पैसे भेजें",
+              "शांत रहें, कॉल काटें और आधिकारिक विवरण से संबंधित एजेंसी की पुष्टि करें",
+              "बैंक पासवर्ड साझा करें",
+              "निर्देश मानें और किसी को न बताएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Threats and demands for immediate payment are coercive tactics. Verify independently and seek trusted help.",
+            "hi": "धमकी और तुरंत भुगतान की मांग दबाव के तरीके हैं। स्वयं पुष्टि करें और विश्वसनीय सहायता लें।"
+          },
+          "id": "social-engineering-8"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A caller asks you to install remote-access software so they can secure your computer. What is safest?",
+            "hi": "कॉलर कंप्यूटर सुरक्षित करने के लिए रिमोट-एक्सेस सॉफ्टवेयर इंस्टॉल करने को कहता है। सुरक्षित तरीका क्या है?"
+          },
+          "options": {
+            "en": [
+              "Install it and share access",
+              "Decline and contact the organization using its official support details",
+              "Install it but hide your files",
+              "Give access for five minutes"
+            ],
+            "hi": [
+              "इंस्टॉल करके एक्सेस दें",
+              "मना करें और आधिकारिक सहायता विवरण से संस्था से संपर्क करें",
+              "इंस्टॉल करें लेकिन फाइलें छिपाएं",
+              "पांच मिनट का एक्सेस दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unsolicited remote access can expose data and control your device. Verify support requests directly.",
+            "hi": "अनचाहा रिमोट एक्सेस डेटा उजागर कर सकता है और डिवाइस नियंत्रित कर सकता है। सहायता अनुरोध की सीधे पुष्टि करें।"
+          },
+          "id": "social-engineering-9"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "Someone asks you to bypass a normal approval step because the request is confidential. What should you do?",
+            "hi": "कोई अनुरोध गोपनीय बताकर सामान्य स्वीकृति चरण छोड़ने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Skip it to be helpful",
+              "Follow established procedures and confirm with an authorized person",
+              "Share your own approval credentials",
+              "Ask a coworker to approve without details"
+            ],
+            "hi": [
+              "मदद के लिए चरण छोड़ें",
+              "निर्धारित प्रक्रिया अपनाएं और अधिकृत व्यक्ति से पुष्टि करें",
+              "अपने स्वीकृति प्रमाण साझा करें",
+              "सहकर्मी से बिना विवरण मंजूरी लें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Procedures help prevent impersonation and unauthorized actions; don't bypass them under pressure.",
+            "hi": "प्रक्रियाएं पहचान की नकल और अनधिकृत कार्रवाई रोकती हैं; दबाव में इन्हें न छोड़ें।"
+          },
+          "id": "social-engineering-10"
+        }
+      ]
+    },
+    {
+      "id": "fake-websites",
+      "name": {
+        "en": "Fake Websites",
+        "hi": "नकली वेबसाइट"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What is the safest way to open your bank's website?",
+            "hi": "बैंक की वेबसाइट खोलने का सबसे सुरक्षित तरीका क्या है?"
+          },
+          "options": {
+            "en": [
+              "Click a link in an unexpected text",
+              "Type the known address yourself or use the official app",
+              "Use the first advertisement",
+              "Search for a login page in a message"
+            ],
+            "hi": [
+              "अनपेक्षित संदेश का लिंक खोलें",
+              "ज्ञात पता स्वयं टाइप करें या आधिकारिक ऐप उपयोग करें",
+              "पहले विज्ञापन का उपयोग करें",
+              "संदेश में लॉगिन पेज खोजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Independent navigation reduces the risk of landing on a lookalike login page.",
+            "hi": "स्वयं वेबसाइट खोलने से मिलते-जुलते नकली लॉगिन पेज का जोखिम घटता है।"
+          },
+          "id": "fake-websites-1"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A website URL has a misspelled brand name. What should you do?",
+            "hi": "वेबसाइट URL में ब्रांड नाम की वर्तनी गलत है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Log in if its design looks right",
+              "Do not enter information; check the official address independently",
+              "Share the URL with a friend to test it",
+              "Ignore the spelling"
+            ],
+            "hi": [
+              "डिजाइन सही लगे तो लॉगिन करें",
+              "जानकारी न भरें; आधिकारिक पता स्वयं जांचें",
+              "जांचने के लिए दोस्त को URL भेजें",
+              "वर्तनी अनदेखी करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Lookalike domains can impersonate real brands. Check the exact domain before entering data.",
+            "hi": "मिलते-जुलते डोमेन असली ब्रांड की नकल कर सकते हैं। जानकारी भरने से पहले सही डोमेन जांचें।"
+          },
+          "id": "fake-websites-2"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "Does a padlock icon alone prove that a website is legitimate?",
+            "hi": "क्या केवल ताला आइकन यह साबित करता है कि वेबसाइट असली है?"
+          },
+          "options": {
+            "en": [
+              "Yes, always",
+              "No; it indicates an encrypted connection, not that the site is trustworthy",
+              "Yes, if the page has a logo",
+              "Only on mobile"
+            ],
+            "hi": [
+              "हां, हमेशा",
+              "नहीं; यह एन्क्रिप्टेड कनेक्शन बताता है, साइट की विश्वसनीयता नहीं",
+              "हां, यदि लोगो है",
+              "केवल मोबाइल पर"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "HTTPS protects the connection but scammers can also use it. Verify the domain and source.",
+            "hi": "HTTPS कनेक्शन सुरक्षित करता है, लेकिन धोखेबाज भी इसका उपयोग कर सकते हैं। डोमेन और स्रोत जांचें।"
+          },
+          "id": "fake-websites-3"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A store's URL uses a strange extra word before the brand name. What should you do?",
+            "hi": "स्टोर URL में ब्रांड नाम से पहले एक अजीब अतिरिक्त शब्द है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Assume it is a regional site",
+              "Verify the domain from the brand's official source before buying",
+              "Enter card details to test it",
+              "Use it if a search ad shows it"
+            ],
+            "hi": [
+              "इसे क्षेत्रीय वेबसाइट मानें",
+              "खरीदने से पहले ब्रांड के आधिकारिक स्रोत से डोमेन जांचें",
+              "जांचने के लिए कार्ड विवरण भरें",
+              "सर्च विज्ञापन में दिखे तो उपयोग करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Extra words and subdomains can disguise impersonation. Confirm the domain through the brand's official source.",
+            "hi": "अतिरिक्त शब्द और सबडोमेन नकली पहचान छिपा सकते हैं। ब्रांड के आधिकारिक स्रोत से डोमेन पुष्टि करें।"
+          },
+          "id": "fake-websites-4"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A website shows a browser warning about an unsafe connection. What should you do?",
+            "hi": "वेबसाइट पर असुरक्षित कनेक्शन की ब्राउज़र चेतावनी दिखती है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Proceed and enter your password",
+              "Stop and leave the site",
+              "Disable browser security",
+              "Use a different password there"
+            ],
+            "hi": [
+              "आगे बढ़कर पासवर्ड दर्ज करें",
+              "रुकें और वेबसाइट छोड़ें",
+              "ब्राउज़र सुरक्षा बंद करें",
+              "वहां दूसरा पासवर्ड उपयोग करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Do not bypass security warnings, especially on pages requesting login or payment details.",
+            "hi": "सुरक्षा चेतावनी को पार न करें, विशेषकर लॉगिन या भुगतान विवरण मांगने वाले पेज पर।"
+          },
+          "id": "fake-websites-5"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A website's contact page has no real business details and only a free email address. What should you do before paying?",
+            "hi": "वेबसाइट पर वास्तविक संपर्क विवरण नहीं, केवल मुफ्त ईमेल पता है। भुगतान से पहले क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Pay because prices are low",
+              "Research the seller independently and use a trusted retailer if unsure",
+              "Send payment by gift card",
+              "Share identity documents"
+            ],
+            "hi": [
+              "कीमत कम है इसलिए भुगतान करें",
+              "विक्रेता की स्वतंत्र जांच करें; संदेह हो तो विश्वसनीय विक्रेता चुनें",
+              "गिफ्ट कार्ड से भुगतान करें",
+              "पहचान दस्तावेज दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Missing or unverifiable contact details are a warning sign; research the business before purchasing.",
+            "hi": "गायब या अपुष्ट संपर्क विवरण चेतावनी संकेत हैं; खरीदने से पहले व्यवसाय की जांच करें।"
+          },
+          "id": "fake-websites-6"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "You entered your credentials on a fake login page. What should you do?",
+            "hi": "नकली लॉगिन पेज पर आपने प्रमाण दर्ज किए। अब क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Wait for an alert",
+              "Change the password on the real service, secure reused accounts, and enable MFA",
+              "Delete the browser history only",
+              "Reply to the website"
+            ],
+            "hi": [
+              "अलर्ट की प्रतीक्षा करें",
+              "असली सेवा पर पासवर्ड बदलें, दोहराए खाते सुरक्षित करें और MFA चालू करें",
+              "केवल ब्राउज़र इतिहास मिटाएं",
+              "वेबसाइट को जवाब दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Assume the credentials are exposed and secure affected accounts immediately.",
+            "hi": "प्रमाण उजागर मानकर प्रभावित खातों को तुरंत सुरक्षित करें।"
+          },
+          "id": "fake-websites-7"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A search result is marked as an advertisement and leads to a bank login page. What is safest?",
+            "hi": "सर्च परिणाम विज्ञापन के रूप में चिह्नित है और बैंक लॉगिन पेज पर ले जाता है। सुरक्षित तरीका क्या है?"
+          },
+          "options": {
+            "en": [
+              "Enter your details because it is at the top",
+              "Use the bank's official app or type its known address instead",
+              "Trust it if the logo is correct",
+              "Share the link in a group"
+            ],
+            "hi": [
+              "सबसे ऊपर है इसलिए जानकारी भरें",
+              "बैंक का आधिकारिक ऐप या ज्ञात पता स्वयं उपयोग करें",
+              "लोगो सही है तो भरोसा करें",
+              "लिंक समूह में भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Search ads can lead to impersonation sites. Navigate through a trusted, known route.",
+            "hi": "सर्च विज्ञापन नकली साइट पर ले जा सकते हैं। विश्वसनीय ज्ञात माध्यम से वेबसाइट खोलें।"
+          },
+          "id": "fake-websites-8"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "Before entering payment details, what should you check on a shopping website?",
+            "hi": "शॉपिंग वेबसाइट पर भुगतान जानकारी भरने से पहले क्या जांचें?"
+          },
+          "options": {
+            "en": [
+              "Only its colors",
+              "The exact domain, seller identity, and secure checkout details",
+              "Whether it has a countdown timer",
+              "If it asks for your email password"
+            ],
+            "hi": [
+              "केवल रंग",
+              "सही डोमेन, विक्रेता की पहचान और सुरक्षित भुगतान विवरण",
+              "काउंटडाउन टाइमर है या नहीं",
+              "ईमेल पासवर्ड मांगा है या नहीं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Check the exact address and seller; avoid pages asking for unrelated credentials.",
+            "hi": "सही पता और विक्रेता जांचें; असंबंधित प्रमाण मांगने वाले पेज से बचें।"
+          },
+          "id": "fake-websites-9"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A link opens a site that redirects through several unfamiliar pages. What should you do?",
+            "hi": "लिंक कई अनजान पेजों से होकर वेबसाइट खोलता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Continue to the final page",
+              "Close it and access the service using its official address",
+              "Enter a temporary password",
+              "Allow all notifications"
+            ],
+            "hi": [
+              "अंतिम पेज तक जाएं",
+              "बंद करें और आधिकारिक पते से सेवा खोलें",
+              "अस्थायी पासवर्ड दर्ज करें",
+              "सभी सूचनाएं अनुमति दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unexpected redirects can lead to malicious or deceptive pages. Avoid them and navigate independently.",
+            "hi": "अनपेक्षित रीडायरेक्ट हानिकारक या भ्रामक पेज पर ले जा सकते हैं। इनसे बचें और स्वयं वेबसाइट खोलें।"
+          },
+          "id": "fake-websites-10"
+        }
+      ]
+    },
+    {
+      "id": "shopping",
+      "name": {
+        "en": "Shopping Scams",
+        "hi": "शॉपिंग धोखाधड़ी"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "An unknown shop offers a new phone at an unbelievable discount and requests payment to a personal UPI ID. What should you do?",
+            "hi": "अनजान दुकान नया फोन अविश्वसनीय छूट पर देकर निजी UPI ID पर भुगतान मांगती है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Pay quickly before the offer ends",
+              "Verify the seller and use a trusted payment method or retailer",
+              "Send your card PIN",
+              "Pay and trust the receipt"
+            ],
+            "hi": [
+              "ऑफर खत्म होने से पहले भुगतान करें",
+              "विक्रेता जांचें और विश्वसनीय भुगतान माध्यम या दुकान चुनें",
+              "कार्ड PIN भेजें",
+              "रसीद पर भरोसा करके भुगतान करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Extreme discounts and personal payment requests can signal a scam. Verify before paying.",
+            "hi": "अत्यधिक छूट और निजी भुगतान अनुरोध धोखाधड़ी के संकेत हो सकते हैं। भुगतान से पहले जांचें।"
+          },
+          "id": "shopping-1"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A seller on social media insists on payment before sharing any product or business details. What is safest?",
+            "hi": "सोशल मीडिया विक्रेता उत्पाद या व्यवसाय विवरण दिए बिना पहले भुगतान पर जोर देता है। सुरक्षित तरीका क्या है?"
+          },
+          "options": {
+            "en": [
+              "Pay a small deposit",
+              "Ask for a secure platform checkout and verify seller history",
+              "Send your ID as a guarantee",
+              "Pay by gift card"
+            ],
+            "hi": [
+              "थोड़ी अग्रिम राशि दें",
+              "सुरक्षित प्लेटफॉर्म भुगतान मांगें और विक्रेता का इतिहास जांचें",
+              "गारंटी के लिए ID भेजें",
+              "गिफ्ट कार्ड से भुगतान करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Use protected checkout methods and check seller reputation before sending money.",
+            "hi": "सुरक्षित भुगतान और खरीदार सुरक्षा उपयोग करें; पैसे भेजने से पहले विक्रेता की प्रतिष्ठा जांचें।"
+          },
+          "id": "shopping-2"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A message says a parcel is held and asks you to pay a tiny fee through a link. What should you do?",
+            "hi": "संदेश कहता है कि पार्सल रुका है और लिंक से छोटी फीस मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Pay the fee",
+              "Check tracking in the delivery company's official app or site",
+              "Enter your card details to see the parcel",
+              "Reply with your address and OTP"
+            ],
+            "hi": [
+              "फीस दें",
+              "डिलीवरी कंपनी के आधिकारिक ऐप या साइट पर ट्रैकिंग जांचें",
+              "पार्सल देखने के लिए कार्ड विवरण भरें",
+              "पता और OTP जवाब में दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unexpected delivery-fee links can be phishing. Verify the shipment with the official carrier.",
+            "hi": "अनपेक्षित डिलीवरी फीस लिंक फ़िशिंग हो सकते हैं। आधिकारिक सेवा से शिपमेंट जांचें।"
+          },
+          "id": "shopping-3"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A seller asks you to pay outside a marketplace to get a lower price. What should you do?",
+            "hi": "कम कीमत के लिए विक्रेता मार्केटप्लेस से बाहर भुगतान करने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Agree to save money",
+              "Keep payment on the platform to retain buyer protections",
+              "Send cash to a courier",
+              "Share your account password"
+            ],
+            "hi": [
+              "पैसे बचाने के लिए मानें",
+              "खरीदार सुरक्षा के लिए प्लेटफॉर्म पर भुगतान करें",
+              "कूरियर को नकद भेजें",
+              "खाता पासवर्ड बताएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Off-platform payments may remove dispute protections and make recovery difficult.",
+            "hi": "प्लेटफॉर्म से बाहर भुगतान विवाद सुरक्षा हटा सकता है और पैसे वापस पाना कठिन करता है।"
+          },
+          "id": "shopping-4"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A website has many identical five-star reviews posted on the same day. What should you do?",
+            "hi": "वेबसाइट पर एक ही दिन में कई समान पांच-सितारा समीक्षाएं हैं। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Assume the product is genuine",
+              "Look for independent reviews and verify the seller",
+              "Post your card number to ask",
+              "Buy several items"
+            ],
+            "hi": [
+              "उत्पाद असली मानें",
+              "स्वतंत्र समीक्षाएं खोजें और विक्रेता जांचें",
+              "पूछने के लिए कार्ड नंबर पोस्ट करें",
+              "कई सामान खरीदें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Review patterns can be manipulated. Check independent sources and seller information.",
+            "hi": "समीक्षाओं में हेरफेर हो सकता है। स्वतंत्र स्रोत और विक्रेता जानकारी जांचें।"
+          },
+          "id": "shopping-5"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A store asks for your email password to apply a discount. What should you do?",
+            "hi": "छूट देने के लिए दुकान आपका ईमेल पासवर्ड मांगती है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Provide it temporarily",
+              "Do not share it; no legitimate store needs your email password",
+              "Change it after purchase",
+              "Give a password you use elsewhere"
+            ],
+            "hi": [
+              "अस्थायी रूप से दें",
+              "साझा न करें; असली दुकान को ईमेल पासवर्ड नहीं चाहिए",
+              "खरीद के बाद बदलें",
+              "कहीं और उपयोग किया पासवर्ड दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Never disclose account passwords to sellers; use only the information needed for a purchase.",
+            "hi": "विक्रेता को खाते का पासवर्ड कभी न बताएं; खरीद के लिए जरूरी जानकारी ही दें।"
+          },
+          "id": "shopping-6"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What should you do when a shopping site asks for a one-time banking OTP by phone?",
+            "hi": "शॉपिंग साइट फोन पर बैंकिंग OTP मांगती है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Read it aloud",
+              "Do not share it; complete payment only through your bank's secure flow",
+              "Send it in chat",
+              "Share it if the caller knows the order"
+            ],
+            "hi": [
+              "फोन पर बता दें",
+              "साझा न करें; बैंक की सुरक्षित प्रक्रिया से ही भुगतान करें",
+              "चैट में भेजें",
+              "ऑर्डर पता हो तो साझा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Do not disclose OTPs to people; enter them only in the expected official payment flow you initiated.",
+            "hi": "OTP किसी व्यक्ति को न बताएं; केवल अपने शुरू किए आधिकारिक भुगतान चरण में दर्ज करें।"
+          },
+          "id": "shopping-7"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "You paid an online seller but received no confirmation or product. What should you do?",
+            "hi": "ऑनलाइन विक्रेता को भुगतान किया, लेकिन पुष्टि या सामान नहीं मिला। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Pay again to confirm",
+              "Contact the platform and payment provider through official channels and preserve records",
+              "Send your PIN to the seller",
+              "Delete the order details"
+            ],
+            "hi": [
+              "पुष्टि के लिए फिर भुगतान करें",
+              "आधिकारिक माध्यम से प्लेटफॉर्म और भुगतान प्रदाता से संपर्क करें और रिकॉर्ड रखें",
+              "विक्रेता को PIN भेजें",
+              "ऑर्डर विवरण मिटाएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Preserve receipts and messages, report the issue to the platform and payment provider, and avoid further payments.",
+            "hi": "रसीदें और संदेश सुरक्षित रखें, प्लेटफॉर्म और भुगतान प्रदाता को रिपोर्ट करें तथा आगे भुगतान न करें।"
+          },
+          "id": "shopping-8"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A seller asks for your card number, expiry, CVV, and bank OTP in a chat. What should you do?",
+            "hi": "विक्रेता चैट में कार्ड नंबर, समाप्ति तारीख, CVV और बैंक OTP मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Send them to complete checkout",
+              "Refuse and use a secure checkout from a verified seller",
+              "Send only the CVV",
+              "Share details in a disappearing message"
+            ],
+            "hi": [
+              "चेकआउट के लिए भेजें",
+              "मना करें और सत्यापित विक्रेता का सुरक्षित भुगतान उपयोग करें",
+              "केवल CVV भेजें",
+              "गायब होने वाले संदेश में भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Do not send payment credentials in chat. Use a secure payment page and never disclose OTPs.",
+            "hi": "भुगतान प्रमाण चैट में न भेजें। सुरक्षित भुगतान पेज उपयोग करें और OTP कभी न बताएं।"
+          },
+          "id": "shopping-9"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "How should you verify a return or refund message?",
+            "hi": "रिटर्न या रिफंड संदेश की पुष्टि कैसे करें?"
+          },
+          "options": {
+            "en": [
+              "Click the link in the message",
+              "Check the order in the retailer's official app or contact its verified support",
+              "Share your bank PIN",
+              "Install a refund app sent by the seller"
+            ],
+            "hi": [
+              "संदेश का लिंक खोलें",
+              "रिटेलर के आधिकारिक ऐप में ऑर्डर जांचें या सत्यापित सहायता से संपर्क करें",
+              "बैंक PIN साझा करें",
+              "विक्रेता का भेजा रिफंड ऐप इंस्टॉल करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Use the retailer's official order page and support contacts to verify refunds.",
+            "hi": "रिफंड की पुष्टि के लिए रिटेलर का आधिकारिक ऑर्डर पेज और सहायता संपर्क उपयोग करें।"
+          },
+          "id": "shopping-10"
+        }
+      ]
+    },
+    {
+      "id": "public-wifi",
+      "name": {
+        "en": "Public Wi-Fi",
+        "hi": "सार्वजनिक Wi-Fi"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What is safest when using open public Wi-Fi?",
+            "hi": "खुले सार्वजनिक Wi-Fi पर सबसे सुरक्षित व्यवहार क्या है?"
+          },
+          "options": {
+            "en": [
+              "Access banking accounts",
+              "Avoid sensitive logins and use a trusted mobile connection for important transactions",
+              "Turn off device updates forever",
+              "Share files with everyone"
+            ],
+            "hi": [
+              "बैंकिंग खाते खोलें",
+              "संवेदनशील लॉगिन से बचें और जरूरी लेनदेन के लिए विश्वसनीय मोबाइल कनेक्शन लें",
+              "डिवाइस अपडेट हमेशा बंद करें",
+              "सभी के साथ फाइल साझा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Avoid sensitive activity on networks you do not control; use a trusted connection when possible.",
+            "hi": "अपने नियंत्रण से बाहर नेटवर्क पर संवेदनशील काम न करें; संभव हो तो विश्वसनीय कनेक्शन लें।"
+          },
+          "id": "public-wifi-1"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A Wi-Fi network named like a cafe's official network has no password. What should you do?",
+            "hi": "कैफे के आधिकारिक नाम जैसा Wi-Fi नेटवर्क बिना पासवर्ड दिखता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Connect and enter account passwords",
+              "Confirm the exact network name with staff before connecting",
+              "Use the strongest signal regardless of name",
+              "Turn on file sharing"
+            ],
+            "hi": [
+              "जुड़कर खाते के पासवर्ड भरें",
+              "जुड़ने से पहले कर्मचारियों से सही नेटवर्क नाम पूछें",
+              "नाम की परवाह किए बिना तेज सिग्नल चुनें",
+              "फाइल शेयरिंग चालू करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "A lookalike hotspot can capture traffic or imitate a legitimate network. Confirm the network with staff.",
+            "hi": "नकली हॉटस्पॉट ट्रैफिक पकड़ या असली नेटवर्क की नकल कर सकता है। कर्मचारियों से नाम पुष्टि करें।"
+          },
+          "id": "public-wifi-2"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "Should you allow your laptop to be discoverable on public Wi-Fi?",
+            "hi": "क्या सार्वजनिक Wi-Fi पर लैपटॉप को खोजे जाने की अनुमति देनी चाहिए?"
+          },
+          "options": {
+            "en": [
+              "Yes, for convenience",
+              "No; turn off discovery and file sharing on public networks",
+              "Only when using banking",
+              "Yes, if the network is free"
+            ],
+            "hi": [
+              "हां, सुविधा के लिए",
+              "नहीं; सार्वजनिक नेटवर्क पर खोज और फाइल शेयरिंग बंद करें",
+              "केवल बैंकिंग के समय",
+              "हां, यदि नेटवर्क मुफ्त है"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Disabling discovery and sharing reduces exposure to nearby devices on public networks.",
+            "hi": "खोज और साझाकरण बंद करने से सार्वजनिक नेटवर्क पर आसपास के उपकरणों के सामने जोखिम घटता है।"
+          },
+          "id": "public-wifi-3"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A public Wi-Fi login page asks for your email password. What should you do?",
+            "hi": "सार्वजनिक Wi-Fi लॉगिन पेज ईमेल पासवर्ड मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Enter it to connect",
+              "Do not provide it; use a legitimate access method or mobile data",
+              "Use your bank password instead",
+              "Share it only once"
+            ],
+            "hi": [
+              "कनेक्ट होने के लिए भरें",
+              "न दें; वैध एक्सेस तरीका या मोबाइल डेटा उपयोग करें",
+              "बैंक पासवर्ड उपयोग करें",
+              "केवल एक बार साझा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "A hotspot should not need your email account password. Avoid giving unrelated credentials.",
+            "hi": "हॉटस्पॉट को ईमेल खाते का पासवर्ड नहीं चाहिए। असंबंधित प्रमाण न दें।"
+          },
+          "id": "public-wifi-4"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What should you do after using a public Wi-Fi hotspot?",
+            "hi": "सार्वजनिक Wi-Fi हॉटस्पॉट उपयोग करने के बाद क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Leave auto-connect enabled",
+              "Disconnect and remove the network if you no longer need it",
+              "Keep file sharing on",
+              "Save banking passwords on the shared device"
+            ],
+            "hi": [
+              "ऑटो-कनेक्ट चालू छोड़ें",
+              "डिस्कनेक्ट करें और जरूरत न हो तो नेटवर्क हटाएं",
+              "फाइल शेयरिंग चालू रखें",
+              "साझा डिवाइस पर बैंकिंग पासवर्ड सेव करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Disconnecting and forgetting unused networks can prevent automatic connections to unsafe hotspots.",
+            "hi": "डिस्कनेक्ट करके अनावश्यक नेटवर्क हटाने से असुरक्षित हॉटस्पॉट से अपने आप जुड़ना रोका जा सकता है।"
+          },
+          "id": "public-wifi-5"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A browser warning appears while you use public Wi-Fi to visit a website. What should you do?",
+            "hi": "सार्वजनिक Wi-Fi पर वेबसाइट खोलते समय ब्राउज़र चेतावनी दिखाता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Ignore it because the network is public",
+              "Stop and avoid entering information on the site",
+              "Disable the warning",
+              "Enter details using private browsing"
+            ],
+            "hi": [
+              "अनदेखा करें क्योंकि नेटवर्क सार्वजनिक है",
+              "रुकें और वेबसाइट पर जानकारी न भरें",
+              "चेतावनी बंद करें",
+              "प्राइवेट ब्राउज़िंग में विवरण भरें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Private browsing does not make an unsafe connection trustworthy. Do not bypass security warnings.",
+            "hi": "प्राइवेट ब्राउज़िंग असुरक्षित कनेक्शन को विश्वसनीय नहीं बनाती। सुरक्षा चेतावनी पार न करें।"
+          },
+          "id": "public-wifi-6"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "You must access a sensitive work resource while traveling. What should you use?",
+            "hi": "यात्रा के दौरान संवेदनशील कार्य संसाधन खोलना जरूरी है। क्या उपयोग करें?"
+          },
+          "options": {
+            "en": [
+              "Any free hotspot",
+              "Your organization's approved secure access method and trusted network",
+              "A stranger's phone hotspot without asking",
+              "A shared public computer"
+            ],
+            "hi": [
+              "कोई भी मुफ्त हॉटस्पॉट",
+              "संस्था की स्वीकृत सुरक्षित पहुंच विधि और विश्वसनीय नेटवर्क",
+              "बिना पूछे अजनबी का हॉटस्पॉट",
+              "सार्वजनिक साझा कंप्यूटर"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Follow workplace security guidance and use approved protected access for sensitive resources.",
+            "hi": "कार्यस्थल सुरक्षा निर्देश मानें और संवेदनशील संसाधनों के लिए स्वीकृत सुरक्षित पहुंच उपयोग करें।"
+          },
+          "id": "public-wifi-7"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A stranger offers a USB charging cable at an airport. What is safest?",
+            "hi": "एयरपोर्ट पर अजनबी USB चार्जिंग केबल देता है। सबसे सुरक्षित क्या है?"
+          },
+          "options": {
+            "en": [
+              "Connect it to your unlocked phone",
+              "Use your own charger and a power outlet or charge-only adapter",
+              "Enable file transfer",
+              "Share your unlock code"
+            ],
+            "hi": [
+              "अनलॉक फोन में लगाएं",
+              "अपना चार्जर और बिजली सॉकेट या केवल चार्जिंग एडेप्टर उपयोग करें",
+              "फाइल ट्रांसफर चालू करें",
+              "अनलॉक कोड बताएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Use trusted charging equipment and avoid data connections from unknown accessories.",
+            "hi": "विश्वसनीय चार्जिंग उपकरण उपयोग करें और अनजान एक्सेसरी के डेटा कनेक्शन से बचें।"
+          },
+          "id": "public-wifi-8"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What is a safer alternative to using an unknown hotspot for banking?",
+            "hi": "बैंकिंग के लिए अनजान हॉटस्पॉट का सुरक्षित विकल्प क्या है?"
+          },
+          "options": {
+            "en": [
+              "Use the unknown hotspot with a short password",
+              "Use mobile data or another trusted secure connection",
+              "Use a public computer",
+              "Ask a stranger to log in for you"
+            ],
+            "hi": [
+              "छोटे पासवर्ड वाला अनजान हॉटस्पॉट उपयोग करें",
+              "मोबाइल डेटा या अन्य विश्वसनीय सुरक्षित कनेक्शन उपयोग करें",
+              "सार्वजनिक कंप्यूटर लें",
+              "अजनबी से लॉगिन करवाएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "A trusted mobile connection is preferable for sensitive transactions when the hotspot cannot be verified.",
+            "hi": "हॉटस्पॉट की पुष्टि न हो तो संवेदनशील लेनदेन के लिए विश्वसनीय मोबाइल कनेक्शन बेहतर है।"
+          },
+          "id": "public-wifi-9"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A site asks you to install a certificate or profile to use free Wi-Fi. What should you do?",
+            "hi": "मुफ्त Wi-Fi उपयोग करने के लिए साइट प्रमाणपत्र या प्रोफाइल इंस्टॉल करने को कहती है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Install it without checking",
+              "Do not install unexpected profiles; confirm with the venue's official support",
+              "Install it and enter all passwords",
+              "Disable device protections"
+            ],
+            "hi": [
+              "बिना जांच इंस्टॉल करें",
+              "अनपेक्षित प्रोफाइल इंस्टॉल न करें; स्थान की आधिकारिक सहायता से पुष्टि करें",
+              "इंस्टॉल कर सभी पासवर्ड भरें",
+              "डिवाइस सुरक्षा बंद करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Profiles and certificates can change device trust settings. Install only when verified and necessary.",
+            "hi": "प्रोफाइल और प्रमाणपत्र डिवाइस की भरोसा सेटिंग बदल सकते हैं। केवल पुष्टि और जरूरत पर इंस्टॉल करें।"
+          },
+          "id": "public-wifi-10"
+        }
+      ]
+    },
+    {
+      "id": "jobs",
+      "name": {
+        "en": "Job Scams",
+        "hi": "नौकरी धोखाधड़ी"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A recruiter asks for a registration fee before an interview. What should you do?",
+            "hi": "रिक्रूटर इंटरव्यू से पहले पंजीकरण शुल्क मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Pay because the amount is small",
+              "Verify the company through official sources and do not pay suspicious upfront fees",
+              "Send bank credentials",
+              "Ask for a discount"
+            ],
+            "hi": [
+              "राशि कम है इसलिए भुगतान करें",
+              "आधिकारिक स्रोत से कंपनी जांचें और संदिग्ध अग्रिम फीस न दें",
+              "बैंक प्रमाण भेजें",
+              "छूट मांगें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Upfront fees for a promised job are a warning sign. Verify the employer independently.",
+            "hi": "नौकरी के वादे पर अग्रिम फीस चेतावनी संकेत है। नियोक्ता की स्वतंत्र जांच करें।"
+          },
+          "id": "jobs-1"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A work-from-home offer promises unusually high pay for simple tasks and asks for a deposit. What is safest?",
+            "hi": "वर्क-फ्रॉम-होम ऑफर आसान काम के लिए बहुत अधिक वेतन और जमा राशि मांगता है। सुरक्षित तरीका क्या है?"
+          },
+          "options": {
+            "en": [
+              "Pay the deposit to reserve the role",
+              "Research the employer and decline payment demands before employment",
+              "Send your OTP",
+              "Borrow money to pay quickly"
+            ],
+            "hi": [
+              "पद सुरक्षित करने के लिए जमा राशि दें",
+              "नियोक्ता जांचें और नौकरी से पहले भुगतान मांगने से मना करें",
+              "OTP भेजें",
+              "जल्दी भुगतान के लिए उधार लें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unrealistic pay plus upfront deposits commonly indicate a fake job offer.",
+            "hi": "अविश्वसनीय वेतन और अग्रिम जमा नकली नौकरी प्रस्ताव के आम संकेत हैं।"
+          },
+          "id": "jobs-2"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A recruiter contacts you only through a personal messaging account and will not name the employer. What should you do?",
+            "hi": "रिक्रूटर केवल निजी मैसेजिंग खाते से संपर्क करता है और नियोक्ता का नाम नहीं बताता। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Send your resume and ID immediately",
+              "Ask for verifiable company details and check them independently",
+              "Pay a background-check fee",
+              "Share your bank account password"
+            ],
+            "hi": [
+              "तुरंत रिज्यूमे और ID भेजें",
+              "सत्यापित कंपनी विवरण मांगें और स्वयं जांचें",
+              "बैकग्राउंड जांच फीस दें",
+              "बैंक पासवर्ड साझा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Confirm the employer, recruiter, and vacancy through official company channels before sharing sensitive data.",
+            "hi": "संवेदनशील जानकारी देने से पहले आधिकारिक कंपनी माध्यम से नियोक्ता, रिक्रूटर और पद की पुष्टि करें।"
+          },
+          "id": "jobs-3"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A job application form asks for your bank PIN and OTP before an interview. What should you do?",
+            "hi": "इंटरव्यू से पहले नौकरी आवेदन फॉर्म बैंक PIN और OTP मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Fill them in to prove identity",
+              "Do not provide them; report the request and verify the employer",
+              "Send only the OTP",
+              "Use a friend's banking details"
+            ],
+            "hi": [
+              "पहचान के लिए भरें",
+              "न दें; अनुरोध रिपोर्ट करें और नियोक्ता की पुष्टि करें",
+              "केवल OTP भेजें",
+              "दोस्त के बैंक विवरण उपयोग करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Employers do not need your PIN or OTP. These credentials must remain private.",
+            "hi": "नियोक्ता को आपका PIN या OTP नहीं चाहिए। ये प्रमाण गोपनीय रखें।"
+          },
+          "id": "jobs-4"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A recruiter says you must buy training materials from a specific link before getting hired. What should you do?",
+            "hi": "रिक्रूटर नौकरी से पहले दिए लिंक से प्रशिक्षण सामग्री खरीदने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Buy it immediately",
+              "Verify the role and requirement through the employer's official website",
+              "Send payment by gift card",
+              "Share your account password"
+            ],
+            "hi": [
+              "तुरंत खरीदें",
+              "नियोक्ता की आधिकारिक वेबसाइट से पद और जरूरत जांचें",
+              "गिफ्ट कार्ड से भुगतान करें",
+              "खाते का पासवर्ड बताएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Fake recruiters may profit from required purchases. Verify the job and any costs independently.",
+            "hi": "नकली रिक्रूटर अनिवार्य खरीद से लाभ कमा सकते हैं। नौकरी और खर्च की अलग से पुष्टि करें।"
+          },
+          "id": "jobs-5"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "You receive an offer letter for a job you never interviewed for. What should you do?",
+            "hi": "ऐसी नौकरी का ऑफर लेटर आता है जिसके लिए आपने इंटरव्यू नहीं दिया। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Accept and send documents",
+              "Verify the vacancy and sender with the company using official contact details",
+              "Pay a joining fee",
+              "Post the letter with your personal details"
+            ],
+            "hi": [
+              "स्वीकार करके दस्तावेज भेजें",
+              "आधिकारिक संपर्क से कंपनी में पद और भेजने वाले की पुष्टि करें",
+              "जॉइनिंग फीस दें",
+              "व्यक्तिगत जानकारी सहित पत्र पोस्ट करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unexpected offers can be used to collect money or identity documents. Verify directly with the employer.",
+            "hi": "अनपेक्षित ऑफर से पैसे या पहचान दस्तावेज जुटाए जा सकते हैं। नियोक्ता से सीधे पुष्टि करें।"
+          },
+          "id": "jobs-6"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "A recruiter requests a scan of your identity documents over an unverified chat. What is safest?",
+            "hi": "रिक्रूटर अपुष्ट चैट पर पहचान दस्तावेजों की स्कैन कॉपी मांगता है। सुरक्षित क्या है?"
+          },
+          "options": {
+            "en": [
+              "Send them to save the opportunity",
+              "Verify the recruiter and share only necessary documents through an official secure process",
+              "Send blank signed forms too",
+              "Post them publicly for proof"
+            ],
+            "hi": [
+              "अवसर बचाने के लिए भेजें",
+              "रिक्रूटर जांचें और आधिकारिक सुरक्षित प्रक्रिया से जरूरी दस्तावेज ही दें",
+              "खाली हस्ताक्षरित फॉर्म भी भेजें",
+              "प्रमाण के लिए सार्वजनिक पोस्ट करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Identity documents can be misused. Confirm legitimacy and minimize what you share.",
+            "hi": "पहचान दस्तावेजों का दुरुपयोग हो सकता है। असलियत जांचें और साझा जानकारी सीमित रखें।"
+          },
+          "id": "jobs-7"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A company email domain differs slightly from the real company's domain. What should you do?",
+            "hi": "कंपनी ईमेल डोमेन असली कंपनी के डोमेन से थोड़ा अलग है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Assume it is a new HR system",
+              "Check the official company site and contact HR using published details",
+              "Reply with your Aadhaar number",
+              "Open all attachments"
+            ],
+            "hi": [
+              "इसे नया HR सिस्टम मानें",
+              "आधिकारिक कंपनी साइट जांचें और प्रकाशित विवरण से HR से संपर्क करें",
+              "आधार नंबर से जवाब दें",
+              "सभी अटैचमेंट खोलें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Lookalike domains can impersonate employers. Verify the address before sending documents or money.",
+            "hi": "मिलते-जुलते डोमेन नियोक्ता की नकल कर सकते हैं। दस्तावेज या पैसे भेजने से पहले पता जांचें।"
+          },
+          "id": "jobs-8"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A job offer asks you to deposit a cheque and return part of the money. What should you do?",
+            "hi": "नौकरी का ऑफर चेक जमा करके कुछ पैसे वापस भेजने को कहता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Return the money after it appears",
+              "Do not transfer funds; ask your bank and verify the employer",
+              "Send the money to another applicant",
+              "Share your online banking login"
+            ],
+            "hi": [
+              "राशि दिखने पर वापस भेजें",
+              "पैसे न भेजें; बैंक से पूछें और नियोक्ता जांचें",
+              "दूसरे आवेदक को भेजें",
+              "ऑनलाइन बैंकिंग लॉगिन साझा करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Fake-check schemes can leave you responsible after a payment is reversed. Verify with your bank.",
+            "hi": "नकली चेक योजना में भुगतान वापस होने पर नुकसान आपका हो सकता है। बैंक से पुष्टि करें।"
+          },
+          "id": "jobs-9"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A recruiter pressures you to decide immediately and pay a refundable placement fee. What should you do?",
+            "hi": "रिक्रूटर तुरंत निर्णय लेने और वापस मिलने वाली प्लेसमेंट फीस देने का दबाव डालता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Pay before the offer expires",
+              "Pause, verify the company, and avoid pressure-based payments",
+              "Send your card PIN",
+              "Borrow money from the recruiter"
+            ],
+            "hi": [
+              "ऑफर खत्म होने से पहले भुगतान करें",
+              "रुकें, कंपनी जांचें और दबाव में भुगतान न करें",
+              "कार्ड PIN भेजें",
+              "रिक्रूटर से उधार लें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Urgency and refundable-fee promises can be used to pressure job seekers into losing money.",
+            "hi": "जल्दबाजी और वापस मिलने वाली फीस का वादा नौकरी चाहने वालों से पैसे लेने के लिए हो सकता है।"
+          },
+          "id": "jobs-10"
+        }
+      ]
+    },
+    {
+      "id": "qr-scams",
+      "name": {
+        "en": "QR Code Scams",
+        "hi": "QR कोड धोखाधड़ी"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A stranger says to scan a QR code to receive money, but your app asks for your UPI PIN. What should you do?",
+            "hi": "अजनबी पैसे पाने के लिए QR स्कैन करने को कहता है, लेकिन ऐप UPI PIN मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Enter the PIN",
+              "Stop; receiving money does not require your UPI PIN",
+              "Share the PIN with the sender",
+              "Scan it again"
+            ],
+            "hi": [
+              "PIN डालें",
+              "रुकें; पैसे पाने के लिए UPI PIN नहीं चाहिए",
+              "भेजने वाले को PIN बताएं",
+              "फिर स्कैन करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "A PIN prompt usually authorizes a payment. Do not enter it to receive money.",
+            "hi": "PIN मांगना आमतौर पर भुगतान अधिकृत करता है। पैसे पाने के लिए इसे न डालें।"
+          },
+          "id": "qr-scams-1"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "You find a QR sticker pasted over a restaurant's payment code. What should you do?",
+            "hi": "रेस्टोरेंट के भुगतान कोड के ऊपर QR स्टिकर चिपका दिखता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Scan it and pay",
+              "Ask staff to verify the code and check the payee name before paying",
+              "Pay without checking the recipient",
+              "Share your UPI PIN with staff"
+            ],
+            "hi": [
+              "स्कैन करके भुगतान करें",
+              "कर्मचारियों से कोड जांचें और भुगतान से पहले प्राप्तकर्ता नाम देखें",
+              "प्राप्तकर्ता जांचे बिना भुगतान करें",
+              "कर्मचारी को UPI PIN बताएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Tampered QR stickers can redirect payments. Verify the code and recipient with the business.",
+            "hi": "बदले QR स्टिकर भुगतान दूसरी जगह भेज सकते हैं। व्यवसाय से कोड और प्राप्तकर्ता की पुष्टि करें।"
+          },
+          "id": "qr-scams-2"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What should you check after scanning a payment QR code but before confirming?",
+            "hi": "भुगतान QR स्कैन करने के बाद पुष्टि से पहले क्या जांचें?"
+          },
+          "options": {
+            "en": [
+              "Only the QR design",
+              "The recipient name and amount shown in your payment app",
+              "Your phone wallpaper",
+              "The number of nearby networks"
+            ],
+            "hi": [
+              "केवल QR डिजाइन",
+              "भुगतान ऐप में प्राप्तकर्ता का नाम और राशि",
+              "फोन वॉलपेपर",
+              "आसपास नेटवर्कों की संख्या"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Confirm the payee and amount in your own app before authorizing a payment.",
+            "hi": "भुगतान अधिकृत करने से पहले अपने ऐप में प्राप्तकर्ता और राशि जांचें।"
+          },
+          "id": "qr-scams-3"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A QR code on a poster promises a prize and opens a page asking for card details. What should you do?",
+            "hi": "पोस्टर का QR इनाम का वादा कर कार्ड विवरण मांगने वाला पेज खोलता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Enter details to claim it",
+              "Close it and verify the promotion through the organizer's official site",
+              "Share your banking OTP",
+              "Pay a claim fee"
+            ],
+            "hi": [
+              "इनाम पाने के लिए विवरण भरें",
+              "बंद करें और आयोजक की आधिकारिक साइट पर प्रचार जांचें",
+              "बैंकिंग OTP साझा करें",
+              "दावा फीस दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "QR codes can hide deceptive destinations. Verify promotions and never provide payment credentials to claim a surprise prize.",
+            "hi": "QR कोड भ्रामक वेबसाइट छिपा सकते हैं। प्रचार की पुष्टि करें और अचानक इनाम के लिए भुगतान प्रमाण न दें।"
+          },
+          "id": "qr-scams-4"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A QR code directs you to install an unknown application. What is safest?",
+            "hi": "QR कोड अनजान ऐप इंस्टॉल करने को कहता है। सुरक्षित तरीका क्या है?"
+          },
+          "options": {
+            "en": [
+              "Install it to continue",
+              "Do not install; find the app through the official app store or provider",
+              "Disable phone security",
+              "Allow all permissions"
+            ],
+            "hi": [
+              "आगे बढ़ने के लिए इंस्टॉल करें",
+              "इंस्टॉल न करें; आधिकारिक ऐप स्टोर या प्रदाता से ऐप खोजें",
+              "फोन सुरक्षा बंद करें",
+              "सभी अनुमतियां दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Use official app stores and verify the publisher; QR links can lead to malicious downloads.",
+            "hi": "आधिकारिक ऐप स्टोर उपयोग करें और प्रकाशक जांचें; QR लिंक हानिकारक डाउनलोड पर ले जा सकते हैं।"
+          },
+          "id": "qr-scams-5"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A QR code opens a URL with a misspelled company name. What should you do?",
+            "hi": "QR कोड ऐसा URL खोलता है जिसमें कंपनी का नाम गलत लिखा है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Continue because the logo matches",
+              "Close the page and navigate to the official website yourself",
+              "Enter your login details",
+              "Forward the URL"
+            ],
+            "hi": [
+              "लोगो सही है इसलिए आगे बढ़ें",
+              "पेज बंद करें और आधिकारिक वेबसाइट स्वयं खोलें",
+              "लॉगिन विवरण भरें",
+              "URL आगे भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Check the destination domain before entering information; QR codes do not make a link trustworthy.",
+            "hi": "जानकारी भरने से पहले गंतव्य डोमेन जांचें; QR कोड लिंक को विश्वसनीय नहीं बनाता।"
+          },
+          "id": "qr-scams-6"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "You scanned a QR code and entered your account password on its page. What should you do?",
+            "hi": "QR स्कैन करके खुले पेज पर आपने खाते का पासवर्ड दर्ज कर दिया। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Do nothing unless money disappears",
+              "Change the password on the official service, secure reused accounts, and report it",
+              "Tell the QR owner your new password",
+              "Delete the QR scanner"
+            ],
+            "hi": [
+              "पैसे गायब होने तक कुछ न करें",
+              "आधिकारिक सेवा पर पासवर्ड बदलें, दोहराए खाते सुरक्षित करें और रिपोर्ट करें",
+              "QR मालिक को नया पासवर्ड बताएं",
+              "QR स्कैनर मिटाएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Treat entered credentials as exposed and secure the affected accounts immediately.",
+            "hi": "दर्ज प्रमाण उजागर मानें और प्रभावित खातों को तुरंत सुरक्षित करें।"
+          },
+          "id": "qr-scams-7"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "Someone messages you a QR code to receive a refund. What is safest?",
+            "hi": "कोई रिफंड पाने के लिए QR कोड भेजता है। सुरक्षित तरीका क्या है?"
+          },
+          "options": {
+            "en": [
+              "Scan and enter your PIN",
+              "Verify the refund using the merchant's official app or support",
+              "Share the code with everyone",
+              "Pay a verification amount"
+            ],
+            "hi": [
+              "स्कैन करके PIN डालें",
+              "व्यापारी के आधिकारिक ऐप या सहायता से रिफंड जांचें",
+              "कोड सभी को भेजें",
+              "सत्यापन राशि दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Verify refunds through official merchant channels and do not enter a PIN to receive money.",
+            "hi": "आधिकारिक व्यापारी माध्यम से रिफंड जांचें और पैसे पाने के लिए PIN न डालें।"
+          },
+          "id": "qr-scams-8"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A QR code at a public place has no clear information about who placed it. What should you do?",
+            "hi": "सार्वजनिक स्थान पर QR कोड लगाने वाले की स्पष्ट जानकारी नहीं है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Scan it to find out",
+              "Avoid scanning and use a verified source if you need the service",
+              "Enter contact details after scanning",
+              "Allow notifications"
+            ],
+            "hi": [
+              "जानने के लिए स्कैन करें",
+              "स्कैन न करें; सेवा चाहिए तो सत्यापित स्रोत उपयोग करें",
+              "स्कैन के बाद संपर्क विवरण भरें",
+              "सूचनाएं अनुमति दें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unknown QR codes can lead to unsafe sites or payment requests. Use verified codes from the provider.",
+            "hi": "अनजान QR असुरक्षित साइट या भुगतान अनुरोध खोल सकते हैं। प्रदाता के सत्यापित कोड उपयोग करें।"
+          },
+          "id": "qr-scams-9"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "Your payment app shows a different recipient than the shop name after scanning. What should you do?",
+            "hi": "QR स्कैन करने के बाद भुगतान ऐप दुकान के बजाय अलग प्राप्तकर्ता दिखाता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Pay and ask for a refund",
+              "Cancel and confirm the correct payment details with the shop",
+              "Enter the PIN to see more",
+              "Send a second payment"
+            ],
+            "hi": [
+              "भुगतान करके रिफंड मांगें",
+              "रद्द करें और दुकान से सही भुगतान विवरण पूछें",
+              "और देखने के लिए PIN डालें",
+              "दूसरा भुगतान करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Do not authorize a payment if the displayed recipient is unexpected. Verify before proceeding.",
+            "hi": "दिखाया गया प्राप्तकर्ता अनपेक्षित हो तो भुगतान अधिकृत न करें। आगे बढ़ने से पहले पुष्टि करें।"
+          },
+          "id": "qr-scams-10"
+        }
+      ]
+    },
+    {
+      "id": "social-media",
+      "name": {
+        "en": "Social Media",
+        "hi": "सोशल मीडिया"
+      },
+      "questions": [
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A new account using your friend's photo asks for emergency money. What should you do?",
+            "hi": "मित्र की फोटो वाला नया खाता आपातकालीन पैसे मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Send money immediately",
+              "Verify with your friend through a different known channel",
+              "Share your bank OTP",
+              "Post your card details"
+            ],
+            "hi": [
+              "तुरंत पैसे भेजें",
+              "दूसरे ज्ञात माध्यम से मित्र से पुष्टि करें",
+              "बैंक OTP साझा करें",
+              "कार्ड विवरण पोस्ट करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Impersonation accounts use stolen photos. Verify unusual money requests outside the account.",
+            "hi": "नकली खाते चुराई फोटो उपयोग करते हैं। असामान्य पैसे के अनुरोध की दूसरे माध्यम से पुष्टि करें।"
+          },
+          "id": "social-media-1"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A social media quiz asks for your birthday, first school, and pet name. What should you consider?",
+            "hi": "सोशल मीडिया क्विज़ जन्मदिन, पहले स्कूल और पालतू का नाम मांगता है। क्या ध्यान रखें?"
+          },
+          "options": {
+            "en": [
+              "These details are harmless",
+              "They may reveal answers to account security questions; avoid sharing them publicly",
+              "Share them only with followers",
+              "Use them as your password"
+            ],
+            "hi": [
+              "ये विवरण हानिरहित हैं",
+              "इनसे खाता सुरक्षा प्रश्नों के उत्तर पता चल सकते हैं; सार्वजनिक रूप से साझा न करें",
+              "केवल फॉलोअर्स से साझा करें",
+              "इन्हें पासवर्ड बनाएं"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Personal details can help attackers guess passwords or security answers.",
+            "hi": "व्यक्तिगत विवरण से हमलावर पासवर्ड या सुरक्षा उत्तर का अनुमान लगा सकते हैं।"
+          },
+          "id": "social-media-2"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A direct message says your account will be suspended unless you log in through a link. What should you do?",
+            "hi": "सीधा संदेश कहता है कि लिंक से लॉगिन न करने पर खाता बंद होगा। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Use the link",
+              "Open the platform's official app or website and check account notifications",
+              "Send your password to the sender",
+              "Share the message publicly with your login"
+            ],
+            "hi": [
+              "लिंक उपयोग करें",
+              "प्लेटफॉर्म का आधिकारिक ऐप या वेबसाइट खोलकर सूचनाएं जांचें",
+              "भेजने वाले को पासवर्ड दें",
+              "लॉगिन सहित संदेश सार्वजनिक करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Suspension threats are commonly used to steal credentials. Check your account through the official platform.",
+            "hi": "खाता बंद करने की धमकी प्रमाण चुराने के लिए आम है। आधिकारिक प्लेटफॉर्म से खाता जांचें।"
+          },
+          "id": "social-media-3"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A social media app requests access to your contacts, microphone, and location for a simple wallpaper feature. What should you do?",
+            "hi": "साधारण वॉलपेपर सुविधा वाला सोशल ऐप संपर्क, माइक्रोफोन और स्थान एक्सेस मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Allow everything",
+              "Review permissions and deny access that is not needed",
+              "Share your password instead",
+              "Disable the phone lock"
+            ],
+            "hi": [
+              "सभी अनुमतियां दें",
+              "अनुमतियां जांचें और गैरजरूरी एक्सेस मना करें",
+              "इसके बजाय पासवर्ड साझा करें",
+              "फोन लॉक बंद करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Grant only permissions needed for the feature and review privacy settings regularly.",
+            "hi": "सुविधा के लिए जरूरी अनुमतियां ही दें और गोपनीयता सेटिंग नियमित जांचें।"
+          },
+          "id": "social-media-4"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What is a good way to secure a social media account?",
+            "hi": "सोशल मीडिया खाते को सुरक्षित करने का अच्छा तरीका क्या है?"
+          },
+          "options": {
+            "en": [
+              "Reuse your email password",
+              "Use a unique password and enable multi-factor authentication",
+              "Share login codes with followers",
+              "Keep recovery details public"
+            ],
+            "hi": [
+              "ईमेल वाला पासवर्ड दोहराएं",
+              "अलग पासवर्ड रखें और मल्टी-फैक्टर प्रमाणीकरण चालू करें",
+              "फॉलोअर्स से लॉगिन कोड साझा करें",
+              "रिकवरी विवरण सार्वजनिक रखें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unique credentials and MFA make unauthorized access more difficult.",
+            "hi": "अलग प्रमाण और MFA अनधिकृत एक्सेस को कठिन बनाते हैं।"
+          },
+          "id": "social-media-5"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "A post asks you to repost a link to claim free data and sign in with another service. What should you do?",
+            "hi": "पोस्ट मुफ्त डेटा पाने के लिए लिंक शेयर करके दूसरी सेवा से लॉगिन करने को कहती है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Repost and log in",
+              "Verify the offer through the provider's official source before interacting",
+              "Enter your password in the comments",
+              "Share the link with family"
+            ],
+            "hi": [
+              "शेयर करके लॉगिन करें",
+              "प्रतिक्रिया से पहले प्रदाता के आधिकारिक स्रोत से ऑफर जांचें",
+              "टिप्पणियों में पासवर्ड दें",
+              "लिंक परिवार को भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Promotional posts can be used for phishing or spreading scams. Confirm offers directly with the provider.",
+            "hi": "प्रचार पोस्ट फ़िशिंग या धोखाधड़ी फैलाने के लिए हो सकती हैं। ऑफर की प्रदाता से पुष्टि करें।"
+          },
+          "id": "social-media-6"
+        },
+        {
+          "difficulty": "Hard",
+          "question": {
+            "en": "You receive an MFA approval prompt that you did not request. What should you do?",
+            "hi": "आपको ऐसा MFA स्वीकृति अनुरोध आता है जिसे आपने शुरू नहीं किया। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Approve it to stop notifications",
+              "Deny it, change your password if needed, and review account activity",
+              "Share the prompt with the requester",
+              "Turn off MFA permanently"
+            ],
+            "hi": [
+              "सूचनाएं रोकने के लिए स्वीकार करें",
+              "अस्वीकार करें, जरूरत हो तो पासवर्ड बदलें और खाता गतिविधि जांचें",
+              "अनुरोधकर्ता को स्क्रीन भेजें",
+              "MFA हमेशा के लिए बंद करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unexpected prompts can indicate someone knows your password. Deny them and secure the account.",
+            "hi": "अनपेक्षित अनुरोध से पता चल सकता है कि किसी को पासवर्ड पता है। अस्वीकार कर खाता सुरक्षित करें।"
+          },
+          "id": "social-media-7"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "A stranger sends you a file claiming it contains photos of you. What should you do?",
+            "hi": "अजनबी आपकी फोटो होने का दावा करके फाइल भेजता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Open it immediately",
+              "Do not open it; verify the sender and report suspicious content",
+              "Disable antivirus first",
+              "Forward it to contacts"
+            ],
+            "hi": [
+              "तुरंत खोलें",
+              "न खोलें; भेजने वाले की पुष्टि करें और संदिग्ध सामग्री रिपोर्ट करें",
+              "पहले एंटीवायरस बंद करें",
+              "संपर्कों को भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Unexpected files can contain malware or lead to credential theft. Avoid opening them.",
+            "hi": "अनपेक्षित फाइल में मैलवेयर या प्रमाण चोरी का जोखिम हो सकता है। इन्हें खोलने से बचें।"
+          },
+          "id": "social-media-8"
+        },
+        {
+          "difficulty": "Medium",
+          "question": {
+            "en": "You see a social media post spreading a sensational security warning with an unfamiliar link. What should you do?",
+            "hi": "अपरिचित लिंक वाला सनसनीखेज सुरक्षा अलर्ट सोशल मीडिया पर दिखता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Share it immediately",
+              "Check trusted official sources before sharing or clicking",
+              "Enter your credentials to read it",
+              "Send it to all groups"
+            ],
+            "hi": [
+              "तुरंत साझा करें",
+              "शेयर या क्लिक करने से पहले विश्वसनीय आधिकारिक स्रोत जांचें",
+              "पढ़ने के लिए प्रमाण दर्ज करें",
+              "सभी समूहों में भेजें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "False urgent posts can spread scams and misinformation. Verify claims through trusted sources.",
+            "hi": "झूठी तात्कालिक पोस्ट धोखाधड़ी और गलत सूचना फैला सकती हैं। विश्वसनीय स्रोत से पुष्टि करें।"
+          },
+          "id": "social-media-9"
+        },
+        {
+          "difficulty": "Easy",
+          "question": {
+            "en": "What should you do if an unknown person asks for your live location on social media?",
+            "hi": "सोशल मीडिया पर अनजान व्यक्ति लाइव लोकेशन मांगता है। क्या करें?"
+          },
+          "options": {
+            "en": [
+              "Share it to be friendly",
+              "Do not share; limit location access and review who can see your posts",
+              "Share your home address too",
+              "Post it publicly for safety"
+            ],
+            "hi": [
+              "मित्रता के लिए साझा करें",
+              "साझा न करें; लोकेशन एक्सेस सीमित करें और पोस्ट देखने वालों की जांच करें",
+              "घर का पता भी दें",
+              "सुरक्षा के लिए सार्वजनिक पोस्ट करें"
+            ]
+          },
+          "answer": 1,
+          "explanation": {
+            "en": "Location data can expose where you are or your routines. Share it only with trusted people when necessary.",
+            "hi": "लोकेशन से आपकी जगह और दिनचर्या उजागर हो सकती है। जरूरत पर केवल विश्वसनीय लोगों से साझा करें।"
+          },
+          "id": "social-media-10"
+        }
+      ]
+    }
+  ],
+  "translations": {
+    "en": {
+      "nav": {
+        "home": "Home",
+        "awareness": "Awareness",
+        "challenges": "Challenges",
+        "assessment": "Assessment",
+        "chatbot": "AI Chatbot"
+      },
+      "home": {
+        "badge": "CYBERSECURITY AWARENESS",
+        "title": "Stay Safe",
+        "titleHighlight": "Stay Cyber Safe.",
+        "subtitle": "Learn how to recognize cyber threats, avoid online scams, and protect your personal information.",
+        "startLearning": "Start Learning",
+        "takeAssessment": "Take Assessment",
+        "awarenessVideos": "Awareness Videos",
+        "cyberChallenges": "Cyber Challenges",
+        "languages": "Languages",
+        "featuresBadge": "LEARN • PRACTICE • PROTECT",
+        "featuresTitle": "Build your cyber awareness",
+        "featuresSubtitle": "Learn to recognize common online threats and test your knowledge through realistic cybersecurity scenarios.",
+        "awarenessTitle": "Awareness Videos",
+        "awarenessDescription": "Watch short, practical lessons covering phishing, OTP fraud, UPI scams, passwords and more.",
+        "startWatching": "Start watching",
+        "challengeTitle": "Cyber Challenges",
+        "challengeDescription": "Face realistic fraud and scam scenarios and learn how to identify dangerous situations.",
+        "takeChallenge": "Take a challenge",
+        "aiTitle": "AI Security Assistant",
+        "aiDescription": "Ask cybersecurity questions and get guidance from the AI security assistant.",
+        "askAI": "Ask AI"
+      },
+      "awareness": {
+        "badge": "LEARN • WATCH • PROTECT",
+        "title": "Cybersecurity Awareness",
+        "subtitle": "Learn how to identify online scams, protect your information, and stay safe in the digital world.",
+        "search": "Search awareness videos...",
+        "all": "All",
+        "watch": "Watch",
+        "completed": "Completed",
+        "complete": "Mark as Completed",
+        "noResults": "No videos found",
+        "noResultsText": "Try changing your search or selecting another category.",
+        "trainingLibrary": "Training Library",
+        "learningResources": "learning resources",
+        "completedText": "completed"
+      },
+      "assessment": {
+        "badge": "CYBERSECURITY ASSESSMENT",
+        "title": "Test Your Cyber Awareness",
+        "chooseCategory": "Choose a topic to take its 10-question assessment.",
+        "submit": "Submit Answer",
+        "next": "Next Question",
+        "result": "View Result",
+        "complete": "Assessment Complete",
+        "correct": "Correct!",
+        "incorrect": "Not quite right",
+        "tryAgain": "Try Again",
+        "correctLabel": "Correct",
+        "incorrectLabel": "Incorrect",
+        "questions": "Questions",
+        "score": "Score",
+        "excellent": "Excellent Cyber Awareness!",
+        "good": "Good Awareness",
+        "improve": "Keep Learning",
+        "easy": "Easy",
+        "medium": "Medium",
+        "hard": "Hard",
+        "questionOf": "Question"
+      },
+      "challenges": {
+        "badge": "PRACTICE",
+        "title": "Cybersecurity Challenges",
+        "subtitle": "Don't just learn about cyber threats. Practice identifying them through realistic fraud and scam situations.",
+        "start": "Start Challenge",
+        "fullAssessment": "Start Full Assessment"
+      }
+    },
+    "hi": {
+      "nav": {
+        "home": "होम",
+        "awareness": "जागरूकता",
+        "challenges": "चुनौतियाँ",
+        "assessment": "मूल्यांकन",
+        "chatbot": "AI चैटबॉट"
+      },
+      "home": {
+        "badge": "साइबर सुरक्षा जागरूकता",
+        "title": "सुरक्षित रहें",
+        "titleHighlight": "साइबर सुरक्षित रहें।",
+        "subtitle": "साइबर खतरों को पहचानना, ऑनलाइन धोखाधड़ी से बचना और अपनी व्यक्तिगत जानकारी को सुरक्षित रखना सीखें।",
+        "startLearning": "सीखना शुरू करें",
+        "takeAssessment": "मूल्यांकन दें",
+        "awarenessVideos": "जागरूकता वीडियो",
+        "cyberChallenges": "साइबर चुनौतियाँ",
+        "languages": "भाषाएँ",
+        "featuresBadge": "सीखें • अभ्यास करें • सुरक्षित रहें",
+        "featuresTitle": "अपनी साइबर जागरूकता बढ़ाएँ",
+        "featuresSubtitle": "सामान्य ऑनलाइन खतरों को पहचानना सीखें और वास्तविक साइबर सुरक्षा स्थितियों के माध्यम से अपनी जानकारी का परीक्षण करें।",
+        "awarenessTitle": "जागरूकता वीडियो",
+        "awarenessDescription": "फिशिंग, OTP धोखाधड़ी, UPI स्कैम, पासवर्ड और अन्य साइबर खतरों पर छोटे और उपयोगी वीडियो देखें।",
+        "startWatching": "देखना शुरू करें",
+        "challengeTitle": "साइबर चुनौतियाँ",
+        "challengeDescription": "वास्तविक धोखाधड़ी और स्कैम स्थितियों का सामना करें और खतरनाक परिस्थितियों की पहचान करना सीखें।",
+        "takeChallenge": "चुनौती लें",
+        "aiTitle": "AI सुरक्षा सहायक",
+        "aiDescription": "साइबर सुरक्षा से जुड़े सवाल पूछें और AI सुरक्षा सहायक से मार्गदर्शन प्राप्त करें।",
+        "askAI": "AI से पूछें"
+      },
+      "awareness": {
+        "badge": "सीखें • देखें • सुरक्षित रहें",
+        "title": "साइबर सुरक्षा जागरूकता",
+        "subtitle": "ऑनलाइन धोखाधड़ी की पहचान करना सीखें, अपनी जानकारी सुरक्षित रखें और डिजिटल दुनिया में सुरक्षित रहें।",
+        "search": "जागरूकता वीडियो खोजें...",
+        "all": "सभी",
+        "watch": "देखें",
+        "completed": "पूरा हुआ",
+        "complete": "पूरा हुआ चिन्हित करें",
+        "noResults": "कोई वीडियो नहीं मिला",
+        "noResultsText": "अपनी खोज बदलें या कोई दूसरी कैटेगरी चुनें।",
+        "trainingLibrary": "प्रशिक्षण लाइब्रेरी",
+        "learningResources": "सीखने के संसाधन",
+        "completedText": "पूरा हुआ"
+      },
+      "assessment": {
+        "badge": "साइबर सुरक्षा मूल्यांकन",
+        "title": "अपनी साइबर जागरूकता जाँचें",
+        "chooseCategory": "10 प्रश्नों वाला मूल्यांकन शुरू करने के लिए एक विषय चुनें।",
+        "submit": "उत्तर जमा करें",
+        "next": "अगला प्रश्न",
+        "result": "परिणाम देखें",
+        "complete": "मूल्यांकन पूरा हुआ",
+        "correct": "सही!",
+        "incorrect": "उत्तर सही नहीं है",
+        "tryAgain": "फिर से प्रयास करें",
+        "correctLabel": "सही",
+        "incorrectLabel": "गलत",
+        "questions": "प्रश्न",
+        "score": "स्कोर",
+        "excellent": "उत्कृष्ट साइबर जागरूकता!",
+        "good": "अच्छी जागरूकता",
+        "improve": "सीखना जारी रखें",
+        "easy": "आसान",
+        "medium": "मध्यम",
+        "hard": "कठिन",
+        "questionOf": "प्रश्न"
+      },
+      "challenges": {
+        "badge": "अभ्यास",
+        "title": "साइबर सुरक्षा चुनौतियाँ",
+        "subtitle": "सिर्फ साइबर खतरों के बारे में न सीखें। वास्तविक धोखाधड़ी और स्कैम स्थितियों के माध्यम से अपनी समझ का अभ्यास करें।",
+        "start": "चुनौती शुरू करें",
+        "fullAssessment": "पूरा मूल्यांकन शुरू करें"
+      }
+    }
+  },
+  "videos": [
+    {
+      "id": 1,
+      "title": {
+        "en": "OTP Scam Awareness",
+        "hi": "OTP धोखाधड़ी जागरूकता"
+      },
+      "description": {
+        "en": "Learn how scammers trick people into sharing OTPs and how to protect yourself from OTP fraud.",
+        "hi": "जानें कि धोखेबाज़ लोगों से OTP कैसे साझा करवाते हैं और OTP धोखाधड़ी से खुद को कैसे सुरक्षित रखें।"
+      },
+      "category": "OTP Fraud",
+      "difficulty": "Easy",
+      "duration": "2:18",
+      "thumbnail": "/thumbnails/phishing.jpg",
+      "video": "https://youtu.be/Y8z67bi1i2A?si=jA0fPuHoCABkH-so"
+    },
+    {
+      "id": 2,
+      "title": {
+        "en": "Banking Fraud Awareness",
+        "hi": "बैंकिंग धोखाधड़ी जागरूकता"
+      },
+      "description": {
+        "en": "Learn essential safety habits to help protect your bank account and avoid online fraud.",
+        "hi": "अपने बैंक खाते को सुरक्षित रखने और ऑनलाइन धोखाधड़ी से बचने के जरूरी सुरक्षा उपाय जानें।"
+      },
+      "category": "Banking Fraud",
+      "difficulty": "Easy",
+      "duration": "1:30",
+      "thumbnail": null,
+      "video": "https://youtu.be/Sgs4K2eAZhg?si=CP8Wirw_81hZ_ihs"
+    },
+    {
+      "id": 3,
+      "title": {
+        "en": "UPI PIN Fraud",
+        "hi": "UPI PIN धोखाधड़ी"
+      },
+      "description": {
+        "en": "Learn to enter your UPI PIN only when sending money, never to receive money, and never share it with anyone.",
+        "hi": "जानें कि UPI PIN केवल पैसे भेजते समय दर्ज करें, पैसे प्राप्त करने के लिए नहीं, और इसे किसी के साथ साझा न करें।"
+      },
+      "category": "UPI Fraud",
+      "difficulty": "Easy",
+      "duration": "1:25",
+      "thumbnail": null,
+      "video": "https://youtu.be/aUDwlq9FWU4?si=Sr3svh8wZpHdBbTN"
+    },
+    {
+      "id": 4,
+      "title": {
+        "en": "Strong Passwords & Password Managers",
+        "hi": "मजबूत पासवर्ड और पासवर्ड मैनेजर"
+      },
+      "description": {
+        "en": "Learn to create memorable, unique passwords and use a password manager and multi-factor authentication to protect your accounts.",
+        "hi": "याद रखने योग्य और अलग-अलग पासवर्ड बनाना सीखें। अपने खातों की सुरक्षा के लिए पासवर्ड मैनेजर और मल्टी-फैक्टर ऑथेंटिकेशन का उपयोग करें।"
+      },
+      "category": "Passwords",
+      "difficulty": "Easy",
+      "duration": "1:18",
+      "thumbnail": null,
+      "video": "https://youtu.be/TvrFpAFitQ0?si=gSUEdVON63AGyj3R"
+    },
+    {
+      "id": 5,
+      "title": {
+        "en": "Social Engineering Attacks",
+        "hi": "सोशल इंजीनियरिंग हमले"
+      },
+      "description": {
+        "en": "Learn how attackers manipulate people into revealing confidential information.",
+        "hi": "जानें कि हमलावर लोगों को प्रभावित करके गोपनीय जानकारी कैसे प्राप्त करते हैं।"
+      },
+      "category": "Social Engineering",
+      "difficulty": "Medium",
+      "duration": "0:57",
+      "thumbnail": null,
+      "video": "https://youtube.com/shorts/OlYcYpVNEUM?si=JdyIPN41fYBwNgpB"
+    },
+    {
+      "id": 6,
+      "title": {
+        "en": "How to Check if a Website Is Legit or a Scam",
+        "hi": "कैसे पहचानें कि वेबसाइट असली है या धोखाधड़ी"
+      },
+      "description": {
+        "en": "Learn to spot warning signs and check whether a website may be fraudulent before sharing information.",
+        "hi": "जानें कि जानकारी साझा करने से पहले चेतावनी के संकेत कैसे पहचानें और वेबसाइट धोखाधड़ी वाली है या नहीं कैसे जांचें।"
+      },
+      "category": "Fake Websites",
+      "difficulty": "Medium",
+      "duration": "1:28",
+      "thumbnail": null,
+      "video": "https://youtu.be/-kB5r4Jlclk?si=T1bSQ-9YVo-Gnfnh"
+    },
+    {
+      "id": 7,
+      "title": {
+        "en": "Online Shopping Scams",
+        "hi": "ऑनलाइन शॉपिंग स्कैम"
+      },
+      "description": {
+        "en": "See how online purchase scams work and learn to be cautious when shopping online.",
+        "hi": "ऑनलाइन खरीदारी के धोखाधड़ी वाले तरीकों को समझें और इंटरनेट पर खरीदारी करते समय सतर्क रहना सीखें।"
+      },
+      "category": "Shopping Fraud",
+      "difficulty": "Medium",
+      "duration": "1:13",
+      "thumbnail": null,
+      "video": "https://youtu.be/qRWpvcjpQNw?si=ZrVROJFN5AYotl_b"
+    },
+    {
+      "id": 8,
+      "title": {
+        "en": "Public Wi-Fi Safety",
+        "hi": "पब्लिक Wi-Fi सुरक्षा"
+      },
+      "description": {
+        "en": "Learn what to avoid when using public Wi-Fi, especially before entering banking, UPI, or password details.",
+        "hi": "पब्लिक Wi-Fi इस्तेमाल करते समय किन बातों से बचना चाहिए, खासकर बैंकिंग, UPI या पासवर्ड की जानकारी दर्ज करने से पहले, यह जानें।"
+      },
+      "category": "Network Security",
+      "difficulty": "Medium",
+      "duration": "0:26",
+      "thumbnail": null,
+      "video": "https://youtube.com/shorts/ZC-jmKegZY0?si=Tk3BJOzrnJtteDIX"
+    },
+    {
+      "id": 9,
+      "title": {
+        "en": "Fake Job & Recruitment Scams",
+        "hi": "नकली जॉब और भर्ती स्कैम"
+      },
+      "description": {
+        "en": "Learn to spot fake work-from-home offers, suspicious fees, and fraudulent job advertisements.",
+        "hi": "नकली वर्क-फ्रॉम-होम ऑफर, संदिग्ध शुल्क और धोखाधड़ी वाले नौकरी विज्ञापनों को पहचानना सीखें।"
+      },
+      "category": "Job Scams",
+      "difficulty": "Medium",
+      "duration": "4:27",
+      "thumbnail": null,
+      "video": "https://youtu.be/QRgDUzKloCw?si=9wIZXar2GkWgW89q"
+    },
+    {
+      "id": 10,
+      "title": {
+        "en": "QR Code Scams",
+        "hi": "QR कोड स्कैम"
+      },
+      "description": {
+        "en": "Learn how QR code scams can steal money or information and how to scan codes more safely.",
+        "hi": "जानें कि QR कोड स्कैम से पैसे या जानकारी कैसे चोरी हो सकती है और कोड को सुरक्षित तरीके से कैसे स्कैन करें।"
+      },
+      "category": "QR Scams",
+      "difficulty": "Medium",
+      "duration": "1:09",
+      "thumbnail": null,
+      "video": "https://youtu.be/2fkh-EBC8_w?si=8KhAObe_NcfeFU5o"
+    },
+    {
+      "id": 11,
+      "title": {
+        "en": "Social Media Security",
+        "hi": "सोशल मीडिया सुरक्षा"
+      },
+      "description": {
+        "en": "Learn to spot common social media scams, recognize warning signs, and protect your accounts.",
+        "hi": "सोशल मीडिया पर होने वाली आम धोखाधड़ी पहचानें, चेतावनी के संकेत समझें और अपने खातों को सुरक्षित रखें।"
+      },
+      "category": "Social Media",
+      "difficulty": "Hard",
+      "duration": "5:09",
+      "thumbnail": null,
+      "video": "https://youtu.be/T40pmHzFf4s?si=15nYY-M9scRO3CpY"
+    },
+    {
+      "id": 12,
+      "title": {
+        "en": "Malware & Suspicious Downloads",
+        "hi": "मैलवेयर और संदिग्ध डाउनलोड"
+      },
+      "description": {
+        "en": "Learn about malware types such as spyware, Trojans, worms, adware, and rootkits.",
+        "hi": "स्पाइवेयर, ट्रोजन, वर्म, एडवेयर और रूटकिट जैसे मैलवेयर के प्रकारों के बारे में जानें।"
+      },
+      "category": "Malware",
+      "difficulty": "Hard",
+      "duration": "3:53",
+      "thumbnail": null,
+      "video": "https://youtu.be/AF_1E_5SfXg?si=5OWa5IuL6D_xlk9e"
+    }
+  ]
+}

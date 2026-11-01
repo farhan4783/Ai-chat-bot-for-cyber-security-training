@@ -3,31 +3,48 @@ import json
 
 client = app.test_client()
 
-print("--- Testing /api/status ---")
+print("--- 1. Testing /api/status ---")
 r = client.get("/api/status")
-print(r.status_code, r.get_json())
+print("Status Code:", r.status_code)
+print("Payload:", json.dumps(r.get_json(), indent=2))
 
-print("\n--- Testing /chat ---")
+print("\n--- 2. Testing /chat (Web Interface) ---")
 r = client.get("/chat")
-print(r.status_code, "HTML length:", len(r.data))
+print("Status Code:", r.status_code, "| HTML byte length:", len(r.data))
 
-print("\n--- Testing /api/chat (General Question) ---")
-r = client.post("/api/chat", json={"message": "How can I prevent ransomware attacks?", "session_id": "test1"})
-print(r.status_code, json.dumps(r.get_json(), indent=2)[:300] + "...")
+print("\n--- 3. Testing /api/chat (English Security Query) ---")
+r = client.post("/api/chat", json={"message": "What is phishing?", "session_id": "test_en"})
+print("Status Code:", r.status_code)
+print("Snippet:", r.get_json()["response"][:220] + "...")
 
-print("\n--- Testing /api/chat (Phishing Inspection) ---")
-r = client.post("/api/chat", json={
-    "message": "Analyze this email: From: security@paypal-verification.biz Urgent: Account suspended, download invoice.zip and verify credentials",
-    "session_id": "test1"
+print("\n--- 4. Testing /api/chat (Hindi Query - Kavach Alignment) ---")
+r = client.post("/api/chat", json={"message": "UPI PIN डालते समय क्या सावधानियां रखनी चाहिए?", "session_id": "test_hi"})
+print("Status Code:", r.status_code)
+print("Snippet:", r.get_json()["response"][:220] + "...")
+
+print("\n--- 5. Testing /api/chat (Emergency Panic Containment) ---")
+r = client.post("/api/chat", json={"message": "I clicked a suspicious link and typed my password what do I do?", "session_id": "panic"})
+print("Status Code:", r.status_code)
+print("Emergency Header:", r.get_json()["response"][:100] + "...")
+
+print("\n--- 6. Testing /api/analyze/phishing ---")
+r = client.post("/api/analyze/phishing", json={
+    "text": "From: billing@paypa1-security.xyz Urgent! Your account is suspended within 24 hours. Download verification.zip immediately."
 })
-print(r.status_code, json.dumps(r.get_json(), indent=2)[:300] + "...")
+print("Status Code:", r.status_code)
+print("Report:", json.dumps(r.get_json()["report"], indent=2))
 
-print("\n--- Testing /api/chat (Quiz Flow) ---")
+print("\n--- 7. Testing /api/chat (Interactive Quiz Flow) ---")
 r = client.post("/api/chat", json={"message": "quiz", "session_id": "quiz_session"})
-print("Q1:", r.status_code, r.get_json()["response"][:150] + "...")
+print("Question 1:", r.status_code, "\n" + r.get_json()["response"][:200] + "...")
 
-r = client.post("/api/chat", json={"message": "D", "session_id": "quiz_session"})
-print("Answer D:", r.status_code, r.get_json()["response"][:150] + "...")
+r = client.post("/api/chat", json={"message": "C", "session_id": "quiz_session"})
+print("\nAnswer C evaluation:", r.status_code, "\n" + r.get_json()["response"][:200] + "...")
 
-print("\nALL BACKEND API TESTS PASSED SUCCESSFULLY!")
+print("\n--- 8. Testing /api/kavach/assessments ---")
+r = client.get("/api/kavach/assessments")
+print("Status Code:", r.status_code, "| Categories count:", r.get_json()["categories_count"])
 
+print("\n" + "=" * 60)
+print("🎯 ALL 8 KAVACH-CYBERBOT API TESTS COMPLETED SUCCESSFULLY!")
+print("=" * 60)

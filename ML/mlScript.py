@@ -1,6 +1,7 @@
+import os
+import sys
 import json
 import re
-import sys
 from pathlib import Path
 
 # Ensure UTF-8 output on Windows consoles
@@ -9,62 +10,73 @@ if sys.stdout:
         sys.stdout.reconfigure(encoding="utf-8")
     except Exception:
         pass
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.linear_model import LogisticRegression
-from sklearn.metrics.pairwise import cosine_similarity
-import numpy as np
 
-DATASET_PATH = Path(__file__).resolve().parents[1] / "dataset" / "cybersecurity.json"
+# Ensure ML package is importable
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
+if str(PROJECT_ROOT) not in sys.path:
+    sys.path.insert(0, str(PROJECT_ROOT))
 
-class LocalCyberBotAI:
-    def __init__(self, dataset_path=DATASET_PATH):
-        self.dataset_path = dataset_path
+from ML.inference import KavachAIInferenceEngine
+
+DATASET_PATH = PROJECT_ROOT / "dataset" / "unified_cyber_dataset.json"
+LEGACY_DATASET_PATH = PROJECT_ROOT / "dataset" / "cybersecurity.json"
+
+class CyberBotAI:
+    """
+    Kavach-CyberBot Master Controller.
+    Combines the ~1.34M Parameter Deep Learning Neural Core (KavachNet1M),
+    Kavach's 11-category bilingual assessment engine (110 questions),
+    and real-time phishing & panic inspection.
+    """
+    def __init__(self):
+        self.engine = KavachAIInferenceEngine()
+        self.dataset_path = DATASET_PATH if DATASET_PATH.exists() else LEGACY_DATASET_PATH
         self.intents = {}
         self.patterns = []
-        self.pattern_labels = []
-        self.pattern_texts = []
         self.quiz_questions = []
-        self.sessions = {}  # session_id -> { "quiz_idx": int, "quiz_active": bool, "score": int }
-        
-        self.vectorizer = TfidfVectorizer(
-            ngram_range=(1, 3),
-            analyzer="word",
-            sublinear_tf=True,
-            strip_accents="unicode",
-            token_pattern=r"(?u)\b\w+\b"
-        )
-        self.classifier = LogisticRegression(
-            C=10.0,
-            max_iter=1000,
-            solver="lbfgs",
-            random_state=42
-        )
-        self.pattern_vectors = None
-        self.load_dataset()
-        self.train()
+        self.kavach_assessments = []
+        self.sessions = {}
+        self.load_data()
 
-    def load_dataset(self):
-        with open(self.dataset_path, "r", encoding="utf-8") as f:
-            data = json.load(f)
+    def load_data(self):
+        if self.dataset_path.exists():
+            with open(self.dataset_path, "r", encoding="utf-8") as f:
+                data = json.load(f)
 
-        self.quiz_questions = data.get("quiz_questions", [])
-        
-        for item in data.get("intents", []):
-            tag = item["tag"]
-            self.intents[tag] = item
-            for pattern in item.get("patterns", []):
-                self.patterns.append(pattern)
-                self.pattern_labels.append(tag)
-                self.pattern_texts.append(pattern)
+            self.kavach_assessments = data.get("kavach_assessments", [])
+            for item in data.get("intents", []):
+                tag = item["tag"]
+                self.intents[tag] = item
+                for p in item.get("patterns_en", item.get("patterns", [])):
+                    self.patterns.append(p)
+                for p in item.get("patterns_hi", []):
+                    self.patterns.append(p)
 
-    def train(self):
-        if not self.patterns:
-            raise ValueError("No training patterns found in dataset.")
-        
-        X = self.vectorizer.fit_transform(self.patterns)
-        self.pattern_vectors = X
-        self.classifier.fit(X, self.pattern_labels)
-        print(f"CyberBot Local AI trained on {len(self.patterns)} patterns across {len(self.intents)} intents.")
+            # Build unified quiz list: Kavach questions + Scenario questions
+            for cat in self.kavach_assessments:
+                cat_name = cat["name"]["en"]
+                for q in cat.get("questions", []):
+                    opts_dict = {chr(65 + i): opt for i, opt in enumerate(q["options"]["en"])}
+                    opts_hi_dict = {chr(65 + i): opt for i, opt in enumerate(q["options"]["hi"])}
+                    correct_letter = chr(65 + q["answer"])
+                    self.quiz_questions.append({
+                        "category": cat_name,
+                        "scenario": q["question"]["en"],
+                        "scenario_hi": q["question"]["hi"],
+                        "options": opts_dict,
+                        "options_hi": opts_hi_dict,
+                        "answer": correct_letter,
+                        "explanation": q["explanation"]["en"],
+                        "explanation_hi": q["explanation"]["hi"]
+                    })
+
+        # Fallback to legacy quiz questions if unified empty
+        if not self.quiz_questions and LEGACY_DATASET_PATH.exists():
+            with open(LEGACY_DATASET_PATH, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                self.quiz_questions = data.get("quiz_questions", [])
+
+        print(f"CyberBot AI Loaded: {len(self.intents)} intents, {len(self.patterns)} patterns, {len(self.quiz_questions)} quiz questions.")
 
     def get_session(self, session_id):
         if session_id not in self.sessions:
@@ -72,283 +84,167 @@ class LocalCyberBotAI:
                 "quiz_idx": 0,
                 "quiz_active": False,
                 "quiz_score": 0,
-                "quiz_total": 0
+                "quiz_total": 0,
+                "language": "en"
             }
         return self.sessions[session_id]
 
-    def check_emergency(self, text):
-        """Immediate detection for users in panic or active incident."""
-        panic_patterns = [
-            r"\b(i clicked|clicked on|clicked a)\b.*\b(link|attachment|file)\b",
-            r"\b(i entered|typed my)\b.*\b(password|credentials|code)\b",
-            r"\b(got hacked|hacked my|am i hacked|i am hacked|compromised)\b",
-            r"\b(ransomware|files are encrypted|ransom note)\b",
-            r"\b(sent money|transferred money|gift cards sent)\b"
-        ]
-        text_lower = text.lower()
-        for p in panic_patterns:
-            if re.search(p, text_lower):
-                return True
-        return False
-
     def analyze_phishing_message(self, text):
-        """Inspects arbitrary message/email text for phishing indicators."""
-        text_lower = text.lower()
-        red_flags = []
-        score = 10  # baseline
+        return self.engine.analyze_phishing(text)
 
-        # Urgency triggers
-        urgency_terms = ["immediate", "urgent", "24 hours", "suspended", "suspend", "action required", 
-                         "final notice", "terminated", "act now", "critical alert", "security alert"]
-        found_urgency = [term for term in urgency_terms if term in text_lower]
-        if found_urgency:
-            score += 25
-            red_flags.append(f"**Artificial Urgency & Threat**: Contains pressure keywords ({', '.join(found_urgency[:3])}). Scammers use fear to bypass critical thinking.")
-
-        # Financial / Sensitive Actions
-        action_terms = ["gift card", "wire transfer", "bitcoin", "crypto", "verify password", 
-                        "confirm identity", "update payment", "invoice attached", "unpaid invoice", "payroll"]
-        found_actions = [term for term in action_terms if term in text_lower]
-        if found_actions:
-            score += 30
-            red_flags.append(f"**Sensitive Financial or Credential Demand**: Mentions {', '.join(found_actions[:3])}. Legitimate companies rarely request unexpected payment or password verifications via message.")
-
-        # Impersonation triggers
-        impersonation_terms = ["paypal", "microsoft", "google", "apple", "netflix", "bank", "it support", "helpdesk", "ceo", "hr department", "dhl", "fedex", "usps"]
-        found_impersonation = [term for term in impersonation_terms if term in text_lower]
-        if found_impersonation:
-            score += 20
-            red_flags.append(f"**High-Profile Brand / Authority Impersonation**: Cites {', '.join(found_impersonation[:2])}. Attackers masquerade as reputable brands to borrow credibility.")
-
-        # Suspicious links or attachments
-        if re.search(r"https?://|www\.|\.xyz|\.top|\.click|\.ru|\.work|bit\.ly|tinyurl", text_lower):
-            score += 25
-            red_flags.append("**Hyperlinks or Shortened URLs Present**: Check the domain carefully. Do not click; hover to inspect the real destination.")
+    def handle_quiz(self, session, user_answer=None, language="en"):
+        """Interactive scenario-based quiz state machine supporting English and Hindi."""
+        is_hi = (language == "hi" or session.get("language") == "hi")
         
-        if re.search(r"\.(exe|scr|iso|zip|rar|vbs|bat)\b", text_lower):
-            score += 35
-            red_flags.append("**High-Risk Attachment Detected**: Mentions dangerous or archived file extensions commonly used to distribute malware.")
-
-        if "dear customer" in text_lower or "dear user" in text_lower or "valued client" in text_lower:
-            score += 15
-            red_flags.append("**Generic Greeting**: Uses non-personalized greeting ('Dear Customer') typical of mass phishing campaigns.")
-
-        score = min(score, 98)
-
-        if score >= 70:
-            rating = "🚨 CRITICAL THREAT (Likely Phishing / Scam)"
-            badge_color = "threat-critical"
-            guidance = "Do NOT click any links, do NOT download attachments, and do NOT reply. Report this message to your company's IT security team or mark it as phishing in your email client."
-        elif score >= 40:
-            rating = "⚠️ SUSPICIOUS (Proceed with Caution)"
-            badge_color = "threat-suspicious"
-            guidance = "Treat this message with high skepticism. Verify the request through a known, independent phone number or official app before taking any action."
-        else:
-            rating = "ℹ️ LOW RISK / INFORMATIONAL"
-            badge_color = "threat-low"
-            guidance = "No overt indicators of malicious intent were detected, but always confirm sender identity before sharing confidential information."
-
-        output = [
-            f"### 🔍 Phishing Threat Analysis Report\n",
-            f"**Threat Assessment**: `{rating}` (Risk Score: **{score}/100**)\n",
-            "#### 🚩 Detected Red Flags:",
-        ]
-        if red_flags:
-            for flag in red_flags:
-                output.append(f"- {flag}")
-        else:
-            output.append("- No obvious phishing triggers detected in the provided snippet.")
-
-        output.append("\n#### 🛡️ Recommended Action:")
-        output.append(f"{guidance}\n")
-        output.append("> **Golden Rule**: When an unexpected message demands immediate action, pause. Real organizations will never punish you for taking 2 minutes to independently verify.")
-        return "\n".join(output)
-
-    def handle_quiz(self, session, user_text=""):
-        user_clean = user_text.strip().upper()
-        
-        # If starting fresh
+        # Start a new quiz session
         if not session["quiz_active"]:
             session["quiz_active"] = True
             session["quiz_idx"] = 0
             session["quiz_score"] = 0
-            session["quiz_total"] = len(self.quiz_questions)
+            session["quiz_total"] = min(len(self.quiz_questions), 5)
+            session["language"] = "hi" if is_hi else "en"
 
+            first_q = self.quiz_questions[0]
+            scenario = first_q.get("scenario_hi" if is_hi else "scenario", first_q.get("scenario", ""))
+            opts_map = first_q.get("options_hi" if is_hi else "options", first_q.get("options", {}))
+            opts = "\n".join([f"- **{k})** {v}" for k, v in opts_map.items()])
+
+            intro = (
+                "### 🎯 कवच साइबर सुरक्षा क्विज़ (Kavach Cyber Quiz)\n\n"
+                f"**श्रेणी / Category**: `{first_q.get('category', 'Cybersecurity')}`\n\n"
+                f"**परिदृश्य (Scenario 1/{session['quiz_total']})**:\n{scenario}\n\n"
+                f"{opts}\n\n"
+                "*👉 कृपया सही विकल्प के लिए **A**, **B**, **C**, या **D** लिखकर जवाब दें।*"
+                if is_hi else
+                "### 🎯 Kavach Interactive Cybersecurity Quiz\n\n"
+                f"**Domain**: `{first_q.get('category', 'Cybersecurity')}`\n\n"
+                f"**Scenario 1/{session['quiz_total']}**:\n{scenario}\n\n"
+                f"{opts}\n\n"
+                "*👉 Reply with **A**, **B**, **C**, or **D**.*"
+            )
+            return intro
+
+        # Process user's answer
         current_idx = session["quiz_idx"]
-
-        # Evaluate previous question if user responded with A/B/C/D
         eval_message = ""
-        if current_idx > 0 and user_clean in ["A", "B", "C", "D"]:
-            prev_q = self.quiz_questions[current_idx - 1]
-            correct = prev_q["correct_answer"]
-            if user_clean == correct:
-                session["quiz_score"] += 1
-                eval_message = f"✅ **Correct!** ({user_clean})\n{prev_q['explanation']}\n\n---\n"
-            else:
-                eval_message = f"❌ **Incorrect.** You selected **{user_clean}**, but the correct answer is **{correct}**.\n{prev_q['explanation']}\n\n---\n"
 
-        # Check if quiz finished
-        if current_idx >= len(self.quiz_questions):
+        if user_answer:
+            prev_q = self.quiz_questions[current_idx]
+            correct_ans = prev_q["answer"].strip().upper()
+            user_ans_clean = user_answer.strip().upper()
+            explanation = prev_q.get("explanation_hi" if is_hi else "explanation", prev_q.get("explanation", ""))
+
+            if user_ans_clean == correct_ans:
+                session["quiz_score"] += 1
+                eval_message = (
+                    f"✅ **सही उत्तर! (Option {correct_ans})**\n\n{explanation}\n\n---\n\n"
+                    if is_hi else
+                    f"✅ **Correct! (Option {correct_ans})**\n\n{explanation}\n\n---\n\n"
+                )
+            else:
+                eval_message = (
+                    f"❌ **गलत उत्तर। सही विकल्प था: **{correct_ans}****\n\n{explanation}\n\n---\n\n"
+                    if is_hi else
+                    f"❌ **Incorrect. The correct answer was **{correct_ans}****\n\n{explanation}\n\n---\n\n"
+                )
+
+            current_idx += 1
+            session["quiz_idx"] = current_idx
+
+        # Check if quiz ended
+        if current_idx >= session["quiz_total"]:
             session["quiz_active"] = False
             score = session["quiz_score"]
-            total = len(self.quiz_questions)
+            total = session["quiz_total"]
             pct = int((score / total) * 100)
-            
-            badge = "🏆 Cyber Security Champion" if pct >= 80 else ("🛡️ Security Aware" if pct >= 60 else "⚠️ Training Recommended")
-            
+            badge = "Cyber Guardian (उत्कृष्ट)" if pct >= 80 else ("Security Aware (अच्छा)" if pct >= 60 else "Needs Practice (सुधार आवश्यक)")
+
             return (
                 f"{eval_message}"
-                f"### 🎯 Quiz Complete!\n\n"
-                f"**Your Score**: **{score}/{total}** ({pct}%)\n"
-                f"**Status**: `{badge}`\n\n"
-                f"{'Fantastic job! You demonstrated strong awareness against modern cyber threats.' if pct >= 80 else 'Good effort! Review the topics above and practice recognizing social engineering traps.'}\n\n"
-                f"*Type 'quiz' to try again, or ask any cybersecurity question!*"
+                f"### 🏆 क्विज़ पूर्ण! (Quiz Complete)\n\n"
+                f"**अंक (Score)**: **{score}/{total}** ({pct}%)\n"
+                f"**स्तर (Rating)**: `{badge}`\n\n"
+                f"{'शानदार प्रदर्शन! आपने आधुनिक साइबर खतरों से निपटने की बेहतरीन समझ दिखाई है।' if pct >= 80 else 'अच्छा प्रयास! उपरोक्त सुरक्षा नियमों का अभ्यास करें ताकि ऑनलाइन धोखेबाज़ी से सुरक्षित रह सकें।'}\n\n"
+                f"*दोबारा अभ्यास के लिए 'quiz' लिखें, या कोई भी साइबर सवाल पूछें!*"
+                if is_hi else
+                f"{eval_message}"
+                f"### 🏆 Quiz Complete!\n\n"
+                f"**Your Final Score**: **{score}/{total}** ({pct}%)\n"
+                f"**Awareness Rating**: `{badge}`\n\n"
+                f"{'Outstanding performance! You demonstrated sharp instincts against modern cyber threats.' if pct >= 80 else 'Good effort! Review the lessons above to sharpen your threat detection instincts.'}\n\n"
+                f"*Type 'quiz' to test another topic, or ask any cybersecurity question!*"
             )
 
-        # Present the next question
+        # Present next question
         q = self.quiz_questions[current_idx]
-        session["quiz_idx"] += 1
-
-        opts = "\n".join([f"- **{k})** {v}" for k, v in q["options"].items()])
+        scenario = q.get("scenario_hi" if is_hi else "scenario", q.get("scenario", ""))
+        opts_map = q.get("options_hi" if is_hi else "options", q.get("options", {}))
+        opts = "\n".join([f"- **{k})** {v}" for k, v in opts_map.items()])
 
         return (
             f"{eval_message}"
-            f"### 🎯 Cybersecurity Scenario Quiz ({current_idx + 1}/{len(self.quiz_questions)})\n\n"
-            f"**Scenario**: {q['scenario']}\n\n"
+            f"### 🎯 प्रश्न {current_idx + 1}/{session['quiz_total']} ({q.get('category', 'Security')})\n\n"
+            f"**परिदृश्य (Scenario)**: {scenario}\n\n"
+            f"{opts}\n\n"
+            f"*👉 कृपया **A**, **B**, **C**, या **D** लिखकर जवाब दें।*"
+            if is_hi else
+            f"{eval_message}"
+            f"### 🎯 Scenario {current_idx + 1}/{session['quiz_total']} ({q.get('category', 'Security')})\n\n"
+            f"**Scenario**: {scenario}\n\n"
             f"{opts}\n\n"
             f"*👉 Reply with **A**, **B**, **C**, or **D**.*"
         )
 
-    def predict_intent(self, text):
-        """Classify user intent using TF-IDF + LogisticRegression + Semantic Cosine Similarity."""
-        # Check emergency panic triggers first
-        if self.check_emergency(text):
-            return "incident_response_immediate", 0.99, "Emergency panic indicator detected"
-
-        # Check for phishing analyzer intent
-        if any(trigger in text.lower() for trigger in ["analyze this", "check this email", "is this email phishing", "inspect this", "check this message"]):
-            # If text has content beyond the trigger, analyze directly
-            clean_sub = re.sub(r"(?i)^(analyze this|check this email|is this email phishing|inspect this|check this message)[:\s]*", "", text).strip()
-            if len(clean_sub) > 15:
-                return "DIRECT_PHISHING_ANALYSIS", 1.0, clean_sub
-            return "phishing_analyzer_trigger", 0.95, text
-
-        # Check for quiz intent
-        if re.search(r"\b(quiz|test me|cyber test|start quiz|take quiz|knowledge check)\b", text.lower()):
-            return "quiz_request", 0.99, text
-
-        X_user = self.vectorizer.transform([text])
-        
-        # LogisticRegression classification probabilities
-        probs = self.classifier.predict_proba(X_user)[0]
-        best_class_idx = np.argmax(probs)
-        best_intent = self.classifier.classes_[best_class_idx]
-        classifier_conf = probs[best_class_idx]
-
-        # Semantic Cosine Similarity against all exemplar patterns
-        sims = cosine_similarity(X_user, self.pattern_vectors)[0]
-        best_sim_idx = np.argmax(sims)
-        best_sim_score = sims[best_sim_idx]
-        best_pattern_intent = self.pattern_labels[best_sim_idx]
-        nearest_pattern = self.patterns[best_sim_idx]
-
-        # Blended confidence: Give weight to exact semantic pattern matching
-        if best_sim_score > 0.65:
-            final_intent = best_pattern_intent
-            final_conf = max(classifier_conf, best_sim_score)
-        else:
-            final_intent = best_intent
-            final_conf = classifier_conf
-
-        return final_intent, final_conf, nearest_pattern
-
-    def format_topic_response(self, intent_tag):
-        """Builds an industry-grade, beautifully structured Markdown response."""
-        data = self.intents.get(intent_tag)
-        if not data:
-            return "I apologize, but I do not have detailed information on that topic yet. Try asking about phishing, ransomware, passwords, MFA, public Wi-Fi, or incident reporting."
-
-        lines = []
-        summary = data.get("summary", "")
-        if summary:
-            lines.append(f"{summary}\n")
-
-        red_flags = data.get("red_flags", [])
-        if red_flags:
-            lines.append("#### 🚩 Warning Signs & Red Flags:")
-            for flag in red_flags:
-                lines.append(f"- {flag}")
-            lines.append("")
-
-        action_steps = data.get("action_steps", [])
-        if action_steps:
-            lines.append("#### 🛡️ Recommended Best Practices & Action Steps:")
-            for step in action_steps:
-                lines.append(f"- {step}")
-            lines.append("")
-
-        pro_tip = data.get("pro_tip", "")
-        if pro_tip:
-            lines.append(f"> 💡 **Pro Tip**: {pro_tip}\n")
-
-        follow_ups = data.get("follow_ups", [])
-        if follow_ups:
-            lines.append("##### 💬 Related Questions You Can Ask:")
-            for q in follow_ups[:3]:
-                lines.append(f"- *\"{q}\"*")
-
-        return "\n".join(lines).strip()
-
-    def respond(self, message, session_id="default"):
+    def respond(self, message, session_id="default", language=None):
         if not isinstance(message, str) or not message.strip():
             return "Please type a cybersecurity question, paste a suspicious email to analyze, or type **'quiz'** to test your knowledge!"
 
         clean_msg = message.strip()
         session = self.get_session(session_id)
+        if language:
+            session["language"] = language
 
-        # Handle active quiz session if user answers A, B, C, D
+        # Detect Hindi if characters present
+        is_hi = (language == "hi" or bool(re.search(r"[\u0900-\u097F]", clean_msg)))
+
+        # Handle active quiz responses
         if session["quiz_active"] and clean_msg.upper() in ["A", "B", "C", "D"]:
-            return self.handle_quiz(session, clean_msg)
+            return self.handle_quiz(session, clean_msg, language="hi" if is_hi else "en")
 
-        # Predict intent
-        intent, conf, extra = self.predict_intent(clean_msg)
+        # Handle quiz trigger
+        if re.search(r"\b(quiz|quizz|test me|cyber test|start quiz|take quiz|क्विज़|परीक्षा)\b", clean_msg.lower()):
+            session["quiz_active"] = False
+            return self.handle_quiz(session, language="hi" if is_hi else "en")
 
-        # Direct phishing inspection
-        if intent == "DIRECT_PHISHING_ANALYSIS":
-            return self.analyze_phishing_message(extra)
+        # Direct phishing inspection triggers
+        if any(trigger in clean_msg.lower() for trigger in ["analyze this", "check this email", "is this email phishing", "inspect this", "check this message"]):
+            clean_sub = re.sub(r"(?i)^(analyze this|check this email|is this email phishing|inspect this|check this message)[:\s]*", "", clean_msg).strip()
+            if len(clean_sub) > 10:
+                report = self.analyze_phishing_message(clean_sub)
+                red_flags_list = "\n".join([f"- ⚠️ {f}" for f in report["red_flags"]]) if report["red_flags"] else "- No explicit red flags detected."
+                return (
+                    f"### 🛡️ Phishing Inspection Report\n\n"
+                    f"**Risk Score**: **{report['score']}/100** (`{report['risk_level']}`)\n\n"
+                    f"**Verdict**: {report['verdict']}\n\n"
+                    f"#### 🚩 Detected Indicators:\n{red_flags_list}\n\n"
+                    f"> 💡 *Always navigate to services directly via verified apps or official domains.*"
+                )
 
-        # Quiz request
-        if intent == "quiz_request":
-            session["quiz_active"] = False  # Reset
-            return self.handle_quiz(session)
-
-        # If confidence is too low (< 0.20)
-        if conf < 0.20:
-            return (
-                "I'm not quite sure I understood that question. As a cybersecurity awareness trainer, I can help you with:\n\n"
-                "- **Phishing & Scams**: Spotting fake emails, smishing texts, and BEC wire fraud.\n"
-                "- **Passwords & MFA**: Passphrases, password managers, 2FA, and passkeys.\n"
-                "- **Malware & Ransomware**: Protection, symptoms, and containment.\n"
-                "- **Emergency Incident Response**: What to do immediately if you clicked a suspicious link.\n"
-                "- **Safe Habits**: Public Wi-Fi safety, USB security, and software updates.\n\n"
-                "*Tip: You can also type **'quiz'** to start an interactive security test or paste a suspicious email snippet!*"
-            )
-
-        return self.format_topic_response(intent)
+        # Neural Model Inference
+        return self.engine.predict(clean_msg, session_id=session_id, user_lang="hi" if is_hi else "en")
 
 
-# Instantiate the global AI engine
-Model = LocalCyberBotAI()
+# Global model singleton
+Model = CyberBotAI()
 
 if __name__ == "__main__":
-    print("Testing CyberBot Local AI...")
-    test_queries = [
+    print("Testing CyberBot Kavach 1M AI Engine...")
+    samples = [
         "What is phishing?",
+        "UPI PIN डालते समय क्या सावधानियां रखनी चाहिए?",
         "I clicked a suspicious link and typed my password what do I do?",
-        "How do passkeys work?",
-        "Analyze this email: From support@paypal-security.xyz Urgent! Your account is suspended, click here to verify.",
         "quiz"
     ]
-    for q in test_queries:
-        print(f"\n--- USER: {q} ---")
-        print(Model.respond(q))
+    for s in samples:
+        print(f"\n--- USER: {s} ---")
+        print(Model.respond(s))

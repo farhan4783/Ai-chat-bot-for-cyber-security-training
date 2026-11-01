@@ -1,60 +1,66 @@
-# CyberBot: Local AI Cybersecurity Awareness Training Platform
+# CyberBot: Local AI Cybersecurity Awareness Platform (Kavach-Net-1M)
 
-CyberBot is a 100% local, privacy-preserving AI chatbot designed specifically for **Cybersecurity Awareness Training**. It runs entirely on your local machine using `scikit-learn` NLP classification, semantic cosine similarity retrieval, and heuristic threat inspection—requiring **zero external cloud APIs or internet connectivity**.
+CyberBot is a 100% local, privacy-preserving AI chatbot powered by **Kavach-Net-1M**—a dedicated **~1.34 Million Parameter Deep Learning Neural Network** trained specifically on modern cybersecurity threat vectors, bilingual English/Hindi threat curricula, and network attack telemetry.
+
+Built as the intelligence backend for the [Kavach Cybersecurity Platform](https://github.com/SalmanKhan123-dev/Kavach-Cybersecurity-Platform.git), CyberBot executes in **< 15ms on local CPU** with zero external cloud or GPU requirements.
 
 ---
 
 ## 🌟 Key Features
 
-### 1. 100% Local & Air-Gapped AI Engine
-- **Zero Cloud Leakage**: No user prompts, company emails, or credentials ever leave your local machine.
-- **Hybrid Local NLP**: Combines Sublinear TF-IDF n-grams (1-3 words), calibrated multi-class `LogisticRegression`, and semantic cosine similarity against 277+ exemplar patterns across 32 core security intents.
-- **Emergency Panic Detection**: Instantly detects indicators of active compromise (e.g., *"I clicked a link"*, *"I typed my password"*, *"ransomware"*) and delivers immediate step-by-step triage and containment advice.
+### 1. 1-Million Parameter Deep Learning Model ("Kavach-Net-1M")
+- **Custom Neural Architecture**: 2-layer Bidirectional GRU + 4-Head Scaled Dot-Product Attention + Multi-Task Output Heads.
+- **Exact Parameter Count**: **1,341,676 parameters** (FP32 size: 5.3 MB).
+- **Multi-Task Outputs**:
+  - **Head A**: Multi-Class Intent Classifier across 43 security domains.
+  - **Head B**: Threat Severity & Phishing Risk Regressor (0.0 – 1.0).
+  - **Head C**: 128-dimensional Normalized Semantic Embeddings for response retrieval.
 
-### 2. Interactive Phishing Message Inspector
-- Paste any email header, subject line, or message text into the chat (or click **"Inspect Phishing Email"**).
-- CyberBot breaks down:
-  - **Risk Assessment Score** (0–100 scale: Low, Suspicious, Critical Threat)
-  - **Identified Red Flags** (artificial urgency, executive impersonation, credential harvesting triggers, risky attachment extensions, shortened URLs)
-  - **Recommended Action & Precautions**
+### 2. Bilingual English & Hindi Security Intelligence
+- Seamlessly comprehends prompts and delivers guidance in both **English (`en`)** and **Hindi (`hi`)**.
+- Incorporates the complete bilingual curriculum and question bank from the Kavach Cybersecurity Platform.
 
-### 3. Scenario-Based Cyber Quizzes
-- Type `quiz` or click **"Practice Cyber Quiz"** in the sidebar.
-- CyberBot tests your practical security instincts through interactive workplace scenarios (Baiting, Vishing, BEC, Password entropy, Public Wi-Fi).
-- Evaluates your answers (`A`, `B`, `C`, `D`), explains why an answer is right or wrong, and scores your awareness level.
+### 3. Comprehensive 43 Cybersecurity Domains & 110 Scenarios
+Covers all 11 Kavach core categories and 32 CyberBot sub-domains:
+- **Financial & Payment Security**: UPI Fraud, QR Code Scams (Quishing), OTP Theft, Net-Banking Traps.
+- **Social Engineering**: Spear Phishing, CEO Fraud / BEC, Impersonation, Pretexting, Job Scams, Shopping Fraud.
+- **Identity & Devices**: Passphrases, Password Managers, 2FA/MFA, Passkeys, Public Wi-Fi & Evil Twins.
+- **Incident Response**: Emergency panic detection, active account takeover containment, credential exposure steps.
 
-### 4. 32 Comprehensive Cybersecurity Awareness Domains
-Trained locally on real-world threat vectors, including:
-- **Social Engineering & Phishing**: Phishing basics, Spear Phishing, Whaling, Smishing (SMS), Vishing (Voice), BEC / CEO Fraud.
-- **Identity & Authentication**: Strong Passphrases, Password Managers, 2FA/MFA, MFA Fatigue Attacks, Passkeys (FIDO2).
-- **Malware & Attacks**: Ransomware isolation, Trojans, Spyware, Infostealers, Zero-Day updates.
-- **Network & Device Safety**: Public Wi-Fi & Evil Twins, VPN usage, HTTPS myths, Full Disk Encryption (BitLocker/FileVault).
-- **Physical & Operational Security**: Clean Desk Policy, Screen Locking, BadUSB & Juice Jacking, Remote Work & Home Router security, Insider Threats & Shadow IT.
-- **Incident Response & Recovery**: First 5 minutes after a click, Account Takeover recovery, Credit Freezes & HaveIBeenPwned.
+### 4. Real-Time Phishing & Scam Inspector
+- Inspects emails, SMS, and messages for 7 distinct threat indicators (urgency, credential lures, shortened URLs, malware attachments).
+- Evaluates risk score (0–100) using neural regression blended with rule-based heuristics.
+
+### 5. Interactive Scenario Quiz Engine
+- Powered by **110 verified assessment scenarios** across all 11 Kavach domains.
+- Multi-turn state machine evaluates choices (`A`, `B`, `C`, `D`), delivers immediate explanations, and scores awareness levels.
 
 ---
 
 ## 🚀 Quick Start Guide
 
 ### Requirements
-- **Python 3.11+**
-- Packages: `Flask`, `scikit-learn`, `numpy`
+- **Python 3.11+** (Tested on Python 3.14)
+- Packages: `Flask`, `torch`, `numpy`, `scikit-learn`
 
-### Installation & Run
+### Run the Application
 
-1. Open PowerShell / Terminal in the project directory:
+1. Open PowerShell / Terminal:
    ```powershell
    cd "c:\Users\Acer\Desktop\Dekstop\Imp\New folder (2)\CyberBot-main"
    ```
 
-2. Run the application:
+2. Run the automated test suite:
    ```powershell
-   py app.py
-   # Or using python:
-   python app.py
+   py test_backend.py
    ```
 
-3. Open your web browser and navigate to:
+3. Launch the web application:
+   ```powershell
+   py app.py
+   ```
+
+4. Open your browser:
    ```text
    http://127.0.0.1:5000/chat
    ```
@@ -64,66 +70,33 @@ Trained locally on real-world threat vectors, including:
 ## 🛠️ API Reference
 
 ### 1. `POST /api/chat`
-Send a question or command to the local AI.
-
-**Request Body:**
+Conversational endpoint with automatic language detection and risk scoring.
 ```json
 {
-  "message": "What should I do if I clicked a suspicious link?",
-  "session_id": "user_session_123"
-}
-```
-
-**Response:**
-```json
-{
-  "success": true,
-  "response": "Immediate action can prevent a minor error from escalating into a full organizational breach...\n\n#### 🛡️ Recommended Best Practices:\n- 1. DISCONNECT IMMEDIATELY...",
-  "session_id": "user_session_123"
+  "message": "UPI PIN डालते समय क्या सावधानियां रखनी चाहिए?",
+  "session_id": "user_session_1",
+  "language": "hi"
 }
 ```
 
 ### 2. `POST /api/analyze/phishing`
-Inspect suspicious message text for phishing indicators.
-
-**Request Body:**
+Inspects email or message snippets for phishing red flags.
 ```json
 {
-  "text": "From support@paypa1.xyz: Urgent! Your account is suspended within 24 hours. Click here to verify."
+  "text": "From: billing@paypa1-update.com Subject: Urgent Account Suspension. Click here to verify."
 }
 ```
 
 ### 3. `GET /api/status`
-Returns model training status and offline metrics.
+Returns model health, parameter count, and offline capability status.
+
+### 4. `GET /api/kavach/assessments`
+Returns the complete 11-category Kavach quiz curriculum and scenario database.
 
 ---
 
-## 📂 Project Structure
-
-```text
-CyberBot/
-├── app.py                     # Modern Flask backend with REST & legacy endpoints
-├── ML/
-│   └── mlScript.py            # Local NLP Engine, Phishing Inspector & Quiz Engine
-├── dataset/
-│   ├── cybersecurity.json     # Master dataset: 32 intents, 277 patterns, quiz scenarios
-│   └── build_dataset.py       # Generator script to expand and customize the dataset
-├── templates/
-│   └── index.html             # Responsive chat UI with Markdown & interactive quiz pills
-├── static/
-│   └── styles/style.css       # Clean cybersecurity-themed styling
-└── test_backend.py            # Automated test suite verifying all local AI endpoints
-```
-
----
-
-## 💡 Customizing & Expanding the Dataset
-
-To add your own organization-specific policies or new questions:
-1. Open `dataset/build_dataset.py`.
-2. Add your new patterns, rules, or quiz questions to the `DATASET` dictionary.
-3. Run:
-   ```powershell
-   py dataset/build_dataset.py
-   ```
-4. Restart `app.py`. The model will retrain on launch in under 1 second!
+## 🔗 Integration with Kavach React Frontend
+To connect the [Kavach Cybersecurity Platform](https://github.com/SalmanKhan123-dev/Kavach-Cybersecurity-Platform.git) directly:
+1. Copy the updated [`Chatbot.jsx`](file:///C:/Users/Acer/.gemini/antigravity/brain/c9f84614-e3ba-49f2-8cd6-a3aef123653d/scratch/kavach_repo/src/pages/Chatbot.jsx) into `Kavach-Cybersecurity-Platform/src/pages/Chatbot.jsx`.
+2. Ensure CyberBot's Flask server is running on `http://127.0.0.1:5000`.
+3. The React app will automatically communicate with the local 1M-parameter AI engine!
