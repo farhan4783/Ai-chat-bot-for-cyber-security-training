@@ -1,9 +1,8 @@
 {
   "metadata": {
-    "version": "3.0",
-    "name": "Kavach-CyberBot-Unified-Dataset",
-    "total_intents": 43,
-    "kavach_categories": 11,
+    "version": "3.1",
+    "name": "Kavach-CyberBot-Unified-Refined-Dataset",
+    "total_intents": 41,
     "kavach_quiz_questions": 110
   },
   "intents": [
@@ -34,6 +33,7 @@
         "Type 'emergency' if you think your account or device was recently compromised."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Hello! I am CyberBot, your cybersecurity awareness trainer. Ask me about phishing, malware, passwords, safe browsing, or type 'quiz' to test your skills!",
         "Greetings! I'm here to help you strengthen your digital defenses. What cybersecurity topic or challenge can we explore today?"
@@ -41,7 +41,7 @@
       "responses_hi": [],
       "pro_tip_en": "Cybersecurity isn't about knowing complex technical jargon—it is about building daily habits of verification and caution.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "bot_capabilities",
@@ -65,13 +65,14 @@
         "Analyze suspicious message snippets for urgency, impersonation, and spoofed domains."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "I am your local cybersecurity coach! I can guide you through threat prevention, analyze suspicious messages, train you with interactive quizzes, and provide incident response checklists."
       ],
       "responses_hi": [],
       "pro_tip_en": "I run 100% locally on your machine—your questions and text are never sent to third-party cloud servers.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "phishing_basics",
@@ -86,9 +87,58 @@
         "Common phishing examples",
         "Phishing indicators",
         "Tell me about phishing attacks",
-        "Suspicious email warning signs"
+        "Suspicious email warning signs",
+        "An email says your bank account will be blocked unless you verify it through a link. What should you do?",
+        "A delivery text asks for a small fee through a shortened link. What is safest?",
+        "A message claims you won a prize but asks you to pay a processing fee first. What should you do?",
+        "The sender address looks almost like your employer's but has one extra character. What should you do?",
+        "An unexpected invoice attachment arrives from an unknown sender. What is the safest action?",
+        "A message says your account will be deleted in ten minutes unless you sign in. What is the best response?",
+        "You entered your password on a page reached through a suspicious email. What should you do first?",
+        "A coworker sends an unusual request for gift cards from a new email address. What should you do?",
+        "A login page reached from an email asks for your password and recovery code together. What should you do?",
+        "What should you do with a suspicious phishing message at work?",
+        "what is phising",
+        "what is phissing",
+        "what is fishing scam",
+        "what is fising",
+        "phising",
+        "phissing",
+        "define phising",
+        "define phishing",
+        "explain phishing",
+        "explain phising",
+        "what does phishing mean",
+        "phishing meaning",
+        "phising meaning",
+        "tell me about phishing",
+        "tell me about phising",
+        "what is a phishing email",
+        "what is a phishing attack",
+        "how does phishing work",
+        "how do attackers phish",
+        "how to identify a phishing email",
+        "phishing example",
+        "phishing vs legit email",
+        "phishing red flags",
+        "what are phishing attacks",
+        "phising attack"
       ],
-      "patterns_hi": [],
+      "patterns_hi": [
+        "एक ईमेल कहता है कि लिंक से पुष्टि न करने पर आपका बैंक खाता बंद हो जाएगा। आपको क्या करना चाहिए?",
+        "डिलीवरी का एक संदेश छोटे लिंक से थोड़ी फीस मांगता है। सबसे सुरक्षित तरीका क्या है?",
+        "एक संदेश कहता है कि आपने इनाम जीता है, लेकिन पहले प्रोसेसिंग फीस मांगता है। क्या करें?",
+        "भेजने वाले का पता आपके नियोक्ता जैसा है, लेकिन उसमें एक अतिरिक्त अक्षर है। क्या करें?",
+        "अनजान व्यक्ति से अप्रत्याशित बिल का अटैचमेंट आता है। सबसे सुरक्षित कदम क्या है?",
+        "संदेश कहता है कि दस मिनट में साइन-इन न करने पर खाता मिटा दिया जाएगा। सही प्रतिक्रिया क्या है?",
+        "संदिग्ध ईमेल के लिंक से खुले पेज पर आपने पासवर्ड दर्ज कर दिया। सबसे पहले क्या करें?",
+        "सहकर्मी के नाम से नए ईमेल पते पर गिफ्ट कार्ड खरीदने का असामान्य अनुरोध आता है। क्या करें?",
+        "ईमेल से खुले लॉगिन पेज पर पासवर्ड और रिकवरी कोड दोनों मांगे जाते हैं। क्या करें?",
+        "काम पर मिले संदिग्ध फ़िशिंग संदेश के साथ क्या करें?",
+        "फ़िशिंग क्या है",
+        "फ़िशिंग का मतलब क्या है",
+        "फ़िशिंग कैसे होती है"
+      ],
       "summary_en": "Phishing is a deceptive social engineering attack where cybercriminals impersonate reputable organizations or colleagues to steal credentials, money, or sensitive data.",
       "summary_hi": "",
       "action_steps_en": [
@@ -99,13 +149,40 @@
         "Verify suspicious requests via a secondary, trusted communication channel (call the person or visit the official website directly)."
       ],
       "action_steps_hi": [],
-      "responses_en": [
-        "Phishing relies on impersonation, artificial urgency, and deceptive links. Always check the true sender domain, hover over links before clicking, and verify unexpected requests through an independent channel."
+      "red_flags": [
+        "Generic greetings ('Dear Customer') when they should know your name.",
+        "Urgent threats of account closure, legal action, or fines.",
+        "Requests for passwords, gift cards, wire transfers, or MFA codes.",
+        "Mismatched URLs that don't match the company's real domain name."
       ],
-      "responses_hi": [],
+      "responses_en": [
+        "Phishing relies on impersonation, artificial urgency, and deceptive links. Always check the true sender domain, hover over links before clicking, and verify unexpected requests through an independent channel.",
+        "Urgent messages and unexpected links are common phishing tactics. Verify through a trusted channel.",
+        "Use the official delivery service to check a parcel; don't trust unsolicited payment links.",
+        "Unexpected prizes that require upfront payment are a common scam warning sign.",
+        "Lookalike sender addresses can impersonate trusted organizations. Verify the exact address and request.",
+        "Unexpected attachments can contain malware. Confirm with the sender using a known contact method.",
+        "Fear and urgency are used to make people click fake login links. Navigate to the service independently.",
+        "Changing the exposed password promptly limits misuse; also enable MFA and report the incident.",
+        "Compromised or spoofed accounts can impersonate colleagues. Verify unusual requests separately.",
+        "Recovery codes are sensitive credentials. Only use them on the genuine service you navigated to yourself.",
+        "Reporting helps security teams block similar messages and protect other people."
+      ],
+      "responses_hi": [
+        "जल्दबाजी कराने वाले संदेश और अनजान लिंक फ़िशिंग के आम तरीके हैं। विश्वसनीय माध्यम से पुष्टि करें।",
+        "पार्सल जांचने के लिए आधिकारिक डिलीवरी सेवा का उपयोग करें; अनचाहे भुगतान लिंक पर भरोसा न करें।",
+        "अनपेक्षित इनाम के लिए पहले भुगतान मांगना धोखाधड़ी का आम संकेत है।",
+        "मिलते-जुलते ईमेल पते भरोसेमंद संस्थाओं की नकल कर सकते हैं। सही पता और अनुरोध जांचें।",
+        "अप्रत्याशित अटैचमेंट में मैलवेयर हो सकता है। ज्ञात संपर्क माध्यम से भेजने वाले की पुष्टि करें।",
+        "डर और जल्दबाजी से नकली लॉगिन लिंक पर क्लिक करवाया जाता है। सेवा को स्वयं आधिकारिक तरीके से खोलें।",
+        "उजागर पासवर्ड तुरंत बदलने से दुरुपयोग सीमित होता है; MFA चालू करें और घटना की रिपोर्ट करें।",
+        "हैक या नकली खातों से सहकर्मियों का रूप लिया जा सकता है। असामान्य अनुरोध की अलग से पुष्टि करें।",
+        "रिकवरी कोड संवेदनशील प्रमाण होते हैं। इन्हें केवल स्वयं खोली गई असली सेवा पर उपयोग करें।",
+        "रिपोर्ट करने से सुरक्षा टीम मिलते-जुलते संदेश रोककर दूसरों को सुरक्षित कर सकती है।"
+      ],
       "pro_tip_en": "When in doubt, never click the email link. Open your browser, type the official website URL manually, and log in from there.",
       "pro_tip_hi": "",
-      "default_risk": 0.75
+      "default_risk": 0.7
     },
     {
       "tag": "spear_phishing_and_whaling",
@@ -129,13 +206,18 @@
         "Limit the amount of sensitive business and organizational hierarchy data shared publicly on social media."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Emails claiming the CEO is in an 'urgent meeting' and cannot take phone calls.",
+        "Requests to bypass standard purchase order or invoice verification protocols.",
+        "Direct requests for employee W-2 forms, payroll accounts, or employee databases."
+      ],
       "responses_en": [
         "Spear phishing uses tailored personal information to lower your guard. Whaling targets executives and finance teams to execute fraudulent wire transfers. Always verify out-of-band using an established phone number."
       ],
       "responses_hi": [],
       "pro_tip_en": "If a high-level executive asks you to break normal security protocol, that urgency itself is the #1 indicator of spear phishing.",
       "pro_tip_hi": "",
-      "default_risk": 0.75
+      "default_risk": 0.7
     },
     {
       "tag": "smishing_and_vishing",
@@ -161,13 +243,18 @@
         "Call the institution back using the official phone number printed on the back of your card or on their official website."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Texts regarding 'Unclaimed package', 'Suspended debit card', or 'Overdue toll fees' containing shortened URLs.",
+        "Callers with urgent or aggressive tones demanding immediate payment via gift cards or wire transfers.",
+        "Callers asking you to read back a verification code sent to your phone."
+      ],
       "responses_en": [
         "Smishing (SMS) and Vishing (phone calls) exploit mobile convenience and urgency. Never click links in unprompted text messages and never read one-time passcodes over the phone."
       ],
       "responses_hi": [],
       "pro_tip_en": "Forward suspicious SMS messages to spam reporting code 7726 (SPAM) on major mobile carriers to help block the campaign.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "business_email_compromise",
@@ -192,13 +279,18 @@
         "Train staff to recognize the classic 'gift card request'—CEOs do not ask junior staff to buy Apple or Google Play gift cards."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Sudden change of remittance bank accounts to overseas or unfamiliar institutions.",
+        "Insistence on absolute secrecy ('Keep this between us until the deal closes').",
+        "Slight domain variations (e.g., acme-supplier.com instead of acmesupplier.com)."
+      ],
       "responses_en": [
         "BEC is responsible for billions in annual losses. Always establish dual-signature policies and verify changes to payment details via a confirmed verbal phone call."
       ],
       "responses_hi": [],
       "pro_tip_en": "A 30-second phone call to verify an invoice can prevent millions of dollars in corporate wire fraud.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "ransomware",
@@ -223,13 +315,18 @@
         "Maintain immutable, offline backups following the 3-2-1 backup rule (3 copies, 2 different media, 1 kept offline/offsite)."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Files suddenly changing extensions to unknown strings (e.g., .locked, .crypt, .lockbit).",
+        "Desktop background replaced with ransom instructions and countdown timers.",
+        "Antivirus or Endpoint Detection and Response (EDR) software alerting on shadow copy deletion."
+      ],
       "responses_en": [
         "Ransomware encrypts your digital assets. Disconnect the computer from all networks immediately, do not pay the ransom, notify IT security, and restore clean files from offline backups."
       ],
       "responses_hi": [],
       "pro_tip_en": "Your strongest defense against ransomware is having an offline, air-gapped backup that cannot be reached or encrypted over the network.",
       "pro_tip_hi": "",
-      "default_risk": 0.95
+      "default_risk": 0.9
     },
     {
       "tag": "malware_and_viruses",
@@ -243,9 +340,22 @@
         "What is a keylogger?",
         "Signs of computer infection",
         "How to remove malware?",
-        "What are infostealers?"
+        "What are infostealers?",
+        "what is malware",
+        "what is malwear",
+        "what is a computer virus",
+        "define malware",
+        "explain malware",
+        "types of malware",
+        "how does malware spread",
+        "malwear definition",
+        "trojan vs virus",
+        "spyware definition",
+        "what does malware do"
       ],
-      "patterns_hi": [],
+      "patterns_hi": [
+        "मैलवेयर क्या है"
+      ],
       "summary_en": "Malware (malicious software) is an umbrella term covering viruses, worms, trojans, ransomware, spyware, and keyloggers designed to damage, disrupt, or gain unauthorized access to computer systems.",
       "summary_hi": "",
       "action_steps_en": [
@@ -255,13 +365,18 @@
         "Keep your operating system and browsers updated to patch known vulnerabilities (CVEs)."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Browser homepage or default search engine changing without your consent.",
+        "Frequent pop-ups, even when the web browser is closed.",
+        "Accounts being accessed from unfamiliar locations (a sign of infostealer credential theft)."
+      ],
       "responses_en": [
         "Malware encompasses all harmful software like trojans, spyware, and worms. Avoid untrusted downloads, keep automatic updates enabled, and maintain active endpoint protection."
       ],
       "responses_hi": [],
       "pro_tip_en": "Infostealers search your browser cache for saved passwords and session cookies. Never store sensitive master passwords in your plain browser storage.",
       "pro_tip_hi": "",
-      "default_risk": 0.75
+      "default_risk": 0.7
     },
     {
       "tag": "password_hygiene",
@@ -286,13 +401,18 @@
         "Use a dedicated Password Manager to generate and store random 20+ character passwords."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Using personal info: birthdays, pet names, kids' names, spouse names, sports teams.",
+        "Predictable substitutions like 'P@ssw0rd2024!'. Automated cracking dictionaries guess these in milliseconds.",
+        "Writing passwords on sticky notes attached to your monitor or under your keyboard."
+      ],
       "responses_en": [
         "Focus on length and uniqueness. Use 4-5 random words to create memorable passphrases, never reuse passwords, and let a password manager handle the rest."
       ],
       "responses_hi": [],
       "pro_tip_en": "A 16-character passphrase made of 4 common words is vastly more secure and easier to remember than an 8-character string of random symbols.",
       "pro_tip_hi": "",
-      "default_risk": 0.35
+      "default_risk": 0.3
     },
     {
       "tag": "password_managers",
@@ -316,13 +436,17 @@
         "Leverage password managers to protect against phishing: They will not autofill your credentials if you land on a spoofed phishing URL."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Using the browser's built-in password store without a master password lock.",
+        "Storing passwords in unencrypted Word, Excel, or Notepad files."
+      ],
       "responses_en": [
         "Password managers are essential modern security tools. They use zero-knowledge end-to-end encryption so only you hold the decryption key. They prevent password reuse and neutralize phishing."
       ],
       "responses_hi": [],
       "pro_tip_en": "Password managers automatically protect you against typosquatting phishing sites: if the domain is fake, the password manager simply won't offer to autofill.",
       "pro_tip_hi": "",
-      "default_risk": 0.35
+      "default_risk": 0.3
     },
     {
       "tag": "multi_factor_authentication",
@@ -347,13 +471,17 @@
         "Save your one-time emergency backup recovery codes in a secure, encrypted offline location."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Receiving unsolicited MFA prompts when you are not trying to log in (indicates your password has already been compromised).",
+        "Anyone claiming to be support asking you to 'read back the code you just received'."
+      ],
       "responses_en": [
         "MFA adds a critical second layer of defense. Even if attackers steal your password, they cannot access your account without your physical second factor. Prefer authenticator apps or security keys over SMS."
       ],
       "responses_hi": [],
       "pro_tip_en": "Enabling MFA blocks over 99% of automated credential-stuffing and account takeover attacks.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "mfa_fatigue_and_bypass",
@@ -376,13 +504,17 @@
         "Switch to number-matching MFA (where you must type the numbers shown on the screen into your authenticator app)."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Multiple push notifications arriving late at night or during meetings.",
+        "A caller pretending to be IT claiming: 'We are sending a test prompt, please tap Approve to clear the error'."
+      ],
       "responses_en": [
         "MFA fatigue exploits human frustration. Never approve an unprompted sign-in request. Decline the prompt and immediately change your password, because the attacker already knows it."
       ],
       "responses_hi": [],
       "pro_tip_en": "If you tap 'Decline' on an MFA prompt, modern systems automatically trigger an alert to your company's security operations center (SOC).",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "passkeys",
@@ -406,13 +538,14 @@
         "Keep at least two devices enrolled (e.g., your laptop and your phone) so you don't lose account access if one device is damaged."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Passkeys replace passwords with un-phishable cryptographic keys bound to specific domains. You unlock them with your fingerprint or face scan, making credential theft practically impossible."
       ],
       "responses_hi": [],
       "pro_tip_en": "Passkeys eliminate the possibility of phishing and credential reuse entirely. They represent the gold standard of modern identity security.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "public_wifi_risks",
@@ -437,13 +570,18 @@
         "Turn off File Sharing and AirDrop/Nearby Share when connected to public hotspots."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Two identical network names (e.g., 'Starbucks_Guest' and 'Starbucks_Guest_Free').",
+        "Networks asking you to install a security certificate or download an app to gain internet access.",
+        "Browser SSL certificate warnings ('Your connection is not private')."
+      ],
       "responses_en": [
         "Public Wi-Fi can expose your device to traffic eavesdropping and rogue access points. Use a reputable VPN or cellular hotspot, ensure HTTPS connections, and disable file sharing."
       ],
       "responses_hi": [],
       "pro_tip_en": "Your mobile phone's personal hotspot is exponentially safer than any free airport or coffee shop public Wi-Fi network.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "vpn_usage",
@@ -467,13 +605,14 @@
         "Always use your organization's official corporate VPN when accessing internal corporate applications."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "A VPN encrypts your network traffic, shielding you on untrusted public Wi-Fi networks. However, it does not stop you from falling for phishing links or downloading malware."
       ],
       "responses_hi": [],
       "pro_tip_en": "A VPN protects your connection in transit, but if you type your password into a phishing site, a VPN will not protect you.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "safe_browsing_and_https",
@@ -498,13 +637,18 @@
         "Keep browser extensions to a minimum and audit permissions regularly."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Websites with countdown timers demanding you claim a prize or install an update immediately.",
+        "Download prompts that initiate automatically without you clicking anything.",
+        "Unusual top-level domains (.xyz, .top, .work) used for mainstream bank or government services."
+      ],
       "responses_en": [
         "Browsing safely means verifying domain names and not trusting a site solely because it has HTTPS. Avoid suspicious downloads, keep extensions minimal, and never ignore browser warnings."
       ],
       "responses_hi": [],
       "pro_tip_en": "HTTPS protects data from eavesdroppers between you and the server. It does NOT guarantee that the server doesn't belong to a criminal.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "software_updates_and_patches",
@@ -528,13 +672,17 @@
         "Apply critical security patches within 24 to 48 hours of release."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Ignoring 'Update Available' notifications for weeks at a time.",
+        "Downloading 'Flash Player' or 'Video Player' updates from pop-up banners—these are almost always malware."
+      ],
       "responses_en": [
         "Software updates are your primary armor against known cyber exploits. Enable automatic updates, reboot promptly, and only download updates through official system settings."
       ],
       "responses_hi": [],
       "pro_tip_en": "Over 90% of successful corporate breaches exploit software vulnerabilities for which a security patch was already available for months.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "data_encryption",
@@ -558,13 +706,14 @@
         "Safeguard your BitLocker or FileVault recovery key in a secure, non-public vault."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Encryption protects data both at rest (stored on devices) and in transit (traveling over networks). Always turn on BitLocker or FileVault so stolen hardware cannot lead to stolen data."
       ],
       "responses_hi": [],
       "pro_tip_en": "Full disk encryption turns a stolen laptop from a devastating corporate data breach into a minor hardware replacement incident.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "safe_attachments_and_downloads",
@@ -588,13 +737,18 @@
         "If someone sends an unexpected archive (.zip or .7z) with a password in the email body, it is designed to bypass security email scanners."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "An invoice sent as an executable file (.exe or .scr) or disk image (.iso).",
+        "Documents prompting you to disable security controls to view protected content.",
+        "Unsolicited resumes or order confirmations from companies you have never contacted."
+      ],
       "responses_en": [
         "Treat all unsolicited attachments with extreme skepticism. Watch for double extensions, never enable macros, and never open .exe or .iso files sent via email."
       ],
       "responses_hi": [],
       "pro_tip_en": "Real invoices are almost never delivered as .zip, .iso, or .exe files. If you see those extensions, report the message immediately.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "social_engineering",
@@ -606,9 +760,36 @@
         "What is shoulder surfing?",
         "How do attackers manipulate people?",
         "Psychology of cyber attacks",
-        "Human factor in cybersecurity"
+        "Human factor in cybersecurity",
+        "A caller pressures you to act immediately and keep the call secret. What should you do?",
+        "Someone follows you through a secure office door saying they forgot their badge. What should you do?",
+        "A person claiming to be IT asks for your login code to fix your account. What should you do?",
+        "A stranger offers a free gift if you scan your badge and share your staff details. What is safest?",
+        "A caller knows public details about you and asks for a confidential code. What should you remember?",
+        "A delivery worker asks you to tell them a verification code sent to your phone. What should you do?",
+        "A manager emails an unusual request to urgently send confidential files to a new address. What should you do?",
+        "A caller says you will be arrested unless you transfer money immediately. What should you do?",
+        "A caller asks you to install remote-access software so they can secure your computer. What is safest?",
+        "Someone asks you to bypass a normal approval step because the request is confidential. What should you do?",
+        "what is social engineering",
+        "define social engineering",
+        "social engineering attacks",
+        "pretexting and baiting",
+        "human hacking definition"
       ],
-      "patterns_hi": [],
+      "patterns_hi": [
+        "कॉलर तुरंत कार्रवाई करने और कॉल गुप्त रखने का दबाव डालता है। क्या करें?",
+        "कोई बैज भूलने की बात कहकर सुरक्षित कार्यालय के दरवाजे से आपके पीछे अंदर आता है। क्या करें?",
+        "IT कर्मचारी बताने वाला व्यक्ति खाता ठीक करने के लिए लॉगिन कोड मांगता है। क्या करें?",
+        "अजनबी बैज स्कैन करके कर्मचारी विवरण देने पर मुफ्त उपहार देता है। सुरक्षित कदम क्या है?",
+        "कॉलर को आपके सार्वजनिक विवरण पता हैं और वह गोपनीय कोड मांगता है। क्या याद रखें?",
+        "डिलीवरी कर्मी फोन पर आए सत्यापन कोड को बताने को कहता है। क्या करें?",
+        "प्रबंधक के नाम से गोपनीय फाइलें नए पते पर तुरंत भेजने का असामान्य ईमेल आता है। क्या करें?",
+        "कॉलर कहता है कि तुरंत पैसे न भेजने पर आपको गिरफ्तार कर लिया जाएगा। क्या करें?",
+        "कॉलर कंप्यूटर सुरक्षित करने के लिए रिमोट-एक्सेस सॉफ्टवेयर इंस्टॉल करने को कहता है। सुरक्षित तरीका क्या है?",
+        "कोई अनुरोध गोपनीय बताकर सामान्य स्वीकृति चरण छोड़ने को कहता है। क्या करें?",
+        "सोशल इंजीनियरिंग क्या है"
+      ],
       "summary_en": "Social engineering is the psychological manipulation of people into performing actions or divulging confidential information, bypassing technical security controls.",
       "summary_hi": "",
       "action_steps_en": [
@@ -618,13 +799,39 @@
         "Never plug in random USB drives found in parking lots, hallways, or lobbies (Baiting)."
       ],
       "action_steps_hi": [],
-      "responses_en": [
-        "Social engineering targets human psychology—urgency, fear, and authority. Always pause, verify unexpected requests independently, and never let emotion override security policy."
+      "red_flags": [
+        "Someone rushing you: 'We will lose this client if you don't send the files in 5 minutes!'.",
+        "Unfamiliar technicians asking you to disable your antivirus or read them your password.",
+        "Strangers asking you to hold open secure doors (Tailgating)."
       ],
-      "responses_hi": [],
+      "responses_en": [
+        "Social engineering targets human psychology—urgency, fear, and authority. Always pause, verify unexpected requests independently, and never let emotion override security policy.",
+        "Urgency and secrecy are common manipulation tactics. Take time and verify independently.",
+        "Tailgating bypasses physical access controls. Follow your organization's visitor procedures.",
+        "One-time login codes should not be shared. Verify support requests using a known channel.",
+        "Unverified offers may be used to collect identity or workplace information.",
+        "Personal details may be publicly available and do not authenticate a caller.",
+        "Codes may authorize account access or payments. Understand the purpose and keep sensitive codes private.",
+        "Attackers impersonate authority to create urgency. Independently confirm sensitive requests before acting.",
+        "Threats and demands for immediate payment are coercive tactics. Verify independently and seek trusted help.",
+        "Unsolicited remote access can expose data and control your device. Verify support requests directly.",
+        "Procedures help prevent impersonation and unauthorized actions; don't bypass them under pressure."
+      ],
+      "responses_hi": [
+        "जल्दबाजी और गोपनीयता हेरफेर के आम तरीके हैं। समय लें और स्वयं पुष्टि करें।",
+        "पीछे-पीछे प्रवेश करके भौतिक सुरक्षा तोड़ी जा सकती है। संस्था की आगंतुक प्रक्रिया अपनाएं।",
+        "एक बार उपयोग होने वाले लॉगिन कोड साझा न करें। ज्ञात माध्यम से सहायता अनुरोध की पुष्टि करें।",
+        "अपुष्ट प्रस्तावों से पहचान या कार्यस्थल की जानकारी जुटाई जा सकती है।",
+        "व्यक्तिगत विवरण सार्वजनिक हो सकते हैं और कॉलर की पहचान प्रमाणित नहीं करते।",
+        "कोड खाते का एक्सेस या भुगतान अधिकृत कर सकते हैं। उद्देश्य समझें और संवेदनशील कोड निजी रखें।",
+        "हमलावर जल्दबाजी के लिए अधिकारी होने का रूप लेते हैं। संवेदनशील अनुरोध पर कार्रवाई से पहले अलग से पुष्टि करें।",
+        "धमकी और तुरंत भुगतान की मांग दबाव के तरीके हैं। स्वयं पुष्टि करें और विश्वसनीय सहायता लें।",
+        "अनचाहा रिमोट एक्सेस डेटा उजागर कर सकता है और डिवाइस नियंत्रित कर सकता है। सहायता अनुरोध की सीधे पुष्टि करें।",
+        "प्रक्रियाएं पहचान की नकल और अनधिकृत कार्रवाई रोकती हैं; दबाव में इन्हें न छोड़ें।"
+      ],
       "pro_tip_en": "Attackers hack humans because humans are easier to exploit than 256-bit AES encryption. When an email or call induces sudden anxiety, that emotion is your warning alarm.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "clean_desk_and_physical_security",
@@ -648,13 +855,18 @@
         "Shred sensitive physical documents using cross-cut shredders rather than throwing them into standard recycling bins."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Sticky notes containing passwords stuck to monitors or under keyboards.",
+        "Unknown individuals wandering corporate corridors without visitor badges.",
+        "Printed confidential payroll or HR documents left unattended on shared printers."
+      ],
       "responses_en": [
         "Digital safety requires physical vigilance. Lock your workstation every time you step away (Win+L), safeguard access badges, shred sensitive paperwork, and prevent unauthorized tailgating."
       ],
       "responses_hi": [],
       "pro_tip_en": "Make locking your workstation a physical reflex: fingers on 'Win+L' whenever your feet leave your chair.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "usb_security_and_juice_jacking",
@@ -678,13 +890,17 @@
         "Organizations should enforce USB device control policies to restrict unauthorized removable media."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Promotional USB drives handed out by unknown vendors or left in public lobbies.",
+        "Phones prompting 'Trust this computer?' when plugged into a public charging station."
+      ],
       "responses_en": [
         "Never plug in unknown USB flash drives—they can execute malicious code in seconds. For public charging, use standard AC wall outlets or a hardware USB data blocker."
       ],
       "responses_hi": [],
       "pro_tip_en": "A BadUSB does not look like a virus to your computer; it registers as an ultra-fast keyboard typing malicious PowerShell commands at 1,000 words per minute.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "remote_work_and_home_wifi",
@@ -708,13 +924,14 @@
         "Ensure your home router's firmware is updated and remote management features are turned off."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Secure your remote workplace: Change default router passwords, isolate smart IoT gadgets on a guest Wi-Fi network, and conduct all business solely on managed corporate devices."
       ],
       "responses_hi": [],
       "pro_tip_en": "Putting your smart home appliances and IoT devices on a dedicated Guest Wi-Fi network prevents a hacked smart lightbulb from compromising your work laptop.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "mobile_security",
@@ -738,13 +955,18 @@
         "Set a strong 6-digit PIN or passphrase (avoid 1234 or 0000) combined with biometric face or fingerprint lock."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Battery draining rapidly or phone overheating when idle (a symptom of background spyware).",
+        "Unexplained spikes in mobile data consumption.",
+        "Strange pop-up windows appearing across your home screen."
+      ],
       "responses_en": [
         "Keep mobile devices protected: Use strong PINs, review app permissions, only install from official app stores, and enable remote locate/wipe capabilities."
       ],
       "responses_hi": [],
       "pro_tip_en": "Rebooting your smartphone once a day flushes many zero-click, in-memory spyware implants that do not possess persistent boot storage.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "incident_response_immediate",
@@ -764,20 +986,23 @@
       "summary_en": "Immediate action can prevent a minor error from escalating into a full organizational breach. Don't panic, don't hide the mistake, and act quickly.",
       "summary_hi": "",
       "action_steps_en": [
-        "1. DISCONNECT IMMEDIATELY: Unplug the network cable (Ethernet) or turn off Wi-Fi on the affected device to halt malware transmission.",
-        "2. CHANGE PASSWORDS (from a DIFFERENT, uncompromised device): Change the password for the affected account and terminate all other active sessions.",
-        "3. REPORT TO IT / SECURITY: Contact your organization's IT Helpdesk or Security Operations Center (SOC) immediately. Quick reporting is valued, not punished.",
-        "4. DO NOT DELETE EVIDENCE: Keep the phishing email, headers, and transaction timestamps so analysts can block the threat across the company.",
-        "5. CONTACT YOUR BANK: If financial data or debit/credit cards were entered, notify the bank immediately to freeze the card."
+        "DISCONNECT IMMEDIATELY: Unplug the network cable (Ethernet) or turn off Wi-Fi on the affected device to halt malware transmission.",
+        "CHANGE PASSWORDS (from a DIFFERENT, uncompromised device): Change the password for the affected account and terminate all other active sessions.",
+        "REPORT TO IT / SECURITY: Contact your organization's IT Helpdesk or Security Operations Center (SOC) immediately. Quick reporting is valued, not punished.",
+        "DO NOT DELETE EVIDENCE: Keep the phishing email, headers, and transaction timestamps so analysts can block the threat across the company.",
+        "CONTACT YOUR BANK: If financial data or debit/credit cards were entered, notify the bank immediately to freeze the card."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Attempting to cover up the mistake or delay reporting—delays allow attackers time to establish persistence and steal data."
+      ],
       "responses_en": [
         "Immediate steps: Disconnect the device from Wi-Fi/Ethernet, change your passwords from a clean device, report the incident to IT security right away, and preserve the suspicious message for evidence."
       ],
       "responses_hi": [],
       "pro_tip_en": "Security teams deal with clicked links every single day. The faster you report it, the faster they can contain the impact and protect your colleagues.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.9
     },
     {
       "tag": "cloud_and_account_takeover",
@@ -802,13 +1027,18 @@
         "Enable an Authenticator App or Passkey for MFA."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Sent emails or direct messages that you never wrote.",
+        "Notifications of password resets or sign-ins originating from foreign countries or unfamiliar devices.",
+        "New mailbox rules that automatically redirect incoming emails to the Trash or RSS folder."
+      ],
       "responses_en": [
         "To reclaim a compromised account: Revoke all active sessions, change your password immediately, verify recovery details, check for hidden email forwarding rules, and enable MFA."
       ],
       "responses_hi": [],
       "pro_tip_en": "Always check your email forwarding rules after an account scare; sneaky forwarding rules are how attackers maintain quiet access even after password changes.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "identity_theft_and_data_breaches",
@@ -832,13 +1062,14 @@
         "Set up transaction alerts on bank accounts and credit cards to detect fraudulent charges instantly."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "After a breach: Check your exposure on HaveIBeenPwned, change exposed passwords, turn on MFA, and place a free credit freeze across major credit reporting bureaus."
       ],
       "responses_hi": [],
       "pro_tip_en": "A credit freeze is free by law, takes 10 minutes to set up, and is the single most effective barrier against identity theft.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "insider_threat_and_shadow_it",
@@ -861,13 +1092,17 @@
         "Report inadvertent data leaks to IT security immediately so they can be contained."
       ],
       "action_steps_hi": [],
+      "red_flags": [
+        "Pasting proprietary company source code, financial roadmaps, or customer PII into public AI tools.",
+        "Sharing company Google Drive or OneDrive links configured with 'Anyone with the link can edit'."
+      ],
       "responses_en": [
         "Avoid Shadow IT by using only authorized company tools for business data. Never forward company assets to personal accounts or unvetted cloud storage."
       ],
       "responses_hi": [],
       "pro_tip_en": "Most insider data breaches are not malicious sabotage—they are well-meaning employees trying to work faster using unvetted personal tools.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "quiz_request",
@@ -892,13 +1127,14 @@
         "Receive instant explanations and best practices."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Let's test your cybersecurity instincts! Here is your scenario question:\n\n**Scenario**: You receive an email from 'IT Support <helpdesk@company-internal-portal.net>' stating your mailbox is full and you must click a link within 2 hours or your account will be deleted.\n\n**What should you do?**\n- **A)** Click the link and enter your credentials to clean your mailbox.\n- **B)** Forward the email to your personal account to test the link safely.\n- **C)** Ignore the email and delete it without telling anyone.\n- **D)** Check the sender's domain, do not click the link, and report it to your official IT security channel.\n\n*Reply with A, B, C, or D!*"
       ],
       "responses_hi": [],
       "pro_tip_en": "Frequent micro-quizzing increases security retention by over 70% compared to once-a-year compliance videos.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "phishing_analyzer_trigger",
@@ -922,13 +1158,14 @@
         "You will receive a Risk Rating (Low, Medium, High, or Critical) with specific red flags."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "I can analyze suspicious messages! Please paste the email subject, sender address, and body text below (e.g., 'Analyze this: From: support@bank-alert.com, Urgent: Account suspended, click here...'). I'll evaluate the red flags and provide a threat assessment."
       ],
       "responses_hi": [],
       "pro_tip_en": "Never paste real passwords, API tokens, or credit card numbers into any inspection tool.",
       "pro_tip_hi": "",
-      "default_risk": 0.75
+      "default_risk": 0.7
     },
     {
       "tag": "goodbye",
@@ -949,6 +1186,7 @@
         "Stay safe and remember: When in doubt, verify out-of-band!"
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Stay safe out there! Remember: think twice before you click, and always verify unexpected requests. Goodbye!",
         "Goodbye! Keep your software updated and your passwords strong. See you next time!"
@@ -956,7 +1194,7 @@
       "responses_hi": [],
       "pro_tip_en": "Stay alert, keep software updated, and verify before you click.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
+      "default_risk": 0.25
     },
     {
       "tag": "gratitude",
@@ -978,6 +1216,7 @@
         "Share these security practices with your team and colleagues."
       ],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "You're very welcome! Security is a team effort—feel free to ask whenever you encounter anything suspicious.",
         "Happy to help! Keep practicing strong digital habits, and stay safe online!"
@@ -985,75 +1224,7 @@
       "responses_hi": [],
       "pro_tip_en": "A culture of security thrives when everyone helps each other stay safe.",
       "pro_tip_hi": "",
-      "default_risk": 0.15
-    },
-    {
-      "tag": "kavach_phishing",
-      "name_en": "Phishing",
-      "name_hi": "फ़िशिंग",
-      "patterns_en": [
-        "What is Phishing?",
-        "How to stay safe from Phishing?",
-        "Explain Phishing fraud and scams",
-        "Protect against Phishing",
-        "An email says your bank account will be blocked unless you verify it through a link. What should you do?",
-        "A delivery text asks for a small fee through a shortened link. What is safest?",
-        "A message claims you won a prize but asks you to pay a processing fee first. What should you do?",
-        "The sender address looks almost like your employer's but has one extra character. What should you do?",
-        "An unexpected invoice attachment arrives from an unknown sender. What is the safest action?",
-        "A message says your account will be deleted in ten minutes unless you sign in. What is the best response?",
-        "You entered your password on a page reached through a suspicious email. What should you do first?",
-        "A coworker sends an unusual request for gift cards from a new email address. What should you do?",
-        "A login page reached from an email asks for your password and recovery code together. What should you do?",
-        "What should you do with a suspicious phishing message at work?"
-      ],
-      "patterns_hi": [
-        "फ़िशिंग क्या है?",
-        "फ़िशिंग से कैसे बचें?",
-        "फ़िशिंग धोखाधड़ी के बारे में बताएं",
-        "फ़िशिंग सुरक्षा टिप्स",
-        "एक ईमेल कहता है कि लिंक से पुष्टि न करने पर आपका बैंक खाता बंद हो जाएगा। आपको क्या करना चाहिए?",
-        "डिलीवरी का एक संदेश छोटे लिंक से थोड़ी फीस मांगता है। सबसे सुरक्षित तरीका क्या है?",
-        "एक संदेश कहता है कि आपने इनाम जीता है, लेकिन पहले प्रोसेसिंग फीस मांगता है। क्या करें?",
-        "भेजने वाले का पता आपके नियोक्ता जैसा है, लेकिन उसमें एक अतिरिक्त अक्षर है। क्या करें?",
-        "अनजान व्यक्ति से अप्रत्याशित बिल का अटैचमेंट आता है। सबसे सुरक्षित कदम क्या है?",
-        "संदेश कहता है कि दस मिनट में साइन-इन न करने पर खाता मिटा दिया जाएगा। सही प्रतिक्रिया क्या है?",
-        "संदिग्ध ईमेल के लिंक से खुले पेज पर आपने पासवर्ड दर्ज कर दिया। सबसे पहले क्या करें?",
-        "सहकर्मी के नाम से नए ईमेल पते पर गिफ्ट कार्ड खरीदने का असामान्य अनुरोध आता है। क्या करें?",
-        "ईमेल से खुले लॉगिन पेज पर पासवर्ड और रिकवरी कोड दोनों मांगे जाते हैं। क्या करें?",
-        "काम पर मिले संदिग्ध फ़िशिंग संदेश के साथ क्या करें?"
-      ],
-      "summary_en": "Comprehensive guidance on Phishing based on Kavach Cybersecurity Platform guidelines.",
-      "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित फ़िशिंग से बचाव की विस्तृत जानकारी।",
-      "action_steps_en": [],
-      "action_steps_hi": [],
-      "responses_en": [
-        "Urgent messages and unexpected links are common phishing tactics. Verify through a trusted channel.",
-        "Use the official delivery service to check a parcel; don't trust unsolicited payment links.",
-        "Unexpected prizes that require upfront payment are a common scam warning sign.",
-        "Lookalike sender addresses can impersonate trusted organizations. Verify the exact address and request.",
-        "Unexpected attachments can contain malware. Confirm with the sender using a known contact method.",
-        "Fear and urgency are used to make people click fake login links. Navigate to the service independently.",
-        "Changing the exposed password promptly limits misuse; also enable MFA and report the incident.",
-        "Compromised or spoofed accounts can impersonate colleagues. Verify unusual requests separately.",
-        "Recovery codes are sensitive credentials. Only use them on the genuine service you navigated to yourself.",
-        "Reporting helps security teams block similar messages and protect other people."
-      ],
-      "responses_hi": [
-        "जल्दबाजी कराने वाले संदेश और अनजान लिंक फ़िशिंग के आम तरीके हैं। विश्वसनीय माध्यम से पुष्टि करें।",
-        "पार्सल जांचने के लिए आधिकारिक डिलीवरी सेवा का उपयोग करें; अनचाहे भुगतान लिंक पर भरोसा न करें।",
-        "अनपेक्षित इनाम के लिए पहले भुगतान मांगना धोखाधड़ी का आम संकेत है।",
-        "मिलते-जुलते ईमेल पते भरोसेमंद संस्थाओं की नकल कर सकते हैं। सही पता और अनुरोध जांचें।",
-        "अप्रत्याशित अटैचमेंट में मैलवेयर हो सकता है। ज्ञात संपर्क माध्यम से भेजने वाले की पुष्टि करें।",
-        "डर और जल्दबाजी से नकली लॉगिन लिंक पर क्लिक करवाया जाता है। सेवा को स्वयं आधिकारिक तरीके से खोलें।",
-        "उजागर पासवर्ड तुरंत बदलने से दुरुपयोग सीमित होता है; MFA चालू करें और घटना की रिपोर्ट करें।",
-        "हैक या नकली खातों से सहकर्मियों का रूप लिया जा सकता है। असामान्य अनुरोध की अलग से पुष्टि करें।",
-        "रिकवरी कोड संवेदनशील प्रमाण होते हैं। इन्हें केवल स्वयं खोली गई असली सेवा पर उपयोग करें।",
-        "रिपोर्ट करने से सुरक्षा टीम मिलते-जुलते संदेश रोककर दूसरों को सुरक्षित कर सकती है।"
-      ],
-      "pro_tip_en": "Always verify transactions and unexpected communications regarding Phishing.",
-      "pro_tip_hi": "फ़िशिंग से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.25
     },
     {
       "tag": "kavach_otp_banking",
@@ -1073,13 +1244,18 @@
         "What should you do if you accidentally shared an OTP with a caller?",
         "A caller asks you to keep a banking conversation secret from your family and bank staff. What does this suggest?",
         "You notice an unauthorized debit in your bank account. What should you do first?",
-        "How should you handle a message asking you to update banking details through an unfamiliar link?"
+        "How should you handle a message asking you to update banking details through an unfamiliar link?",
+        "what is otp fraud",
+        "banking scams definition",
+        "why never share otp",
+        "fake kyc call",
+        "bank call fraud"
       ],
       "patterns_hi": [
         "OTP और बैंकिंग धोखाधड़ी क्या है?",
         "OTP और बैंकिंग धोखाधड़ी से कैसे बचें?",
         "OTP और बैंकिंग धोखाधड़ी धोखाधड़ी के बारे में बताएं",
-        "OTP और बैंकिंग धोखाधड़ी सुरक्षा टिप्स",
+        "OTP और बैंकिंग धोखाधड़ी सुरक्षा नियम",
         "बैंक का कर्मचारी बताने वाला व्यक्ति लेनदेन रोकने के लिए OTP मांगता है। क्या करें?",
         "ऐसे लेनदेन का OTP आता है जिसे आपने शुरू नहीं किया। सबसे सुरक्षित कदम क्या है?",
         "फोन पर KYC अपडेट पूरा करने के लिए कोई ऐप इंस्टॉल करने को कहता है। क्या करें?",
@@ -1089,12 +1265,14 @@
         "यदि गलती से कॉलर को OTP बता दिया तो क्या करना चाहिए?",
         "कॉलर बैंकिंग बातचीत को परिवार और बैंक कर्मचारियों से गुप्त रखने को कहता है। यह किस बात का संकेत है?",
         "बैंक खाते में अनधिकृत कटौती दिखती है। सबसे पहले क्या करें?",
-        "बैंकिंग विवरण अनजान लिंक से अपडेट करने को कहने वाला संदेश कैसे संभालें?"
+        "बैंकिंग विवरण अनजान लिंक से अपडेट करने को कहने वाला संदेश कैसे संभालें?",
+        "ओटीपी धोखाधड़ी क्या है"
       ],
       "summary_en": "Comprehensive guidance on OTP & Banking Fraud based on Kavach Cybersecurity Platform guidelines.",
       "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित OTP और बैंकिंग धोखाधड़ी से बचाव की विस्तृत जानकारी।",
       "action_steps_en": [],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Banks do not need your OTP over a call. Contact the bank yourself through a trusted channel.",
         "An unexpected OTP may indicate an attempted transaction. Never disclose it and contact the bank.",
@@ -1121,7 +1299,7 @@
       ],
       "pro_tip_en": "Always verify transactions and unexpected communications regarding OTP & Banking Fraud.",
       "pro_tip_hi": "OTP और बैंकिंग धोखाधड़ी से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.6
     },
     {
       "tag": "kavach_upi",
@@ -1141,13 +1319,19 @@
         "Which detail should you verify before approving a UPI payment?",
         "A caller says to transfer your money to a 'safe account' to protect it from fraud. What should you do?",
         "You approved an unknown UPI collect request and money was debited. What should you do?",
-        "Someone requests your UPI PIN to send you money. What is the correct response?"
+        "Someone requests your UPI PIN to send you money. What is the correct response?",
+        "what is upi fraud",
+        "what is upi scam",
+        "explain upi scams",
+        "upi pin rules",
+        "do i need pin to receive money",
+        "upi fraud prevention"
       ],
       "patterns_hi": [
         "UPI धोखाधड़ी क्या है?",
         "UPI धोखाधड़ी से कैसे बचें?",
         "UPI धोखाधड़ी धोखाधड़ी के बारे में बताएं",
-        "UPI धोखाधड़ी सुरक्षा टिप्स",
+        "UPI धोखाधड़ी सुरक्षा नियम",
         "खरीदार कहता है कि भुगतान पाने के लिए UPI PIN डालना होगा। क्या करें?",
         "UPI ऐप में अनजान व्यक्ति से पैसे मांगने का अनुरोध आता है। क्या करें?",
         "कोई UPI भुगतान पूरा होने का स्क्रीनशॉट भेजता है, लेकिन ऐप में पैसे नहीं आए। किस पर भरोसा करें?",
@@ -1157,12 +1341,14 @@
         "UPI भुगतान स्वीकार करने से पहले कौन सा विवरण जांचना चाहिए?",
         "कॉलर धोखाधड़ी से बचाने के लिए पैसे 'सुरक्षित खाते' में भेजने को कहता है। क्या करें?",
         "अनजान UPI अनुरोध स्वीकार किया और पैसे कट गए। क्या करें?",
-        "कोई आपको पैसे भेजने के लिए UPI PIN मांगता है। सही प्रतिक्रिया क्या है?"
+        "कोई आपको पैसे भेजने के लिए UPI PIN मांगता है। सही प्रतिक्रिया क्या है?",
+        "यूपीआई धोखाधड़ी क्या है"
       ],
       "summary_en": "Comprehensive guidance on UPI Scams based on Kavach Cybersecurity Platform guidelines.",
       "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित UPI धोखाधड़ी से बचाव की विस्तृत जानकारी।",
       "action_steps_en": [],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "A UPI PIN authorizes money leaving your account; it is not needed to receive money.",
         "A collect request asks you to pay. Approve only if you recognize and intend the payment.",
@@ -1189,10 +1375,10 @@
       ],
       "pro_tip_en": "Always verify transactions and unexpected communications regarding UPI Scams.",
       "pro_tip_hi": "UPI धोखाधड़ी से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.6
     },
     {
-      "tag": "kavach_passwords",
+      "tag": "password_security",
       "name_en": "Passwords",
       "name_hi": "पासवर्ड",
       "patterns_en": [
@@ -1209,13 +1395,19 @@
         "A support agent asks you to tell them your account password to fix a problem. What should you do?",
         "What does multi-factor authentication add to an account?",
         "You are creating a password for an important account. Which should you avoid?",
-        "You suspect someone else knows your password. What is the best response?"
+        "You suspect someone else knows your password. What is the best response?",
+        "what is a strong password",
+        "how to create a strong password",
+        "password security tips",
+        "what is a passphrase",
+        "password manager definition",
+        "why unique passwords matter"
       ],
       "patterns_hi": [
         "पासवर्ड क्या है?",
         "पासवर्ड से कैसे बचें?",
         "पासवर्ड धोखाधड़ी के बारे में बताएं",
-        "पासवर्ड सुरक्षा टिप्स",
+        "पासवर्ड सुरक्षा नियम",
         "पासवर्ड का कौन सा तरीका सबसे सुरक्षित है?",
         "पासवर्ड मैनेजर कैसे मदद कर सकता है?",
         "सूचना मिलती है कि आपका पासवर्ड डेटा लीक में मिला है। क्या करें?",
@@ -1225,12 +1417,15 @@
         "सपोर्ट एजेंट समस्या ठीक करने के लिए खाते का पासवर्ड बताने को कहता है। क्या करें?",
         "मल्टी-फैक्टर प्रमाणीकरण खाते में क्या जोड़ता है?",
         "महत्वपूर्ण खाते के लिए पासवर्ड बनाते समय किससे बचें?",
-        "आपको संदेह है कि किसी और को आपका पासवर्ड पता है। क्या करें?"
+        "आपको संदेह है कि किसी और को आपका पासवर्ड पता है। क्या करें?",
+        "पासवर्ड सुरक्षा क्या है",
+        "मजबूत पासवर्ड कैसे बनाएं"
       ],
       "summary_en": "Comprehensive guidance on Passwords based on Kavach Cybersecurity Platform guidelines.",
       "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित पासवर्ड से बचाव की विस्तृत जानकारी।",
       "action_steps_en": [],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Unique passwords prevent one exposed account from unlocking others.",
         "A reputable password manager can create and store unique passwords; protect it with a strong master password and MFA.",
@@ -1257,75 +1452,7 @@
       ],
       "pro_tip_en": "Always verify transactions and unexpected communications regarding Passwords.",
       "pro_tip_hi": "पासवर्ड से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
-    },
-    {
-      "tag": "kavach_social_engineering",
-      "name_en": "Social Engineering",
-      "name_hi": "सोशल इंजीनियरिंग",
-      "patterns_en": [
-        "What is Social Engineering?",
-        "How to stay safe from Social Engineering?",
-        "Explain Social Engineering fraud and scams",
-        "Protect against Social Engineering",
-        "A caller pressures you to act immediately and keep the call secret. What should you do?",
-        "Someone follows you through a secure office door saying they forgot their badge. What should you do?",
-        "A person claiming to be IT asks for your login code to fix your account. What should you do?",
-        "A stranger offers a free gift if you scan your badge and share your staff details. What is safest?",
-        "A caller knows public details about you and asks for a confidential code. What should you remember?",
-        "A delivery worker asks you to tell them a verification code sent to your phone. What should you do?",
-        "A manager emails an unusual request to urgently send confidential files to a new address. What should you do?",
-        "A caller says you will be arrested unless you transfer money immediately. What should you do?",
-        "A caller asks you to install remote-access software so they can secure your computer. What is safest?",
-        "Someone asks you to bypass a normal approval step because the request is confidential. What should you do?"
-      ],
-      "patterns_hi": [
-        "सोशल इंजीनियरिंग क्या है?",
-        "सोशल इंजीनियरिंग से कैसे बचें?",
-        "सोशल इंजीनियरिंग धोखाधड़ी के बारे में बताएं",
-        "सोशल इंजीनियरिंग सुरक्षा टिप्स",
-        "कॉलर तुरंत कार्रवाई करने और कॉल गुप्त रखने का दबाव डालता है। क्या करें?",
-        "कोई बैज भूलने की बात कहकर सुरक्षित कार्यालय के दरवाजे से आपके पीछे अंदर आता है। क्या करें?",
-        "IT कर्मचारी बताने वाला व्यक्ति खाता ठीक करने के लिए लॉगिन कोड मांगता है। क्या करें?",
-        "अजनबी बैज स्कैन करके कर्मचारी विवरण देने पर मुफ्त उपहार देता है। सुरक्षित कदम क्या है?",
-        "कॉलर को आपके सार्वजनिक विवरण पता हैं और वह गोपनीय कोड मांगता है। क्या याद रखें?",
-        "डिलीवरी कर्मी फोन पर आए सत्यापन कोड को बताने को कहता है। क्या करें?",
-        "प्रबंधक के नाम से गोपनीय फाइलें नए पते पर तुरंत भेजने का असामान्य ईमेल आता है। क्या करें?",
-        "कॉलर कहता है कि तुरंत पैसे न भेजने पर आपको गिरफ्तार कर लिया जाएगा। क्या करें?",
-        "कॉलर कंप्यूटर सुरक्षित करने के लिए रिमोट-एक्सेस सॉफ्टवेयर इंस्टॉल करने को कहता है। सुरक्षित तरीका क्या है?",
-        "कोई अनुरोध गोपनीय बताकर सामान्य स्वीकृति चरण छोड़ने को कहता है। क्या करें?"
-      ],
-      "summary_en": "Comprehensive guidance on Social Engineering based on Kavach Cybersecurity Platform guidelines.",
-      "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित सोशल इंजीनियरिंग से बचाव की विस्तृत जानकारी।",
-      "action_steps_en": [],
-      "action_steps_hi": [],
-      "responses_en": [
-        "Urgency and secrecy are common manipulation tactics. Take time and verify independently.",
-        "Tailgating bypasses physical access controls. Follow your organization's visitor procedures.",
-        "One-time login codes should not be shared. Verify support requests using a known channel.",
-        "Unverified offers may be used to collect identity or workplace information.",
-        "Personal details may be publicly available and do not authenticate a caller.",
-        "Codes may authorize account access or payments. Understand the purpose and keep sensitive codes private.",
-        "Attackers impersonate authority to create urgency. Independently confirm sensitive requests before acting.",
-        "Threats and demands for immediate payment are coercive tactics. Verify independently and seek trusted help.",
-        "Unsolicited remote access can expose data and control your device. Verify support requests directly.",
-        "Procedures help prevent impersonation and unauthorized actions; don't bypass them under pressure."
-      ],
-      "responses_hi": [
-        "जल्दबाजी और गोपनीयता हेरफेर के आम तरीके हैं। समय लें और स्वयं पुष्टि करें।",
-        "पीछे-पीछे प्रवेश करके भौतिक सुरक्षा तोड़ी जा सकती है। संस्था की आगंतुक प्रक्रिया अपनाएं।",
-        "एक बार उपयोग होने वाले लॉगिन कोड साझा न करें। ज्ञात माध्यम से सहायता अनुरोध की पुष्टि करें।",
-        "अपुष्ट प्रस्तावों से पहचान या कार्यस्थल की जानकारी जुटाई जा सकती है।",
-        "व्यक्तिगत विवरण सार्वजनिक हो सकते हैं और कॉलर की पहचान प्रमाणित नहीं करते।",
-        "कोड खाते का एक्सेस या भुगतान अधिकृत कर सकते हैं। उद्देश्य समझें और संवेदनशील कोड निजी रखें।",
-        "हमलावर जल्दबाजी के लिए अधिकारी होने का रूप लेते हैं। संवेदनशील अनुरोध पर कार्रवाई से पहले अलग से पुष्टि करें।",
-        "धमकी और तुरंत भुगतान की मांग दबाव के तरीके हैं। स्वयं पुष्टि करें और विश्वसनीय सहायता लें।",
-        "अनचाहा रिमोट एक्सेस डेटा उजागर कर सकता है और डिवाइस नियंत्रित कर सकता है। सहायता अनुरोध की सीधे पुष्टि करें।",
-        "प्रक्रियाएं पहचान की नकल और अनधिकृत कार्रवाई रोकती हैं; दबाव में इन्हें न छोड़ें।"
-      ],
-      "pro_tip_en": "Always verify transactions and unexpected communications regarding Social Engineering.",
-      "pro_tip_hi": "सोशल इंजीनियरिंग से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.6
     },
     {
       "tag": "kavach_fake_websites",
@@ -1345,13 +1472,18 @@
         "You entered your credentials on a fake login page. What should you do?",
         "A search result is marked as an advertisement and leads to a bank login page. What is safest?",
         "Before entering payment details, what should you check on a shopping website?",
-        "A link opens a site that redirects through several unfamiliar pages. What should you do?"
+        "A link opens a site that redirects through several unfamiliar pages. What should you do?",
+        "what is a fake website",
+        "how to spot a spoofed website",
+        "fake login page",
+        "homograph domain attack",
+        "lookalike website"
       ],
       "patterns_hi": [
         "नकली वेबसाइट क्या है?",
         "नकली वेबसाइट से कैसे बचें?",
         "नकली वेबसाइट धोखाधड़ी के बारे में बताएं",
-        "नकली वेबसाइट सुरक्षा टिप्स",
+        "नकली वेबसाइट सुरक्षा नियम",
         "बैंक की वेबसाइट खोलने का सबसे सुरक्षित तरीका क्या है?",
         "वेबसाइट URL में ब्रांड नाम की वर्तनी गलत है। क्या करें?",
         "क्या केवल ताला आइकन यह साबित करता है कि वेबसाइट असली है?",
@@ -1361,12 +1493,14 @@
         "नकली लॉगिन पेज पर आपने प्रमाण दर्ज किए। अब क्या करें?",
         "सर्च परिणाम विज्ञापन के रूप में चिह्नित है और बैंक लॉगिन पेज पर ले जाता है। सुरक्षित तरीका क्या है?",
         "शॉपिंग वेबसाइट पर भुगतान जानकारी भरने से पहले क्या जांचें?",
-        "लिंक कई अनजान पेजों से होकर वेबसाइट खोलता है। क्या करें?"
+        "लिंक कई अनजान पेजों से होकर वेबसाइट खोलता है। क्या करें?",
+        "नकली वेबसाइट की पहचान"
       ],
       "summary_en": "Comprehensive guidance on Fake Websites based on Kavach Cybersecurity Platform guidelines.",
       "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित नकली वेबसाइट से बचाव की विस्तृत जानकारी।",
       "action_steps_en": [],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Independent navigation reduces the risk of landing on a lookalike login page.",
         "Lookalike domains can impersonate real brands. Check the exact domain before entering data.",
@@ -1393,7 +1527,7 @@
       ],
       "pro_tip_en": "Always verify transactions and unexpected communications regarding Fake Websites.",
       "pro_tip_hi": "नकली वेबसाइट से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.6
     },
     {
       "tag": "kavach_shopping",
@@ -1413,13 +1547,17 @@
         "What should you do when a shopping site asks for a one-time banking OTP by phone?",
         "You paid an online seller but received no confirmation or product. What should you do?",
         "A seller asks for your card number, expiry, CVV, and bank OTP in a chat. What should you do?",
-        "How should you verify a return or refund message?"
+        "How should you verify a return or refund message?",
+        "what is online shopping fraud",
+        "fake shopping website scam",
+        "unbelievable discount scam",
+        "marketplace fraud"
       ],
       "patterns_hi": [
         "शॉपिंग धोखाधड़ी क्या है?",
         "शॉपिंग धोखाधड़ी से कैसे बचें?",
         "शॉपिंग धोखाधड़ी धोखाधड़ी के बारे में बताएं",
-        "शॉपिंग धोखाधड़ी सुरक्षा टिप्स",
+        "शॉपिंग धोखाधड़ी सुरक्षा नियम",
         "अनजान दुकान नया फोन अविश्वसनीय छूट पर देकर निजी UPI ID पर भुगतान मांगती है। क्या करें?",
         "सोशल मीडिया विक्रेता उत्पाद या व्यवसाय विवरण दिए बिना पहले भुगतान पर जोर देता है। सुरक्षित तरीका क्या है?",
         "संदेश कहता है कि पार्सल रुका है और लिंक से छोटी फीस मांगता है। क्या करें?",
@@ -1429,12 +1567,14 @@
         "शॉपिंग साइट फोन पर बैंकिंग OTP मांगती है। क्या करें?",
         "ऑनलाइन विक्रेता को भुगतान किया, लेकिन पुष्टि या सामान नहीं मिला। क्या करें?",
         "विक्रेता चैट में कार्ड नंबर, समाप्ति तारीख, CVV और बैंक OTP मांगता है। क्या करें?",
-        "रिटर्न या रिफंड संदेश की पुष्टि कैसे करें?"
+        "रिटर्न या रिफंड संदेश की पुष्टि कैसे करें?",
+        "ऑनलाइन शॉपिंग स्कैम क्या है"
       ],
       "summary_en": "Comprehensive guidance on Shopping Scams based on Kavach Cybersecurity Platform guidelines.",
       "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित शॉपिंग धोखाधड़ी से बचाव की विस्तृत जानकारी।",
       "action_steps_en": [],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Extreme discounts and personal payment requests can signal a scam. Verify before paying.",
         "Use protected checkout methods and check seller reputation before sending money.",
@@ -1461,10 +1601,10 @@
       ],
       "pro_tip_en": "Always verify transactions and unexpected communications regarding Shopping Scams.",
       "pro_tip_hi": "शॉपिंग धोखाधड़ी से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.6
     },
     {
-      "tag": "kavach_public_wifi",
+      "tag": "public_wifi",
       "name_en": "Public Wi-Fi",
       "name_hi": "सार्वजनिक Wi-Fi",
       "patterns_en": [
@@ -1481,13 +1621,18 @@
         "You must access a sensitive work resource while traveling. What should you use?",
         "A stranger offers a USB charging cable at an airport. What is safest?",
         "What is a safer alternative to using an unknown hotspot for banking?",
-        "A site asks you to install a certificate or profile to use free Wi-Fi. What should you do?"
+        "A site asks you to install a certificate or profile to use free Wi-Fi. What should you do?",
+        "what are public wifi risks",
+        "is public wifi safe",
+        "what is an evil twin attack",
+        "public wifi dangers",
+        "using vpn on public wifi"
       ],
       "patterns_hi": [
         "सार्वजनिक Wi-Fi क्या है?",
         "सार्वजनिक Wi-Fi से कैसे बचें?",
         "सार्वजनिक Wi-Fi धोखाधड़ी के बारे में बताएं",
-        "सार्वजनिक Wi-Fi सुरक्षा टिप्स",
+        "सार्वजनिक Wi-Fi सुरक्षा नियम",
         "खुले सार्वजनिक Wi-Fi पर सबसे सुरक्षित व्यवहार क्या है?",
         "कैफे के आधिकारिक नाम जैसा Wi-Fi नेटवर्क बिना पासवर्ड दिखता है। क्या करें?",
         "क्या सार्वजनिक Wi-Fi पर लैपटॉप को खोजे जाने की अनुमति देनी चाहिए?",
@@ -1497,12 +1642,14 @@
         "यात्रा के दौरान संवेदनशील कार्य संसाधन खोलना जरूरी है। क्या उपयोग करें?",
         "एयरपोर्ट पर अजनबी USB चार्जिंग केबल देता है। सबसे सुरक्षित क्या है?",
         "बैंकिंग के लिए अनजान हॉटस्पॉट का सुरक्षित विकल्प क्या है?",
-        "मुफ्त Wi-Fi उपयोग करने के लिए साइट प्रमाणपत्र या प्रोफाइल इंस्टॉल करने को कहती है। क्या करें?"
+        "मुफ्त Wi-Fi उपयोग करने के लिए साइट प्रमाणपत्र या प्रोफाइल इंस्टॉल करने को कहती है। क्या करें?",
+        "सार्वजनिक वाईफाई के खतरे"
       ],
       "summary_en": "Comprehensive guidance on Public Wi-Fi based on Kavach Cybersecurity Platform guidelines.",
       "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित सार्वजनिक Wi-Fi से बचाव की विस्तृत जानकारी।",
       "action_steps_en": [],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Avoid sensitive activity on networks you do not control; use a trusted connection when possible.",
         "A lookalike hotspot can capture traffic or imitate a legitimate network. Confirm the network with staff.",
@@ -1529,7 +1676,7 @@
       ],
       "pro_tip_en": "Always verify transactions and unexpected communications regarding Public Wi-Fi.",
       "pro_tip_hi": "सार्वजनिक Wi-Fi से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.6
     },
     {
       "tag": "kavach_jobs",
@@ -1549,13 +1696,17 @@
         "A recruiter requests a scan of your identity documents over an unverified chat. What is safest?",
         "A company email domain differs slightly from the real company's domain. What should you do?",
         "A job offer asks you to deposit a cheque and return part of the money. What should you do?",
-        "A recruiter pressures you to decide immediately and pay a refundable placement fee. What should you do?"
+        "A recruiter pressures you to decide immediately and pay a refundable placement fee. What should you do?",
+        "what is a job scam",
+        "work from home fraud",
+        "recruitment fee scam",
+        "fake offer letter"
       ],
       "patterns_hi": [
         "नौकरी धोखाधड़ी क्या है?",
         "नौकरी धोखाधड़ी से कैसे बचें?",
         "नौकरी धोखाधड़ी धोखाधड़ी के बारे में बताएं",
-        "नौकरी धोखाधड़ी सुरक्षा टिप्स",
+        "नौकरी धोखाधड़ी सुरक्षा नियम",
         "रिक्रूटर इंटरव्यू से पहले पंजीकरण शुल्क मांगता है। क्या करें?",
         "वर्क-फ्रॉम-होम ऑफर आसान काम के लिए बहुत अधिक वेतन और जमा राशि मांगता है। सुरक्षित तरीका क्या है?",
         "रिक्रूटर केवल निजी मैसेजिंग खाते से संपर्क करता है और नियोक्ता का नाम नहीं बताता। क्या करें?",
@@ -1565,12 +1716,14 @@
         "रिक्रूटर अपुष्ट चैट पर पहचान दस्तावेजों की स्कैन कॉपी मांगता है। सुरक्षित क्या है?",
         "कंपनी ईमेल डोमेन असली कंपनी के डोमेन से थोड़ा अलग है। क्या करें?",
         "नौकरी का ऑफर चेक जमा करके कुछ पैसे वापस भेजने को कहता है। क्या करें?",
-        "रिक्रूटर तुरंत निर्णय लेने और वापस मिलने वाली प्लेसमेंट फीस देने का दबाव डालता है। क्या करें?"
+        "रिक्रूटर तुरंत निर्णय लेने और वापस मिलने वाली प्लेसमेंट फीस देने का दबाव डालता है। क्या करें?",
+        "नौकरी धोखाधड़ी क्या है"
       ],
       "summary_en": "Comprehensive guidance on Job Scams based on Kavach Cybersecurity Platform guidelines.",
       "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित नौकरी धोखाधड़ी से बचाव की विस्तृत जानकारी।",
       "action_steps_en": [],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Upfront fees for a promised job are a warning sign. Verify the employer independently.",
         "Unrealistic pay plus upfront deposits commonly indicate a fake job offer.",
@@ -1597,7 +1750,7 @@
       ],
       "pro_tip_en": "Always verify transactions and unexpected communications regarding Job Scams.",
       "pro_tip_hi": "नौकरी धोखाधड़ी से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.6
     },
     {
       "tag": "kavach_qr_scams",
@@ -1617,13 +1770,17 @@
         "You scanned a QR code and entered your account password on its page. What should you do?",
         "Someone messages you a QR code to receive a refund. What is safest?",
         "A QR code at a public place has no clear information about who placed it. What should you do?",
-        "Your payment app shows a different recipient than the shop name after scanning. What should you do?"
+        "Your payment app shows a different recipient than the shop name after scanning. What should you do?",
+        "what is a qr code scam",
+        "what is quishing",
+        "qr sticker fraud",
+        "scanning qr to receive money scam"
       ],
       "patterns_hi": [
         "QR कोड धोखाधड़ी क्या है?",
         "QR कोड धोखाधड़ी से कैसे बचें?",
         "QR कोड धोखाधड़ी धोखाधड़ी के बारे में बताएं",
-        "QR कोड धोखाधड़ी सुरक्षा टिप्स",
+        "QR कोड धोखाधड़ी सुरक्षा नियम",
         "अजनबी पैसे पाने के लिए QR स्कैन करने को कहता है, लेकिन ऐप UPI PIN मांगता है। क्या करें?",
         "रेस्टोरेंट के भुगतान कोड के ऊपर QR स्टिकर चिपका दिखता है। क्या करें?",
         "भुगतान QR स्कैन करने के बाद पुष्टि से पहले क्या जांचें?",
@@ -1633,12 +1790,14 @@
         "QR स्कैन करके खुले पेज पर आपने खाते का पासवर्ड दर्ज कर दिया। क्या करें?",
         "कोई रिफंड पाने के लिए QR कोड भेजता है। सुरक्षित तरीका क्या है?",
         "सार्वजनिक स्थान पर QR कोड लगाने वाले की स्पष्ट जानकारी नहीं है। क्या करें?",
-        "QR स्कैन करने के बाद भुगतान ऐप दुकान के बजाय अलग प्राप्तकर्ता दिखाता है। क्या करें?"
+        "QR स्कैन करने के बाद भुगतान ऐप दुकान के बजाय अलग प्राप्तकर्ता दिखाता है। क्या करें?",
+        "क्यूआर कोड स्कैम क्या है"
       ],
       "summary_en": "Comprehensive guidance on QR Code Scams based on Kavach Cybersecurity Platform guidelines.",
       "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित QR कोड धोखाधड़ी से बचाव की विस्तृत जानकारी।",
       "action_steps_en": [],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "A PIN prompt usually authorizes a payment. Do not enter it to receive money.",
         "Tampered QR stickers can redirect payments. Verify the code and recipient with the business.",
@@ -1665,7 +1824,7 @@
       ],
       "pro_tip_en": "Always verify transactions and unexpected communications regarding QR Code Scams.",
       "pro_tip_hi": "QR कोड धोखाधड़ी से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.6
     },
     {
       "tag": "kavach_social_media",
@@ -1685,13 +1844,17 @@
         "You receive an MFA approval prompt that you did not request. What should you do?",
         "A stranger sends you a file claiming it contains photos of you. What should you do?",
         "You see a social media post spreading a sensational security warning with an unfamiliar link. What should you do?",
-        "What should you do if an unknown person asks for your live location on social media?"
+        "What should you do if an unknown person asks for your live location on social media?",
+        "what are social media scams",
+        "fake account impersonation",
+        "instagram giveaway scam",
+        "social media account takeover"
       ],
       "patterns_hi": [
         "सोशल मीडिया क्या है?",
         "सोशल मीडिया से कैसे बचें?",
         "सोशल मीडिया धोखाधड़ी के बारे में बताएं",
-        "सोशल मीडिया सुरक्षा टिप्स",
+        "सोशल मीडिया सुरक्षा नियम",
         "मित्र की फोटो वाला नया खाता आपातकालीन पैसे मांगता है। क्या करें?",
         "सोशल मीडिया क्विज़ जन्मदिन, पहले स्कूल और पालतू का नाम मांगता है। क्या ध्यान रखें?",
         "सीधा संदेश कहता है कि लिंक से लॉगिन न करने पर खाता बंद होगा। क्या करें?",
@@ -1701,12 +1864,14 @@
         "आपको ऐसा MFA स्वीकृति अनुरोध आता है जिसे आपने शुरू नहीं किया। क्या करें?",
         "अजनबी आपकी फोटो होने का दावा करके फाइल भेजता है। क्या करें?",
         "अपरिचित लिंक वाला सनसनीखेज सुरक्षा अलर्ट सोशल मीडिया पर दिखता है। क्या करें?",
-        "सोशल मीडिया पर अनजान व्यक्ति लाइव लोकेशन मांगता है। क्या करें?"
+        "सोशल मीडिया पर अनजान व्यक्ति लाइव लोकेशन मांगता है। क्या करें?",
+        "सोशल मीडिया फ्रॉड क्या है"
       ],
       "summary_en": "Comprehensive guidance on Social Media based on Kavach Cybersecurity Platform guidelines.",
       "summary_hi": "कवच साइबर सुरक्षा दिशानिर्देशों पर आधारित सोशल मीडिया से बचाव की विस्तृत जानकारी।",
       "action_steps_en": [],
       "action_steps_hi": [],
+      "red_flags": [],
       "responses_en": [
         "Impersonation accounts use stolen photos. Verify unusual money requests outside the account.",
         "Personal details can help attackers guess passwords or security answers.",
@@ -1733,7 +1898,7 @@
       ],
       "pro_tip_en": "Always verify transactions and unexpected communications regarding Social Media.",
       "pro_tip_hi": "सोशल मीडिया से जुड़े किसी भी अनपेक्षित संदेश या कॉल की पहले आधिकारिक स्रोत से पुष्टि करें।",
-      "default_risk": 0.65
+      "default_risk": 0.6
     }
   ],
   "kavach_assessments": [

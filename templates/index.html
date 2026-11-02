@@ -64,8 +64,8 @@
             <span class="brand-mark" aria-hidden="true">C</span> CyberBot
           </div>
           <div class="model-label">
-            <span class="status-dot" aria-hidden="true"></span> Local NLP Security Model
-            <span class="beta-tag">v2.0 OFFLINE</span>
+            <span class="status-dot" aria-hidden="true"></span> Kavach-Net-1M Neural Core
+            <span class="beta-tag">1.34M PARAMS • OFFLINE</span>
           </div>
           <span class="about-link" id="modelStatus">100% Private & Local</span>
         </header>
@@ -170,7 +170,7 @@
         .then(r => r.json())
         .then(data => {
           if (data && data.total_intents) {
-            document.getElementById("modelStatus").textContent = `${data.total_intents} Topics • Local Scikit-Learn`;
+            document.getElementById("modelStatus").textContent = `${data.total_intents} Topics • Kavach-Net-1M Deep Learning`;
           }
         })
         .catch(() => {});
@@ -202,18 +202,24 @@
         // Inline code
         html = html.replace(/`([^`]+)`/gim, "<code>$1</code>");
 
+        // Ordered lists (1. item)
+        html = html.replace(/^\s*\d+\.\s+(.*$)/gim, "<oli>$1</oli>");
+        html = html.replace(/(<oli>.*<\/oli>)/gims, "<ol>$1</ol>");
+        html = html.replace(/<\/ol>\s*<ol>/gim, "");
+        html = html.replace(/<oli>/gim, "<li>").replace(/<\/oli>/gim, "</li>");
+
         // Unordered lists (- item)
-        html = html.replace(/^\s*-\s+(.*$)/gim, "<li>$1</li>");
-        html = html.replace(/(<li>.*<\/li>)/gims, "<ul>$1</ul>");
-        // Fix multiple adjacent ul tags
+        html = html.replace(/^\s*-\s+(.*$)/gim, "<uli>$1</uli>");
+        html = html.replace(/(<uli>.*<\/uli>)/gims, "<ul>$1</ul>");
         html = html.replace(/<\/ul>\s*<ul>/gim, "");
+        html = html.replace(/<uli>/gim, "<li>").replace(/<\/uli>/gim, "</li>");
 
         // Convert remaining double newlines to paragraph breaks
         const paragraphs = html.split(/\n{2,}/);
         html = paragraphs.map(p => {
           p = p.trim();
           if (p.startsWith("<h3>") || p.startsWith("<h4>") || p.startsWith("<h5>") || 
-              p.startsWith("<ul>") || p.startsWith("<blockquote>") || p.startsWith("<hr>")) {
+              p.startsWith("<ul>") || p.startsWith("<ol>") || p.startsWith("<blockquote>") || p.startsWith("<hr>")) {
             return p;
           }
           return `<p>${p.replace(/\n/g, "<br>")}</p>`;

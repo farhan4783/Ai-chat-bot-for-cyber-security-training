@@ -72,10 +72,20 @@ def prepare_data():
             if resp.strip():
                 corpus.append(resp)
 
+    TAG_MERGES = {
+        "kavach_phishing": "phishing_basics",
+        "kavach_passwords": "password_security",
+        "kavach_social_engineering": "social_engineering",
+        "kavach_public_wifi": "public_wifi"
+    }
+
     # Add Kavach quiz questions
     for cat in data.get("kavach_assessments", []):
         cat_tag = f"kavach_{cat['id'].replace('-', '_')}"
-        label = tag_to_id.get(cat_tag, 0)
+        target_tag = TAG_MERGES.get(cat_tag, cat_tag)
+        label = tag_to_id.get(target_tag)
+        if label is None:
+            continue
         for q in cat.get("questions", []):
             q_en = q["question"]["en"]
             q_hi = q["question"]["hi"]
